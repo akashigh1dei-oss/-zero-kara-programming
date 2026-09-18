@@ -257,7 +257,8 @@ document.getElementById('closeTranslationDialog').addEventListener('click',()=>d
    const actions=document.getElementById('glossaryDialogActions');
    if(actions) actions.append(b); else dialog.append(b);
  }else{
-   dialog.append(b);
+   const actions=dialog.querySelector('.dialog-actions');
+   if(actions) actions.append(b); else dialog.append(b);
  }
 });
 // v1.71: iPhone/Safariでは翻訳ボタンを押す前に翻訳エンジンを準備する。
