@@ -3584,15 +3584,32 @@ button,a,.btn,.translate-btn{max-width:100%}
 </style>
 
 
-<style id="v199-term-dialog-iphone-fix">
-/* v1.99: iPhone term popup — force all three action buttons onto one row. */
+<style id="v200-term-dialog-three-buttons-row">
+/* v2.00: keep Close / Glossary / Translate on one horizontal row on iPhone. */
 #termDialog{width:min(650px,calc(100% - 24px));box-sizing:border-box;}
-#termDialog .dialog-actions{display:flex;flex-wrap:nowrap;gap:8px;width:100%;align-items:stretch;}
-#termDialog .dialog-actions .btn{display:flex;flex:1 1 0;min-width:0;width:0;align-items:center;justify-content:center;white-space:nowrap;margin:0;box-sizing:border-box;}
+#termDialog .dialog-actions{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:8px !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+#termDialog .dialog-actions > .btn{
+  display:flex !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:12px 4px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  white-space:nowrap !important;
+  box-sizing:border-box !important;
+}
 @media(max-width:540px){
-  #termDialog{padding:24px 20px;}
-  #termDialog .dialog-actions{gap:6px;}
-  #termDialog .dialog-actions .btn{padding:12px 6px;font-size:15px;}
+  #termDialog{padding:24px 20px !important;}
+  #termDialog .dialog-actions{gap:6px !important;}
+  #termDialog .dialog-actions > .btn{font-size:13px !important;letter-spacing:-.04em !important;}
 }
 </style>
 </head>
@@ -3601,7 +3618,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v1.99</div>
+<div class="version">v2.00</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
