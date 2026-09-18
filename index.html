@@ -3585,7 +3585,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 
 
 <style id="v200-term-dialog-three-buttons-row">
-/* v2.00: keep Close / Glossary / Translate on one horizontal row on iPhone. */
+/* v2.01: keep Close / Glossary / Translate on one horizontal row on iPhone. */
 #termDialog{width:min(650px,calc(100% - 24px));box-sizing:border-box;}
 #termDialog .dialog-actions{
   display:grid !important;
@@ -3618,7 +3618,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.00</div>
+<div class="version">v2.01</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -6209,7 +6209,8 @@ document.getElementById('closeTranslationDialog').addEventListener('click',()=>d
    const actions=document.getElementById('glossaryDialogActions');
    if(actions) actions.append(b); else dialog.append(b);
  }else{
-   dialog.append(b);
+   const actions=dialog.querySelector('.dialog-actions');
+   if(actions) actions.append(b); else dialog.append(b);
  }
 });
 // v1.71: iPhone/Safariでは翻訳ボタンを押す前に翻訳エンジンを準備する。
