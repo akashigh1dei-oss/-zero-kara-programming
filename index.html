@@ -3618,7 +3618,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.02</div>
+<div class="version">v2.03</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -4017,6 +4017,10 @@ button,a,.btn,.translate-btn{max-width:100%}
   <div class="lesson-item"><div><b>第15回　API編 第1話</b><br>道路を作ったら、受付がいた<br><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture1')">読む</button></div>
   <div class="lesson-item"><div><b>第16回　API編 第2話</b><br>お願いしたのに、返事がまだ来ない<br><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture2')">読む</button></div>
   <div class="lesson-item"><div><b>第17回　API編 第3話</b><br>地雷原に、帰り道をつける<br><span class="muted">全8ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture3')">読む</button></div>
+  <div class="card"><h2>JavaScript実践編　配列・for文・DOM</h2><p>「覚える」から「実際に画面を動かす」へ。笑いながら仕組みを理解する3回です。</p><p class="muted">追加日：2026年9月18日</p></div>
+  <div class="lesson-item"><div><b>第18回　JavaScript実践編</b><br>配列との出会い――箱が増えすぎて、部屋が大変なことになった<br><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory18')">読む</button></div>
+  <div class="lesson-item"><div><b>第19回　JavaScript実践編</b><br>for文登場――同じ仕事を10回？ コンピュータにやらせろ！<br><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory19')">読む</button></div>
+  <div class="lesson-item"><div><b>第20回　JavaScript実践編</b><br>DOM操作――ついにJavaScriptが画面を動かした！<br><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory20')">読む</button></div>
 </div>
 </section>
 <section class="page" id="lesson1">
@@ -4170,6 +4174,40 @@ document.getElementById('hello').addEventListener('click', function(){
 <div class="article-nav"><button class="btn secondary" onclick="showPage('languageStory7')">← 第7回</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ戻る</button></div>
 </article>
 </section>
+
+
+<section class="page" id="jsStory18"><article class="card editorial-reading long-lesson">
+<button class="btn secondary small" onclick="showPage('lessons')">← 記事一覧</button><h1>第18回　配列との出会い<br>「箱が増えすぎて、部屋が大変なことになった」</h1>
+<h2>第1話　変数100個作戦</h2><p>変数、if文、関数。少しずつJavaScriptが分かってきたKAZUは、ちょっと調子に乗っていた。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">なるほどね。JavaScript、だいぶ分かってきたかもしれない。</div></div><div class="chat"><div class="who">AI</div><div class="bubble">その言葉が出た直後が、一番危険です。</div></div><p>ミニテスト10問の正解を保存しようと、answer1、answer2、answer3……と書き始める。5問、8問と進んだところで手が止まった。</p><pre><code>let answer1 = "A";
+let answer2 = "B";
+let answer3 = "C";</code></pre><div class="chat"><div class="who">KAZU</div><div class="bubble">1000問ならanswer1000まで？ そんなサイト作ってたら、先に俺が壊れるわ！</div></div><p>そこで登場したのが、たくさんのデータを一つにまとめる<strong>配列（Array）</strong>だった。</p>
+<h2>第2話　大きな箱「配列」</h2><pre><code>let answers = ["A", "B", "C"];</code></pre><div class="chat"><div class="who">KAZU</div><div class="bubble">……終わり？ さっき俺が一生懸命answer1、answer2って書いてたのは？</div></div><div class="chat"><div class="who">AI</div><div class="bubble">お疲れさまでした。</div></div><p>配列は大きな棚のようなもの。Aを取り出すなら <code>answers[0]</code>。ここで重要なのは、配列は<strong>0から数える</strong>こと。</p><pre><code>answers[0] → A
+answers[1] → B
+answers[2] → C</code></pre><div class="chat"><div class="who">KAZU</div><div class="bubble">最初なんだから1番だろ。</div></div><div class="chat"><div class="who">AI</div><div class="bubble">人間はそう考えます。コンピュータは0番です。</div></div>
+<h2>第3話　10問が一気に片付いた</h2><pre><code>let answers = [
+  "A", "B", "B", "A", "A",
+  "B", "A", "B", "A", "B"
+];</code></pre><p>第1問は <code>answers[0]</code>、第10問は <code>answers[9]</code>。名前一覧、用語集、ミニテスト、献立、記事一覧――大量のデータを扱う場面で配列の考え方が役立つ。</p><p class="note"><strong>今回の要点：</strong>変数は1つのデータを覚える。配列は、たくさんのデータを順番にまとめて覚える。一番最初は0番。</p><div class="article-nav"><button class="btn" onclick="showPage('jsStory19')">第19回へ →</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ</button></div></article></section>
+<section class="page" id="jsStory19"><article class="card editorial-reading long-lesson">
+<button class="btn secondary small" onclick="showPage('lessons')">← 記事一覧</button><h1>第19回　for文登場<br>「同じ仕事を10回？ コンピュータにやらせろ！」</h1>
+<h2>第1話　また10回書く男</h2><p>配列を覚えたKAZUは、今度は答えを全部表示しようとした。</p><pre><code>console.log(answers[0]);
+console.log(answers[1]);
+console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div><div class="bubble">まさか10回書くんですか？</div></div><div class="chat"><div class="who">KAZU</div><div class="bubble">だって10個あるんだから。</div></div><p>そこでAIが出したのが <strong>for文</strong>。</p><pre><code>for (let i = 0; i &lt; 10; i++) {
+  console.log(answers[i]);
+}</code></pre><div class="chat"><div class="who">KAZU</div><div class="bubble">急にJavaScriptが本気出してきた。</div></div>
+<h2>第2話　暗号を一つずつ解読する</h2><p><code>let i = 0</code> は0から開始。<code>i &lt; 10</code> は10より小さい間続ける。<code>i++</code> は1ずつ増やす。つまり0、1、2……9と進み、そのたびに <code>answers[i]</code> を処理する。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">iの数字が勝手に変わるから、全部順番に取り出せるのか！</div></div><p>10回でも100回でも、同じ仕事を人間が書き続ける必要はない。</p>
+<h2>第3話　人間は命令する、コンピュータは繰り返す</h2><pre><code>for (let i = 0; i &lt; answers.length; i++) {
+  console.log(answers[i]);
+}</code></pre><p><code>answers.length</code> は配列の個数。問題が10問から50問に増えても、その個数に合わせて最後まで処理できる。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">じゃあ、人間の仕事は？</div></div><div class="chat"><div class="who">AI</div><div class="bubble">何をさせるか考えることです。</div></div><p class="note"><strong>今回の要点：</strong>for文は同じ処理を繰り返す仕組み。人間がルールを作り、コンピュータに繰り返しを任せる。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory18')">← 第18回</button><button class="btn" onclick="showPage('jsStory20')">第20回へ →</button></div></article></section>
+<section class="page" id="jsStory20"><article class="card editorial-reading long-lesson">
+<button class="btn secondary small" onclick="showPage('lessons')">← 記事一覧</button><h1>第20回　DOM操作<br>「ついにJavaScriptが画面を動かした！」</h1>
+<h2>第1話　で、ホームページはいつ動くんだ？</h2><p>変数、if、関数、配列、for。ここまで覚えたKAZUには一つ疑問があった。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">俺はホームページを作ってるんだよな？ ずっとconsole.logばっかりじゃないか！</div></div><div class="chat"><div class="who">AI</div><div class="bubble">では、いよいよJavaScriptからHTMLを動かします。DOMの登場です。</div></div>
+<h2>第2話　JavaScript、HTMLを発見する</h2><pre><code>&lt;p id="message"&gt;ここが変わります&lt;/p&gt;</code></pre><p><code>id="message"</code> は目印。JavaScriptから次のように探せる。</p><pre><code>document.getElementById("message");</code></pre><p>ざっくり言えば「このページの中から、messageというIDのものを探して」という命令だ。</p><pre><code>document.getElementById("message").textContent =
+  "JavaScriptで変更しました！";</code></pre><p>これで画面の文字が実際に書き換わる。</p>
+<h2>第3話　ボタンを押した――動いた！</h2><pre><code>&lt;button onclick="changeMessage()"&gt;押してみる&lt;/button&gt;</code></pre><pre><code>function changeMessage() {
+  document.getElementById("message").textContent =
+    "成功しました！";
+}</code></pre><p>HTMLが骨組みを作る。CSSが見た目を整える。JavaScriptが動きを与える。変数がデータを覚え、ifが判断し、functionが仕事をまとめ、配列が整理し、forが繰り返し、DOMがHTMLとJavaScriptをつなぐ。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">最初はボタン一つ直すのにも苦労した。でも今なら、そのボタンがなぜ動くのか少し分かる。</div></div><p>プログラミングはコードを丸暗記することではない。「こうしたい」という人間の考えを、「こうしてください」というコンピュータの言葉へ変えていくことだ。</p><p class="note"><strong>次回予告：</strong>習ったものを全部使って、自分で一つ作ってみる。物語は「ミニアプリ制作編」へ続く。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory19')">← 第19回</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ</button></div></article></section>
 
 <section class="page" id="progress">
 <div class="card">
