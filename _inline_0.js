@@ -1,0 +1,1 @@
+{"@context": "https://schema.org", "@type": "WebSite", "name": "ゼロから始めるプログラム言語", "url": "https://zero-kara-prog.mmdei.workers.dev/", "inLanguage": "ja", "description": "プログラミング初心者が、作りながら学ぶ学習サイト。HTML・CSS・JavaScriptからPython・SQL・APIへ。実践記事、用語集、ヒント付きミニテスト、制作の編集後記を掲載しています。"}

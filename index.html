@@ -3618,7 +3618,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.03</div>
+<div class="version">v2.06</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -4207,7 +4207,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <h2>第3話　ボタンを押した――動いた！</h2><pre><code>&lt;button onclick="changeMessage()"&gt;押してみる&lt;/button&gt;</code></pre><pre><code>function changeMessage() {
   document.getElementById("message").textContent =
     "成功しました！";
-}</code></pre><p>HTMLが骨組みを作る。CSSが見た目を整える。JavaScriptが動きを与える。変数がデータを覚え、ifが判断し、functionが仕事をまとめ、配列が整理し、forが繰り返し、DOMがHTMLとJavaScriptをつなぐ。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">最初はボタン一つ直すのにも苦労した。でも今なら、そのボタンがなぜ動くのか少し分かる。</div></div><p>プログラミングはコードを丸暗記することではない。「こうしたい」という人間の考えを、「こうしてください」というコンピュータの言葉へ変えていくことだ。</p><p class="note"><strong>次回予告：</strong>習ったものを全部使って、自分で一つ作ってみる。物語は「ミニアプリ制作編」へ続く。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory19')">← 第19回</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ</button></div></article></section>
+}</code></pre><p>HTMLが骨組みを作る。CSSが見た目を整える。JavaScriptが動きを与える。変数がデータを覚え、ifが判断し、functionが仕事をまとめ、配列が整理し、forが繰り返し、DOMがHTMLとJavaScriptをつなぐ。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">最初はボタン一つ直すのにも苦労した。でも今なら、そのボタンがなぜ動くのか少し分かる。</div></div><p>プログラミングはコードを丸暗記することではない。「こうしたい」という人間の考えを、「こうしてください」というコンピュータの言葉へ変えていくことだ。</p><p class="note"><strong>次回予告：</strong>習ったものを全部使って、自分で一つ作ってみる。物語は「ミニアプリ制作編」へ続く。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory19')">← 第19回</button><button class="btn" onclick="showPage('jsStoryQuiz18to20')">第18〜20回 ミニテスト10問 →</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ</button></div></article></section>
 
 <section class="page" id="progress">
 <div class="card">
@@ -4217,16 +4217,36 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <div><span class="badge" id="badge1">🌱 はじめの一歩</span><span class="badge" id="badge2">🥉 HTMLビギナー</span></div>
 </div>
 </section>
+<section class="page" id="jsStoryQuiz18to20"><div class="card">
+<button class="btn secondary small" onclick="showPage('quiz')">← ミニテスト一覧</button>
+<h1>ミニテスト 2 — 第18〜20回</h1>
+<p>配列・for文・DOM操作を10問で確認します。答えを選ぶと、その場で理由が表示されます。</p>
+<p id="storyQuizCounter"></p><div class="progress"><span id="storyQuizBar" style="width:0%"></span></div>
+<h2 id="storyQuizQuestion"></h2><p class="note" id="storyQuizHint"></p><div id="storyQuizOptions"></div>
+<div aria-live="polite" id="storyQuizFeedback" role="status"></div>
+<div class="article-nav"><button class="btn secondary" hidden id="storyQuizPrev">← 前の問題</button><button class="btn" hidden id="storyQuizNext">次の問題へ →</button><button class="btn secondary" hidden id="storyQuizRetry">もう一度挑戦</button><button class="btn secondary" onclick="showPage('lessons')">記事一覧へ</button></div>
+<div id="storyQuizReview"></div>
+</div></section>
 <section class="page" id="quiz"><div class="card">
-<h1>ミニテスト — JavaScriptくんの仕事チェック</h1>
+<h1>ミニテスト</h1>
+<div class="section-homebar"><button class="btn secondary" onclick="showPage('home')">← ホームに戻る</button></div>
+<p>ミニテストを番号順に整理しました。上から順番に進められます。</p>
+<div class="lesson-list">
+<div class="lesson-item"><div><b>ミニテスト 1</b><br>HTML・CSS・JavaScript 基礎編<br><span class="muted">全12問</span></div><button class="btn small" onclick="showPage('quizBasic')">始める →</button></div>
+<div class="lesson-item"><div><b>ミニテスト 2</b><br>JavaScript実践編　第18〜20回<br><span class="muted">配列・for文・DOM操作／全10問</span></div><button class="btn small" onclick="showPage('jsStoryQuiz18to20')">始める →</button></div>
+</div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('home')">← ホーム</button><button class="btn" onclick="showPage('quizBasic')">ミニテスト1へ →</button></div>
+</div></section>
+<section class="page" id="quizBasic"><div class="card">
+<h1>ミニテスト 1 — JavaScriptくんの仕事チェック</h1>
 <div class="section-homebar">
-  <button class="btn secondary" onclick="showPage('home')">← ホームに戻る</button>
+  <button class="btn secondary" onclick="showPage('quiz')">← ミニテスト一覧</button>
 </div>
 <p>全12問。HTML・CSS・JavaScriptの役割から、在庫の判断まで。答えを選ぶと理由が分かります。</p>
 <p id="quizCounter"></p><div class="progress"><span id="quizBar" style="width:0%"></span></div>
 <h2 id="quizQuestion"></h2><div id="quizHintArea"><button aria-controls="quizHint" aria-expanded="false" class="btn secondary" id="quizHintButton">ヒントを見る</button><p class="note" hidden="" id="quizHint"></p><p class="muted">ヒントを見ても減点されません。</p></div><div id="quizOptions"></div>
 <div aria-live="polite" id="quizFeedback" role="status"></div>
-<div class="article-nav"><button class="btn" hidden="" id="quizNext">次の問題へ →</button>
+<div class="article-nav"><button class="btn secondary" hidden id="quizPrev">← 前の問題</button><button class="btn" hidden="" id="quizNext">次の問題へ →</button>
 <button class="btn secondary" hidden="" id="quizRetry">全問もう一度</button>
 <button class="btn secondary" onclick="showPage('jsLecture1p1')">講座を読み直す</button></div>
 <div id="quizReview"></div></div></section>
@@ -4355,7 +4375,7 @@ const c = a * b;</code></pre>
 <p>そうです。</p>
 <p>JavaScriptくんが頭の中で600円と計算しても、画面に出さなければ、使う人には分かりません。</p>
 <p>次は、計算結果を画面へ出してもらいます。</p>
-<div class="article-nav"><button aria-current="page" aria-label="第2回の1ページ目" class="btn" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button><button class="btn" onclick="showPage('jsLecture2p2')">次のページへ →</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture1p3')">← 第1回</button><button aria-current="page" aria-label="第2回の1ページ目" class="btn" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button><button class="btn" onclick="showPage('jsLecture2p2')">次のページへ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture2p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4448,7 +4468,7 @@ if (!Number.isFinite(数量) || 数量 &lt; 0) {
 <p class="note"><b>第2回まとめ：</b>JavaScriptくんは計算が速い。ただし「何を入力として受け取るか」「間違った入力をどう扱うか」は、人が決めてあげる必要があります。</p>
 <p>次回は、JavaScriptの中で何度も登場する「変数」にもう少し踏み込みます。</p>
 <p>JavaScriptくんの机の上には、名前の付いた箱が並び始めます。</p>
-<div class="article-nav"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-current="page" aria-label="第2回の3ページ目" class="btn" onclick="showPage('jsLecture2p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture2p2')">← 前のページ</button><button class="btn" onclick="showPage('lessons')">記事一覧へ戻る</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture1p3')">← 第1回へ</button><button class="btn secondary" onclick="showPage('lessons')">講義一覧</button><button class="btn" onclick="showPage('jsLecture3p1')">第3回へ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture3p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4478,7 +4498,7 @@ if (!Number.isFinite(数量) || 数量 &lt; 0) {
 <p>棚から本当に1本使っただけでは、JavaScriptの在庫は勝手に2にはなりません。</p>
 <p>人がボタンを押す、数量を入力する、バーコードを読むなど、現実の変化をプログラムへ伝える仕組みが必要です。</p>
 <p class="note"><b>今日の第一歩：</b>変数は、現実の情報をプログラムの中で扱うための「名前付きの値」。現実が変わったら、その変化をプログラムにも伝える。</p>
-<div class="article-nav"><button aria-current="page" aria-label="第3回の1ページ目" class="btn" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button><button class="btn" onclick="showPage('jsLecture3p2')">次のページへ →</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture2p3')">← 第2回</button><button aria-current="page" aria-label="第3回の1ページ目" class="btn" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button><button class="btn" onclick="showPage('jsLecture3p2')">次のページへ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture3p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4557,7 +4577,7 @@ const 合計金額 = 単価 * 数量;</code></pre>
 <p class="note"><b>第3回まとめ：</b>変数は値を扱うための仕組み。大切なのは、何を表す値か、途中で変わるか、名前を見て意味が分かるかです。</p>
 <p>次回は、JavaScriptくんに「判断」をもっと本格的に任せます。</p>
 <p>そして、たった1文字の記号が結果を逆にしてしまう怖さも体験します。</p>
-<div class="article-nav"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-current="page" aria-label="第3回の3ページ目" class="btn" onclick="showPage('jsLecture3p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture3p2')">← 前のページ</button><button class="btn" onclick="showPage('lessons')">記事一覧へ戻る</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture2p3')">← 第2回へ</button><button class="btn secondary" onclick="showPage('lessons')">講義一覧</button><button class="btn" onclick="showPage('jsLecture4p1')">第4回へ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture4p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4595,7 +4615,7 @@ const 合計金額 = 単価 * 数量;</code></pre>
 </ul>
 <p>ここまで書けば、「2を含める」ことがはっきりします。</p>
 <p class="note"><b>第4回の第一歩：</b>記号から考えず、先に「どの数字なら、どの結果にしたいか」を決める。</p>
-<div class="article-nav"><button aria-current="page" aria-label="第4回の1ページ目" class="btn" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button><button class="btn" onclick="showPage('jsLecture4p2')">次のページへ →</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture3p3')">← 第3回</button><button aria-current="page" aria-label="第4回の1ページ目" class="btn" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button><button class="btn" onclick="showPage('jsLecture4p2')">次のページへ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture4p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4670,7 +4690,7 @@ const 合計金額 = 単価 * 数量;</code></pre>
 <p>次回は、商品が増えてきます。</p>
 <p>KAZUはJavaScriptくんに100個の商品の確認を頼もうとします。</p>
 <p>そして、「同じことを100回書くの？」という問題にぶつかります。</p>
-<div class="article-nav"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-current="page" aria-label="第4回の3ページ目" class="btn" onclick="showPage('jsLecture4p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture4p2')">← 前のページ</button><button class="btn" onclick="showPage('lessons')">記事一覧へ戻る</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture3p3')">← 第3回へ</button><button class="btn secondary" onclick="showPage('lessons')">講義一覧</button><button class="btn" onclick="showPage('jsLecture5p1')">第5回へ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture5p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4704,7 +4724,7 @@ console.log("手袋");</code></pre>
 <p>人は100回同じ確認をすると疲れます。</p>
 <p>JavaScriptくんは、100回でも1000回でも、同じ指示なら同じように実行します。</p>
 <p class="note"><b>第5回の第一歩：</b>同じ形の処理を何度も書き始めたら、「繰り返しにできないか」を考える。</p>
-<div class="article-nav"><button aria-current="page" aria-label="第5回の1ページ目" class="btn" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button><button class="btn" onclick="showPage('jsLecture5p2')">次のページへ →</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture4p3')">← 第4回</button><button aria-current="page" aria-label="第5回の1ページ目" class="btn" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button><button class="btn" onclick="showPage('jsLecture5p2')">次のページへ →</button></div>
 </article></section>
 <section class="page js-lecture" id="jsLecture5p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 記事一覧</button>
@@ -4785,7 +4805,7 @@ for (const 金額 of 金額一覧) {
 <p class="note"><b>第5回まとめ：</b>繰り返しは、大量の同じ作業を任せる仕組み。小さいデータで確認し、条件と途中経過を見てから件数を増やす。</p>
 <p>ここまでで、JavaScriptくんには「計算」「値の保持」「判断」「繰り返し」という仕事を任せられるようになりました。</p>
 <p>少しずつ、単なるボタンの動きから「システムらしい処理」へ近づいてきました。</p>
-<div class="article-nav"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-current="page" aria-label="第5回の3ページ目" class="btn" onclick="showPage('jsLecture5p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture5p2')">← 前のページ</button><button class="btn" onclick="showPage('lessons')">記事一覧へ戻る</button></div>
+<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture4p3')">← 第4回へ</button><button class="btn secondary" onclick="showPage('lessons')">講義一覧</button><button class="btn" onclick="showPage('quiz')">ミニテストへ →</button></div>
 </article></section>
 <section class="page" id="editorialIndex">
 <div class="card">
@@ -4972,7 +4992,7 @@ if (在庫 &lt;= 最低在庫) {
   alert("発注が必要です");
 } else {
   alert("在庫は足りています");
-}</code></pre><p>急に難しそうに見えるかもしれませんが、順番に読むと単純です。</p><pre><code>const 在庫 = 1;</code></pre><p>「在庫」という名前を付けて、数字の1を扱います。</p><p>こうして情報に名前を付けると、数字だけを並べるより意味が分かりやすくなります。こうした名前付きの情報を扱う仕組みが「変数」です。なお、constで作った名前には、後から別の値を代入できません。</p><pre><code>if (在庫 &lt;= 最低在庫)</code></pre><p>「もし、在庫が最低在庫以下なら」という意味です。</p><p>&lt;=は「以下」。今回なら、2本ちょうども含みます。</p><pre><code>else</code></pre><p>「そうでなければ」という意味です。</p><p>今回は、在庫が2本以下ではない場合に「在庫は足りています」と表示します。</p><p>これで、在庫数によって返事が変わるようになりました。</p><p>動作を確かめてみましょう。</p><div class="js-table"><table><thead><tr><th>入れた在庫数</th><th>出てほしい結果</th></tr></thead><tbody><tr><td>0本</td><td>発注が必要です</td></tr><tr><td>1本</td><td>発注が必要です</td></tr><tr><td>2本</td><td>発注が必要です</td></tr><tr><td>3本</td><td>在庫は足りています</td></tr><tr><td>10本</td><td>在庫は足りています</td></tr></tbody></table></div><p>ここで、数人さんがわざと記号を変えたとします。</p><pre><code>if (在庫 &gt;= 最低在庫)</code></pre><p>&gt;=は「以上」です。</p><p>すると、10本あるのに「発注が必要です」と言い、0本なのに「在庫は足りています」と言ってしまいます。</p><p>JavaScriptくんは、胸を張って報告します。</p><p>「指示どおりに実行しました！」</p><p>たしかに、書かれた指示には従っています。でも、頼みたかった仕事とは逆です。</p><p>これが、動いてはいるけれど、結果が間違っている不具合です。</p><p>だから確認するときは、「何か表示された」で終わりにせず、「この数字なら、この結果になるはず」と比べます。</p><p>特に今回は、境目の2本と3本を確かめると、ルールの間違いを見つけやすくなります。</p><p>なお、この例は学習用です。本物の入力画面では、空欄やマイナスの数字が入った場合も考えます。それは、基本の動きを理解してから追加していきましょう。</p><p>今日の持ち帰りは、3つです。</p><ul><li>JavaScriptは、画面の動作や計算を担当する。</li><li>人が決めたルールを、具体的な指示にする。</li><li>動いた後は、期待どおりの結果か確かめる。</li></ul><p>次回は、この助手に「商品名」「単価」「数量」を渡します。</p><p>いよいよJavaScriptくん、電卓係に就任です。</p><div class="article-nav"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-current="page" aria-label="第1回の3ページ目" class="btn" onclick="showPage('jsLecture1p3')">3</button><button class="btn" onclick="showPage('lessons')">記事一覧へ戻る</button></div><p><button class="btn" onclick="showPage('quiz')">全12問のミニテストに挑戦</button></p></article></section>
+}</code></pre><p>急に難しそうに見えるかもしれませんが、順番に読むと単純です。</p><pre><code>const 在庫 = 1;</code></pre><p>「在庫」という名前を付けて、数字の1を扱います。</p><p>こうして情報に名前を付けると、数字だけを並べるより意味が分かりやすくなります。こうした名前付きの情報を扱う仕組みが「変数」です。なお、constで作った名前には、後から別の値を代入できません。</p><pre><code>if (在庫 &lt;= 最低在庫)</code></pre><p>「もし、在庫が最低在庫以下なら」という意味です。</p><p>&lt;=は「以下」。今回なら、2本ちょうども含みます。</p><pre><code>else</code></pre><p>「そうでなければ」という意味です。</p><p>今回は、在庫が2本以下ではない場合に「在庫は足りています」と表示します。</p><p>これで、在庫数によって返事が変わるようになりました。</p><p>動作を確かめてみましょう。</p><div class="js-table"><table><thead><tr><th>入れた在庫数</th><th>出てほしい結果</th></tr></thead><tbody><tr><td>0本</td><td>発注が必要です</td></tr><tr><td>1本</td><td>発注が必要です</td></tr><tr><td>2本</td><td>発注が必要です</td></tr><tr><td>3本</td><td>在庫は足りています</td></tr><tr><td>10本</td><td>在庫は足りています</td></tr></tbody></table></div><p>ここで、数人さんがわざと記号を変えたとします。</p><pre><code>if (在庫 &gt;= 最低在庫)</code></pre><p>&gt;=は「以上」です。</p><p>すると、10本あるのに「発注が必要です」と言い、0本なのに「在庫は足りています」と言ってしまいます。</p><p>JavaScriptくんは、胸を張って報告します。</p><p>「指示どおりに実行しました！」</p><p>たしかに、書かれた指示には従っています。でも、頼みたかった仕事とは逆です。</p><p>これが、動いてはいるけれど、結果が間違っている不具合です。</p><p>だから確認するときは、「何か表示された」で終わりにせず、「この数字なら、この結果になるはず」と比べます。</p><p>特に今回は、境目の2本と3本を確かめると、ルールの間違いを見つけやすくなります。</p><p>なお、この例は学習用です。本物の入力画面では、空欄やマイナスの数字が入った場合も考えます。それは、基本の動きを理解してから追加していきましょう。</p><p>今日の持ち帰りは、3つです。</p><ul><li>JavaScriptは、画面の動作や計算を担当する。</li><li>人が決めたルールを、具体的な指示にする。</li><li>動いた後は、期待どおりの結果か確かめる。</li></ul><p>次回は、この助手に「商品名」「単価」「数量」を渡します。</p><p>いよいよJavaScriptくん、電卓係に就任です。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('lessons')">講義一覧</button><button class="btn" onclick="showPage('jsLecture2p1')">第2回へ →</button></div><p><button class="btn" onclick="showPage('quiz')">全12問のミニテストに挑戦</button></p></article></section>
 <section class="page" id="editorial5"><article class="card editorial-reading">
 <button class="btn secondary small" onclick="showPage('editorialIndex')">← 編集後記一覧</button>
 <div class="editor-date">第5回・記載日：2026年9月13日</div>
@@ -6280,14 +6300,16 @@ function renderQuizQuestion(){
  document.getElementById('quizFeedback').textContent='';
  document.getElementById('quizFeedback').className='';
  document.getElementById('quizNext').hidden=true;
+ document.getElementById('quizPrev').hidden=quizIndex===0;
  document.getElementById('quizRetry').hidden=true;
  const options=document.getElementById('quizOptions'); options.replaceChildren();
  q.options.forEach((text,i)=>{const b=document.createElement('button');b.className='quiz-option';b.textContent=text;b.addEventListener('click',()=>selectQuizAnswer(i));options.appendChild(b);});
+ if(quizAnswers[quizIndex]!==undefined){document.querySelectorAll('#quizOptions button').forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.style.border='3px solid #176b52';});const correct=quizAnswers[quizIndex]===q.answer;const f=document.getElementById('quizFeedback');f.className=correct?'note':'warning';f.textContent=(correct?'正解！ ':'今回は不正解。正解は「'+q.options[q.answer]+'」。 ')+q.why;const next=document.getElementById('quizNext');next.textContent=quizIndex===quizQuestions.length-1?'結果を見る':'次の問題へ →';next.hidden=false;}
 }
 function selectQuizAnswer(choice){
- if(quizAnswers.length>quizIndex)return;
+ if(quizAnswers[quizIndex]!==undefined)return;
  const q=quizQuestions[quizIndex], correct=choice===q.answer;
- quizAnswers.push(choice);
+ quizAnswers[quizIndex]=choice;
  document.querySelectorAll('#quizOptions button').forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.style.border='3px solid #176b52';});
  const f=document.getElementById('quizFeedback'); f.className=correct?'note':'warning';
  f.textContent=(correct?'正解！ ':'今回は不正解。正解は「'+q.options[q.answer]+'」。 ')+q.why;
@@ -6302,12 +6324,13 @@ function finishQuiz(){
  document.getElementById('quizOptions').replaceChildren();
  document.getElementById('quizFeedback').className='note';
  document.getElementById('quizFeedback').textContent=score===12?'全問正解です！ 指示と動作のつながりをつかめましたね。':'お疲れさまでした。間違えた問題を下で振り返ってみましょう。';
- document.getElementById('quizNext').hidden=true;document.getElementById('quizRetry').hidden=false;
+ document.getElementById('quizNext').hidden=true;document.getElementById('quizRetry').hidden=false;document.getElementById('quizPrev').hidden=false;
  const review=document.getElementById('quizReview');review.replaceChildren();
  quizQuestions.forEach((q,i)=>{if(q.answer===quizAnswers[i])return;const box=document.createElement('div');box.className='card';const title=document.createElement('h3');title.textContent='第'+(i+1)+'問：'+q.q;const a=document.createElement('p');a.textContent='あなたの回答：'+q.options[quizAnswers[i]];const why=document.createElement('p');why.textContent='正解：'+q.options[q.answer]+'。'+q.why;box.append(title,a,why);review.appendChild(box);});
 }
 document.getElementById('quizHintButton').addEventListener('click',()=>{const hint=document.getElementById('quizHint');hint.hidden=!hint.hidden;const b=document.getElementById('quizHintButton');b.textContent=hint.hidden?'ヒントを見る':'ヒントを閉じる';b.setAttribute('aria-expanded',String(!hint.hidden));});
-document.getElementById('quizNext').addEventListener('click',()=>{if(quizAnswers.length!==quizIndex+1)return;if(quizIndex===quizQuestions.length-1)finishQuiz();else{quizIndex++;renderQuizQuestion();}document.getElementById('quizQuestion').scrollIntoView({block:'center'});});
+document.getElementById('quizPrev').addEventListener('click',()=>{if(quizIndex>0){quizIndex--;renderQuizQuestion();document.getElementById('quizQuestion').scrollIntoView({block:'center'});}});
+document.getElementById('quizNext').addEventListener('click',()=>{if(quizAnswers[quizIndex]===undefined)return;if(quizIndex===quizQuestions.length-1)finishQuiz();else{quizIndex++;renderQuizQuestion();}document.getElementById('quizQuestion').scrollIntoView({block:'center'});});
 document.getElementById('quizRetry').addEventListener('click',()=>{quizIndex=0;quizAnswers=[];document.getElementById('quizReview').replaceChildren();renderQuizQuestion();});
 renderQuizQuestion();
 </script>
@@ -7279,5 +7302,24 @@ async function loadWeather() {
 })();
 </script>
 
+<script>
+const storyQuizQuestions=[
+{q:'複数の答えを順番にまとめて保存したい。適しているのは？',o:['配列','CSS','else'],a:0,h:'第18回の「箱をまとめる」考え方です。',w:'配列は複数のデータを順番にまとめて扱えます。'},
+{q:'配列の一番最初の番号は？',o:['0','1','10'],a:0,h:'JavaScriptの配列は人間の数え方と少し違います。',w:'JavaScriptの配列は0番から始まります。'},
+{q:'answers[0] が表すものは？',o:['配列の最初の要素','配列の最後の要素','配列の個数'],a:0,h:'角括弧の数字は位置を示します。',w:'[0]は配列の最初の要素を指定します。'},
+{q:'同じ処理を10回繰り返したい。適しているのは？',o:['for文','metaタグ','CSS'],a:0,h:'第19回でコンピュータに繰り返しを任せました。',w:'for文は同じ処理を条件に従って繰り返します。'},
+{q:'answers.length が表すものは？',o:['配列の要素数','文字の色','最初の答え'],a:0,h:'lengthは「長さ・個数」の手掛かりです。',w:'lengthで配列に入っている要素数を取得できます。'},
+{q:'配列が10件から50件に増えても最後まで処理しやすい書き方は？',o:['lengthを使ったfor文','変数を50個手書き','CSSを50個作る'],a:0,h:'データ数が変わっても追従できる方法を考えます。',w:'配列のlengthを条件に使えば、要素数の変化に合わせて繰り返せます。'},
+{q:'DOM操作でJavaScriptができることは？',o:['HTMLの画面内容を取得・変更する','パソコンの電源を作る','CSSファイルを紙に印刷するだけ'],a:0,h:'第20回では「画面を動かす」段階に進みました。',w:'DOMを通してJavaScriptからHTML要素を取得したり内容を変更したりできます。'},
+{q:'document.getElementById("message") は何をする？',o:['idがmessageの要素を探す','messageというサイトを検索する','配列を削除する'],a:0,h:'getElementByIdを日本語に分けて考えます。',w:'指定したidを持つHTML要素を取得します。'},
+{q:'HTML・CSS・JavaScriptの役割の組み合わせとして適切なのは？',o:['HTML=骨組み、CSS=見た目、JavaScript=動き','HTML=動き、CSS=計算、JavaScript=画像だけ','3つとも同じ役割'],a:0,h:'家にたとえた基本の役割を思い出します。',w:'HTMLが構造、CSSが見た目、JavaScriptが動作や処理を主に担当します。'},
+{q:'第18〜20回の流れとして最も近いものは？',o:['データをまとめる→繰り返す→画面につなぐ','色を決める→印刷する→終了する','HTMLを消す→CSSを消す→JavaScriptを消す'],a:0,h:'配列→for文→DOMの順番です。',w:'配列で整理し、for文で繰り返し、DOMでHTML画面へつなぐ流れです。'}
+];
+let storyQuizIndex=0,storyQuizAnswers=[];
+function renderStoryQuiz(){const q=storyQuizQuestions[storyQuizIndex];document.getElementById('storyQuizCounter').textContent='第'+(storyQuizIndex+1)+'問 / 全10問';document.getElementById('storyQuizBar').style.width=(storyQuizIndex/10*100)+'%';document.getElementById('storyQuizQuestion').textContent=q.q;document.getElementById('storyQuizHint').textContent='ヒント：'+q.h;document.getElementById('storyQuizFeedback').textContent='';const box=document.getElementById('storyQuizOptions');box.innerHTML='';q.o.forEach((x,i)=>{const b=document.createElement('button');b.className='btn secondary';b.style.margin='6px';b.textContent=x;b.onclick=()=>answerStoryQuiz(i,b);box.appendChild(b)});document.getElementById('storyQuizNext').hidden=true;document.getElementById('storyQuizPrev').hidden=storyQuizIndex===0;if(storyQuizAnswers[storyQuizIndex]!==undefined){document.querySelectorAll('#storyQuizOptions button').forEach(x=>x.disabled=true);const correct=storyQuizAnswers[storyQuizIndex]===q.a;document.getElementById('storyQuizFeedback').textContent=(correct?'正解！ ':'もう一歩。 ')+q.w;document.getElementById('storyQuizNext').hidden=false;}}
+function answerStoryQuiz(i,b){if(storyQuizAnswers[storyQuizIndex]!==undefined)return;const q=storyQuizQuestions[storyQuizIndex];storyQuizAnswers[storyQuizIndex]=i;document.querySelectorAll('#storyQuizOptions button').forEach(x=>x.disabled=true);document.getElementById('storyQuizFeedback').textContent=(i===q.a?'正解！ ':'もう一歩。 ')+q.w;document.getElementById('storyQuizNext').hidden=false;}
+function finishStoryQuiz(){const score=storyQuizQuestions.filter((q,i)=>q.a===storyQuizAnswers[i]).length;document.getElementById('storyQuizCounter').textContent='10問回答完了';document.getElementById('storyQuizBar').style.width='100%';document.getElementById('storyQuizQuestion').textContent='結果：10問中 '+score+'問正解';document.getElementById('storyQuizHint').textContent=score===10?'全問正解です。第18〜20回の要点をしっかりつかめています。':'間違えた問題を下で確認して、もう一度挑戦できます。';document.getElementById('storyQuizOptions').innerHTML='';document.getElementById('storyQuizFeedback').textContent='';document.getElementById('storyQuizNext').hidden=true;document.getElementById('storyQuizRetry').hidden=false;document.getElementById('storyQuizPrev').hidden=false;const r=document.getElementById('storyQuizReview');r.innerHTML='';storyQuizQuestions.forEach((q,i)=>{if(q.a===storyQuizAnswers[i])return;const p=document.createElement('p');p.className='note';p.textContent='第'+(i+1)+'問：正解は「'+q.o[q.a]+'」。'+q.w;r.appendChild(p)});}
+document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.getElementById('storyQuizPrev').addEventListener('click',()=>{if(storyQuizIndex>0){storyQuizIndex--;renderStoryQuiz();}});document.getElementById('storyQuizNext').addEventListener('click',()=>{if(storyQuizIndex===9)finishStoryQuiz();else{storyQuizIndex++;renderStoryQuiz();}});document.getElementById('storyQuizRetry').addEventListener('click',()=>{storyQuizIndex=0;storyQuizAnswers=[];document.getElementById('storyQuizRetry').hidden=true;document.getElementById('storyQuizReview').innerHTML='';renderStoryQuiz();});});
+</script>
 </body>
 </html>
