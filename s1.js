@@ -251,7 +251,7 @@ document.getElementById('onlineTranslateButton').addEventListener('click',openOn
 desktopTranslateButton.addEventListener('click',()=>{translationSelect.value=desktopTranslationSelect.value;openOnlineTranslation();});
 document.getElementById('closeTranslationDialog').addEventListener('click',()=>document.getElementById('onlineTranslationDialog').close());
 ['glossaryDetailDialog','termDialog'].forEach(id=>{
- const dialog=document.getElementById(id);const b=document.createElement('button');b.type='button';b.className='btn secondary';b.dataset.uiKey='translate';b.textContent='翻訳する';
+ const dialog=document.getElementById(id);const b=document.createElement('button');b.type='button';b.className='btn secondary';b.dataset.uiKey='translate';b.textContent='翻訳する';b.classList.add('notranslate');b.setAttribute('translate','no');
  b.addEventListener('click',()=>{if(translationSelect.value==='ja'){dialog.close();setTranslationStatus('先に翻訳先の言語を選んでください。');translationSelect.focus();}else openOnlineTranslation();});
  if(id==='glossaryDetailDialog'){
    const actions=document.getElementById('glossaryDialogActions');

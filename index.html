@@ -3583,13 +3583,23 @@ button,a,.btn,.translate-btn{max-width:100%}
 }
 </style>
 
+
+<style id="v198-term-dialog-iphone-fix">
+/* v1.98: iPhone term popup — keep controls aligned and prevent Translate from being translated alone. */
+#termDialog{width:min(650px,calc(100% - 24px));box-sizing:border-box;}
+#termDialog .btn{white-space:nowrap;}
+@media(max-width:540px){
+  #termDialog{padding:24px 20px;}
+  #termDialog .btn{display:inline-flex;align-items:center;justify-content:center;min-width:0;width:auto;padding:12px 16px;margin:4px 4px 4px 0;font-size:16px;}
+}
+</style>
 </head>
 <body>
 <div id="iphoneTranslationVeil" data-no-translate="true" aria-live="polite">翻訳中…</div>
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v1.97</div>
+<div class="version">v1.98</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -6174,7 +6184,7 @@ document.getElementById('onlineTranslateButton').addEventListener('click',openOn
 desktopTranslateButton.addEventListener('click',()=>{translationSelect.value=desktopTranslationSelect.value;openOnlineTranslation();});
 document.getElementById('closeTranslationDialog').addEventListener('click',()=>document.getElementById('onlineTranslationDialog').close());
 ['glossaryDetailDialog','termDialog'].forEach(id=>{
- const dialog=document.getElementById(id);const b=document.createElement('button');b.type='button';b.className='btn secondary';b.dataset.uiKey='translate';b.textContent='翻訳する';
+ const dialog=document.getElementById(id);const b=document.createElement('button');b.type='button';b.className='btn secondary';b.dataset.uiKey='translate';b.textContent='翻訳する';b.classList.add('notranslate');b.setAttribute('translate','no');
  b.addEventListener('click',()=>{if(translationSelect.value==='ja'){dialog.close();setTranslationStatus('先に翻訳先の言語を選んでください。');translationSelect.focus();}else openOnlineTranslation();});
  if(id==='glossaryDetailDialog'){
    const actions=document.getElementById('glossaryDialogActions');
@@ -7160,7 +7170,7 @@ async function loadWeather() {
 </article></section>
 
 
-<!-- v1.97 cleanup: removed unused invalid s0.js; structured data remains embedded as application/ld+json. -->
+<!-- v1.98 cleanup: removed unused invalid s0.js; structured data remains embedded as application/ld+json. -->
 <!-- v1.91 security baseline: current static site only. Future shop/payment must use server-side validation, authenticated admin access, payment-provider hosted/tokenized flows, idempotency, audit logs, and secrets kept out of client HTML. -->
 <!-- v1.81: single contact entry, always visible; uses existing #lineFriends only -->
 <button id="contactQuickV181" type="button" data-page="lineFriends" aria-label="お問い合わせを開く">お問い合わせ</button>
