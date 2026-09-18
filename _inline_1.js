@@ -4,8 +4,9 @@ const languageNames={
 };
 
 function showPage(id){
+  let target=document.getElementById(id);
+  if(!target){ id='home'; target=document.getElementById('home'); }
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  const target=document.getElementById(id);
   if(target) target.classList.add('active');
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
   const iphoneEmergency=document.querySelector('.iphone-featured-below-translate');
