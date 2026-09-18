@@ -3618,7 +3618,7 @@ button,a,.btn,.translate-btn{max-width:100%}
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.06</div>
+<div class="version">v2.07</div>
 </div>
 <div class="translation-zone mobile-translation-zone" aria-label="翻訳">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -6025,6 +6025,15 @@ function showPage(id){
 document.querySelectorAll('nav button[data-page]').forEach(btn=>{
   btn.addEventListener('click',()=>showPage(btn.dataset.page));
 });
+
+/* v2.07: Reload/startup must return to Home instead of a stale glossary view.
+   Contact keeps its explicit hash because that route is intentionally restorable. */
+document.addEventListener('DOMContentLoaded',()=>{
+  if(location.hash !== '#lineFriends'){
+    showPage('home');
+    try{ history.replaceState(null,'',location.pathname + location.search); }catch(e){}
+  }
+},{once:true});
 
 function openLesson(n){ showPage('lesson'+n); }
 
