@@ -1,0 +1,265 @@
+/* v1.27: PC記事一覧をもう一段かっこよく。iPhoneは変更しない */
+@media (min-width:981px){
+  #lessons{
+    position:relative !important;
+    padding:72px 3vw 96px !important;
+    background:
+      radial-gradient(circle at 12% 10%, rgba(255,255,255,.18), transparent 14%),
+      radial-gradient(circle at 86% 18%, rgba(255,255,255,.12), transparent 20%),
+      linear-gradient(140deg, #1f1827 0%, #3a263d 18%, #6d4659 36%, #b88687 63%, #f1e0d6 82%, #fbf7f3 100%) !important;
+    overflow:hidden !important;
+  }
+
+  #lessons::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0)),
+      radial-gradient(circle at 50% 100%, transparent 26px, rgba(255,255,255,.11) 27px, rgba(255,255,255,.11) 28px, transparent 29px),
+      radial-gradient(circle at 0% 100%, transparent 26px, rgba(255,255,255,.11) 27px, rgba(255,255,255,.11) 28px, transparent 29px),
+      radial-gradient(circle at 100% 100%, transparent 26px, rgba(255,255,255,.11) 27px, rgba(255,255,255,.11) 28px, transparent 29px) !important;
+    background-size:100% 100%, 60px 30px, 60px 30px, 60px 30px !important;
+    background-position:0 0, 0 0, 30px 0, 30px 0 !important;
+    opacity:.72 !important;
+    pointer-events:none !important;
+  }
+
+  #lessons::after{
+    content:"ARCHIVE" !important;
+    position:absolute !important;
+    right:54px !important;
+    top:34px !important;
+    font-size:78px !important;
+    font-weight:800 !important;
+    letter-spacing:.22em !important;
+    color:rgba(255,255,255,.10) !important;
+    z-index:0 !important;
+  }
+
+  #lessons > .card{
+    position:relative !important;
+    z-index:1 !important;
+    max-width:860px !important;
+    margin:0 auto !important;
+    padding:40px 42px 38px !important;
+    background:linear-gradient(180deg, rgba(255,250,246,.90), rgba(255,247,243,.82)) !important;
+    border:1px solid rgba(255,255,255,.42) !important;
+    border-radius:32px !important;
+    box-shadow:
+      0 30px 90px rgba(20,15,24,.34),
+      inset 0 1px 0 rgba(255,255,255,.56) !important;
+    backdrop-filter:blur(16px) saturate(108%);
+  }
+
+  #lessons > .card > h1{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:16px !important;
+    margin:0 0 10px !important;
+    padding:0 !important;
+    background:none !important;
+    color:#201b1e !important;
+    box-shadow:none !important;
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif !important;
+    font-size:46px !important;
+    letter-spacing:.08em !important;
+    border:none !important;
+  }
+
+  #lessons > .card > h1::before{
+    content:"" !important;
+    display:inline-block !important;
+    width:58px !important;
+    height:4px !important;
+    border-radius:99px !important;
+    background:linear-gradient(90deg,#d06a93,#684157) !important;
+  }
+
+  #lessons .lessons-lead{
+    margin:0 0 22px !important;
+    color:#746763 !important;
+    font-size:14px !important;
+    line-height:1.8 !important;
+    letter-spacing:.04em !important;
+  }
+
+  #lessons .section-homebar{
+    display:flex !important;
+    justify-content:flex-end !important;
+    margin:-2px 0 18px !important;
+  }
+
+  #lessons .section-homebar .btn{
+    min-width:172px !important;
+    padding:12px 18px !important;
+    border-radius:999px !important;
+    border:1px solid rgba(115,77,93,.22) !important;
+    background:rgba(255,255,255,.70) !important;
+    color:#6b3e53 !important;
+    font-weight:700 !important;
+    box-shadow:0 10px 22px rgba(74,50,60,.10) !important;
+  }
+
+  #lessons .article-sort-wrap{
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin:0 0 28px !important;
+  }
+
+  #lessons .article-sort-label{
+    font-size:13px !important;
+    font-weight:700 !important;
+    color:#6d605d !important;
+    margin-right:4px !important;
+    letter-spacing:.06em !important;
+  }
+
+  #lessons .article-sort-btn{
+    border-radius:999px !important;
+    padding:10px 16px !important;
+    border:1px solid rgba(120,92,102,.14) !important;
+    background:rgba(255,255,255,.72) !important;
+    color:#524744 !important;
+    font-weight:700 !important;
+    box-shadow:0 4px 10px rgba(68,52,60,.05) !important;
+  }
+
+  #lessons .article-sort-btn.active{
+    background:linear-gradient(135deg,#c35580,#593447) !important;
+    color:#fff !important;
+    border-color:transparent !important;
+    box-shadow:0 16px 30px rgba(106,57,79,.30) !important;
+  }
+
+  #lessons > .card > .card{
+    position:relative !important;
+    overflow:hidden !important;
+    margin:0 auto 26px !important;
+    max-width:760px !important;
+    padding:34px 32px 30px 36px !important;
+    border:none !important;
+    border-radius:24px !important;
+    background:
+      linear-gradient(120deg, rgba(255,255,255,.96), rgba(251,242,237,.90) 70%, rgba(247,231,228,.92) 100%) !important;
+    box-shadow:
+      0 22px 44px rgba(58,42,50,.14),
+      inset 0 1px 0 rgba(255,255,255,.5) !important;
+  }
+
+  #lessons > .card > .card::before{
+    content:"FEATURED" !important;
+    position:absolute !important;
+    right:22px !important;
+    top:18px !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    letter-spacing:.18em !important;
+    color:#a26f7f !important;
+  }
+
+  #lessons > .card > .card::after{
+    content:"" !important;
+    position:absolute !important;
+    left:0 !important;
+    top:0 !important;
+    bottom:0 !important;
+    width:10px !important;
+    background:linear-gradient(180deg,#d16a92,#674156) !important;
+  }
+
+  #lessons > .card > .card h2{
+    margin:0 0 14px !important;
+    padding-right:110px !important;
+    font-size:32px !important;
+    line-height:1.35 !important;
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif !important;
+    color:#211c1e !important;
+  }
+
+  #lessons > .card > .card p{
+    color:#5f5652 !important;
+    line-height:1.82 !important;
+  }
+
+  #lessons .lesson-item{
+    position:relative !important;
+    display:grid !important;
+    grid-template-columns:minmax(0, 1fr) 112px !important;
+    align-items:center !important;
+    gap:24px !important;
+    max-width:760px !important;
+    margin:16px auto !important;
+    padding:24px 24px 24px 30px !important;
+    border:none !important;
+    border-radius:22px !important;
+    background:rgba(255,255,255,.88) !important;
+    box-shadow:
+      0 14px 28px rgba(56,40,46,.10),
+      inset 0 1px 0 rgba(255,255,255,.45) !important;
+  }
+
+  #lessons .lesson-item::before{
+    content:"" !important;
+    position:absolute !important;
+    left:0 !important;
+    top:16px !important;
+    bottom:16px !important;
+    width:6px !important;
+    border-radius:999px !important;
+    background:linear-gradient(180deg,#d47399,#77485f) !important;
+  }
+
+  #lessons .lesson-item > div{
+    min-width:0 !important;
+  }
+
+  #lessons .lesson-item b{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-width:88px !important;
+    margin:0 0 8px !important;
+    padding:7px 12px !important;
+    border-radius:999px !important;
+    background:linear-gradient(135deg,#f4d9e3,#fdf6f8) !important;
+    color:#8a4864 !important;
+    font-size:13px !important;
+    letter-spacing:.08em !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.7) !important;
+  }
+
+  #lessons .lesson-item br{
+    display:none !important;
+  }
+
+  #lessons .lesson-item .muted,
+  #lessons .lesson-item small{
+    display:block !important;
+    color:#7a716d !important;
+    font-size:13px !important;
+    margin-top:6px !important;
+  }
+
+  #lessons .lesson-item .btn.small,
+  #lessons > .card > .card .btn{
+    width:100% !important;
+    justify-content:center !important;
+    text-align:center !important;
+    border:none !important;
+    border-radius:13px !important;
+    padding:13px 16px !important;
+    background:linear-gradient(135deg,#2f2a31,#121116) !important;
+    color:#fff !important;
+    font-weight:700 !important;
+    box-shadow:0 14px 28px rgba(18,17,22,.23) !important;
+  }
+
+  #lessons .lesson-item:hover,
+  #lessons > .card > .card:hover{
+    transform:translateY(-2px) !important;
+    transition:.22s ease !important;
+  }
+}

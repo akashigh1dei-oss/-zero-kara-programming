@@ -1,0 +1,12 @@
+ゼロから始めるプログラム言語 v2.16
+構造整理版（v2.15の表示・機能を維持する方針）
+
+index.html  : ページ本文・教材
+css/        : 旧index.html内のCSSを役割別ファイルとして外出し
+js/         : 旧index.html内のJavaScriptを外出し
+worker.js   : Cloudflare Worker
+robots.txt  : 検索エンジン向け設定
+sitemap.xml : サイトマップ
+
+今回は安全性を優先し、教材本文のページ分割はまだ行っていません。
+次段階で lessons / glossary / editorial 等への分離が可能です。

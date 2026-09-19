@@ -1,0 +1,9 @@
+#glossary #glossaryNamePanel[hidden],#glossary [data-label][hidden]{display:none!important}
+#glossary #glossaryNameMode{display:inline-block!important}
+#glossary #glossaryKanaGrid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;max-width:280px}
+#glossaryKanaGrid button[data-kana=""]{grid-column:1/-1}
+#glossary #glossaryAlphaGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));max-width:340px}
+#glossary button{transition:none!important;animation:none!important}
+#glossary .article-nav button{flex:1 1 130px;min-height:44px;white-space:normal}
+
+.contact-mail-form{display:grid;gap:14px;margin-top:16px;text-align:left}.contact-mail-form label{display:grid;gap:7px;font-weight:700}.contact-mail-form input,.contact-mail-form textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cfd6df;border-radius:12px;font:inherit;background:#fff;color:#17202a}.contact-mail-form textarea{resize:vertical;min-height:130px}.contact-mail-form .btn{justify-self:start;min-width:150px}

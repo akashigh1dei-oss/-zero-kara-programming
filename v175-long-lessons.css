@@ -1,0 +1,10 @@
+.long-lesson {min-width:0;overflow-wrap:anywhere;}
+.long-lesson p,.long-lesson li {line-height:1.95;}
+.long-lesson h1 {line-height:1.55;}
+.long-lesson h2 {margin-top:2em;font-size:1.2em;}
+.long-lesson pre {max-width:100%;overflow-x:auto;white-space:pre;box-sizing:border-box;}
+.long-lesson pre code {white-space:pre;overflow-wrap:normal;word-break:normal;}
+.long-lesson .lesson-table {overflow-x:auto;}
+.long-lesson table {border-collapse:collapse;width:100%;}
+.long-lesson th,.long-lesson td {border:1px solid #aaa;padding:.5em;text-align:left;}
+.long-lesson .article-nav {display:flex;flex-wrap:wrap;gap:.5rem;}

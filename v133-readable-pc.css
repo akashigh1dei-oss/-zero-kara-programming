@@ -1,0 +1,253 @@
+/* v1.33
+   PC本文を「読みやすい本」のように整理。
+   iPhone/スマホは既存レイアウトを維持。
+*/
+@media (min-width:981px){
+
+  /* ===== 全ページの本文幅 ===== */
+  .page:not(#home){
+    max-width:1060px !important;
+    margin:0 auto !important;
+  }
+
+  .page:not(#home) > .card{
+    max-width:960px !important;
+    margin:18px auto 0 !important;
+    padding:40px 46px !important;
+    background:#fff !important;
+    border:1px solid #d9dde1 !important;
+    border-radius:18px !important;
+    box-shadow:0 12px 34px rgba(30,38,48,.07) !important;
+  }
+
+  /* ===== 記事本文 ===== */
+  #lesson1 > .card,
+  #lesson2 > .card,
+  [id^="jsLecture"] > .card,
+  [id^="editorial"] > .card,
+  [id^="languageStory"] > .card{
+    max-width:900px !important;
+    padding:44px 54px !important;
+  }
+
+  #lesson1 h1,
+  #lesson2 h1,
+  [id^="jsLecture"] h1,
+  [id^="editorial"] h1,
+  [id^="languageStory"] h1{
+    font-size:34px !important;
+    line-height:1.5 !important;
+    margin:18px 0 28px !important;
+    letter-spacing:.02em !important;
+    color:#20252b !important;
+  }
+
+  #lesson1 h2,
+  #lesson2 h2,
+  [id^="jsLecture"] h2,
+  [id^="editorial"] h2,
+  [id^="languageStory"] h2{
+    font-size:25px !important;
+    line-height:1.55 !important;
+    margin:36px 0 16px !important;
+    padding-bottom:8px !important;
+    border-bottom:1px solid #e4e7ea !important;
+    color:#252b31 !important;
+  }
+
+  #lesson1 p,
+  #lesson2 p,
+  [id^="jsLecture"] p,
+  [id^="editorial"] p,
+  [id^="languageStory"] p{
+    font-size:18px !important;
+    line-height:2.05 !important;
+    margin:18px 0 !important;
+    color:#333a42 !important;
+    max-width:48em !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    text-shadow:none !important;
+  }
+
+  /* 会話部分 */
+  #lesson1 .chat,
+  #lesson2 .chat,
+  [id^="jsLecture"] .chat,
+  [id^="editorial"] .chat,
+  [id^="languageStory"] .chat{
+    display:grid !important;
+    grid-template-columns:72px minmax(0,1fr) !important;
+    gap:14px !important;
+    align-items:start !important;
+    margin:22px 0 !important;
+  }
+
+  #lesson1 .who,
+  #lesson2 .who,
+  [id^="jsLecture"] .who,
+  [id^="editorial"] .who,
+  [id^="languageStory"] .who{
+    min-width:0 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    letter-spacing:.04em !important;
+    color:#5f4b50 !important;
+    padding-top:12px !important;
+  }
+
+  #lesson1 .bubble,
+  #lesson2 .bubble,
+  [id^="jsLecture"] .bubble,
+  [id^="editorial"] .bubble,
+  [id^="languageStory"] .bubble{
+    background:#f5f6f7 !important;
+    border:1px solid #e0e3e6 !important;
+    border-radius:14px !important;
+    padding:16px 20px !important;
+    font-size:17px !important;
+    line-height:1.9 !important;
+    color:#30363c !important;
+    box-shadow:none !important;
+  }
+
+  /* 第1回「まず使う3つ」 */
+  #lesson1 .grid3{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:18px !important;
+    margin:22px 0 32px !important;
+  }
+
+  #lesson1 .grid3 > .card{
+    margin:0 !important;
+    padding:24px !important;
+    min-height:190px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    background:#fafafa !important;
+    border:1px solid #dfe3e6 !important;
+    border-radius:14px !important;
+    box-shadow:none !important;
+  }
+
+  #lesson1 .grid3 > .card > b{
+    display:block !important;
+    font-size:19px !important;
+    margin-bottom:10px !important;
+    color:#252b31 !important;
+  }
+
+  #lesson1 .grid3 > .card p{
+    font-size:16px !important;
+    line-height:1.8 !important;
+    margin:0 0 16px !important;
+    color:#59616a !important;
+  }
+
+  #lesson1 .grid3 > .card .btn{
+    margin-top:auto !important;
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+    padding:0 !important;
+    display:grid !important;
+    place-items:center !important;
+    border-radius:9px !important;
+  }
+
+  /* コード */
+  #lesson1 pre,
+  #lesson2 pre,
+  [id^="jsLecture"] pre,
+  [id^="languageStory"] pre{
+    max-width:100% !important;
+    padding:20px 22px !important;
+    border-radius:12px !important;
+    font-size:16px !important;
+    line-height:1.8 !important;
+    overflow:auto !important;
+    background:#232b33 !important;
+    color:#f3f5f7 !important;
+  }
+
+  /* 下部ナビ */
+  .article-nav{
+    display:flex !important;
+    gap:12px !important;
+    align-items:center !important;
+    flex-wrap:wrap !important;
+    margin-top:30px !important;
+    padding-top:22px !important;
+    border-top:1px solid #e2e5e8 !important;
+  }
+
+  .article-nav .btn,
+  #lesson1 p > .btn,
+  #lesson2 p > .btn{
+    min-height:46px !important;
+    padding:11px 18px !important;
+    border-radius:9px !important;
+    font-size:15px !important;
+  }
+
+  /* ===== 記事一覧 ===== */
+  #lessons{
+    padding:34px 0 60px !important;
+    background:none !important;
+    overflow:visible !important;
+  }
+  #lessons::before,
+  #lessons::after{
+    content:none !important;
+    display:none !important;
+  }
+  #lessons > .card{
+    max-width:960px !important;
+  }
+  #lessons .lesson-item{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) auto !important;
+    align-items:center !important;
+    gap:18px !important;
+    padding:18px 0 !important;
+    background:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    transform:none !important;
+  }
+  #lessons .lesson-item::before,
+  #lessons .lesson-item::after{
+    content:none !important;
+    display:none !important;
+  }
+
+  /* ===== 一般ページの文字 ===== */
+  .page:not(#home):not(#lesson1):not(#lesson2) p,
+  .page:not(#home):not(#lesson1):not(#lesson2) li{
+    font-size:17px !important;
+    line-height:1.95 !important;
+  }
+
+  .page:not(#home) h1,
+  .page:not(#home) h2,
+  .page:not(#home) h3,
+  .page:not(#home) p,
+  .page:not(#home) li,
+  .page:not(#home) td,
+  .page:not(#home) th{
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    text-shadow:none !important;
+  }
+}
+
+/* スマホ/iPhoneは見た目を変えない。長い文字だけ安全に折り返す */
+@media (max-width:980px){
+  .page h1,.page h2,.page h3,.page p,.page li,
+  .bubble,.lesson-item,.term{
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}

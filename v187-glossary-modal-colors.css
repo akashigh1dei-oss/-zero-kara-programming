@@ -1,0 +1,21 @@
+/* v1.87: colors only — keep v1.86 layout/spacing */
+#glossaryDetailDialog .glossary-dialog-close .btn,
+#glossaryDialogActions form .btn{
+  background:#e83e8c !important;
+  color:#ffffff !important;
+  border-color:#e83e8c !important;
+}
+#glossaryDialogActions > .btn.secondary{
+  background:#ffffff !important;
+  color:#172033 !important;
+  border:2px solid #6b7280 !important;
+}
+#glossaryDetailDialog .glossary-dialog-close .btn:hover,
+#glossaryDialogActions form .btn:hover{
+  background:#cf2f78 !important;
+  border-color:#cf2f78 !important;
+}
+#glossaryDialogActions > .btn.secondary:hover{
+  background:#f7f7f8 !important;
+  color:#172033 !important;
+}

@@ -1,0 +1,20 @@
+#glossaryNameMode,
+#glossaryKanaMode,
+#glossaryAlphaMode,
+#glossaryDetailDialog .glossary-dialog-close .btn,
+#glossaryDialogActions form .btn,
+#glossaryDialogActions > .btn.secondary{
+  background:#e83e8c !important;
+  color:#ffffff !important;
+  border:2px solid #e83e8c !important;
+}
+#glossaryNameMode:hover,
+#glossaryKanaMode:hover,
+#glossaryAlphaMode:hover,
+#glossaryDetailDialog .glossary-dialog-close .btn:hover,
+#glossaryDialogActions form .btn:hover,
+#glossaryDialogActions > .btn.secondary:hover{
+  background:#cf2f78 !important;
+  color:#ffffff !important;
+  border-color:#cf2f78 !important;
+}

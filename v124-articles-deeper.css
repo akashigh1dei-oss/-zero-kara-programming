@@ -1,0 +1,67 @@
+/* v1.24: PC記事一覧をもっと濃く・存在感を強く。iPhoneは変更しない */
+@media (min-width:981px){
+  #lessons{
+    background:
+      radial-gradient(circle at top right, rgba(178, 74, 112, .20), transparent 26%),
+      radial-gradient(circle at top left, rgba(136, 117, 102, .10), transparent 24%),
+      linear-gradient(180deg, #f6eee6 0%, #efe4da 100%) !important;
+  }
+
+  #lessons::before{
+    background-image:
+      radial-gradient(circle at 50% 100%, transparent 23px, rgba(104,92,84,.18) 24px, rgba(104,92,84,.18) 25px, transparent 26px),
+      radial-gradient(circle at 0% 100%, transparent 23px, rgba(104,92,84,.18) 24px, rgba(104,92,84,.18) 25px, transparent 26px),
+      radial-gradient(circle at 100% 100%, transparent 23px, rgba(104,92,84,.18) 24px, rgba(104,92,84,.18) 25px, transparent 26px);
+    opacity:.95 !important;
+  }
+
+  #lessons > .card{
+    background:rgba(255,250,246,.94) !important;
+    border:1px solid rgba(176,154,144,.65) !important;
+    box-shadow:
+      0 22px 60px rgba(70,54,48,.14),
+      0 6px 16px rgba(70,54,48,.08) !important;
+  }
+
+  #lessons > .card > h1{
+    border-bottom:4px solid #c56988 !important;
+    color:#1f1a18 !important;
+    text-shadow:0 1px 0 rgba(255,255,255,.55);
+  }
+
+  #lessons .section-homebar .btn{
+    border:1px solid #cda2b1 !important;
+    background:linear-gradient(180deg,#fff8fa,#f3e2e7) !important;
+    color:#7c3551 !important;
+    box-shadow:0 6px 14px rgba(140,76,100,.12) !important;
+  }
+
+  #lessons .article-sort-btn{
+    border:1px solid #d6c3bb !important;
+    background:#fff9f7 !important;
+  }
+
+  #lessons .article-sort-btn.active{
+    background:linear-gradient(135deg,#cc557d,#922f54) !important;
+    border-color:#a63d63 !important;
+    box-shadow:0 12px 28px rgba(169,63,100,.28) !important;
+  }
+
+  #lessons > .card > .card{
+    background:linear-gradient(135deg, rgba(255,255,255,.99), rgba(246,236,232,.98)) !important;
+    border-left:8px solid #c86f8d !important;
+    box-shadow:0 16px 32px rgba(78,61,54,.10) !important;
+  }
+
+  #lessons .lesson-item{
+    background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(250,245,242,.96)) !important;
+    border:1px solid #e6d8d1 !important;
+    box-shadow:0 8px 22px rgba(78,61,54,.08) !important;
+  }
+
+  #lessons .btn.small,
+  #lessons > .card > .card .btn{
+    background:linear-gradient(135deg,#342d35,#151419) !important;
+    box-shadow:0 10px 22px rgba(21,20,25,.22) !important;
+  }
+}

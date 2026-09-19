@@ -1,0 +1,26 @@
+/* v2.02: keep three buttons horizontal with clearer spacing on iPhone. */
+#termDialog{width:min(650px,calc(100% - 24px));box-sizing:border-box;}
+#termDialog .dialog-actions{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:14px !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+#termDialog .dialog-actions > .btn{
+  display:flex !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:14px 6px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  white-space:nowrap !important;
+  box-sizing:border-box !important;
+}
+@media(max-width:540px){
+  #termDialog{padding:24px 20px !important;}
+  #termDialog .dialog-actions{gap:10px !important;}
+  #termDialog .dialog-actions > .btn{font-size:13px !important;letter-spacing:-.04em !important;padding:14px 3px !important;}
+}

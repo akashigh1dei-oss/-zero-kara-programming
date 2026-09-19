@@ -1,0 +1,7 @@
+/* v1.50 PC glossary operation fix: direct search + optional kana helper. iPhone unchanged. */
+@media (min-width:981px){
+  #glossaryNameMode{display:none!important}
+  #glossaryNamePanel{display:block!important}
+  #glossaryLookupLayout.kana-layout{display:block!important}
+  #glossaryLookupLayout.kana-layout #glossaryKanaPanel{margin-top:14px}
+}

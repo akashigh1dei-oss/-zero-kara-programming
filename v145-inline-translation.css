@@ -1,0 +1,9 @@
+/* v1.45: translate in place without opening another window. */
+#google_translate_element{position:absolute!important;left:-9999px!important;top:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame{display:none!important}
+body{top:0!important}
+.goog-logo-link,.goog-te-gadget span{display:none!important}
+/* Keep translated text inside the existing design. */
+.page, .page *, .ref-home, .ref-home *{overflow-wrap:anywhere}
+button,a,.btn,.translate-btn{max-width:100%}
+.ref-top,.ref-actions,.langbox{min-width:0}

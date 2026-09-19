@@ -1,0 +1,17 @@
+#glossary .glossary-homebar{
+  display:flex !important;
+  justify-content:flex-start;
+  margin:12px 0 18px !important;
+}
+#glossary .glossary-homebar .btn{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-width:180px;
+  font-weight:700;
+}
+@media (min-width:981px){
+  #glossary .glossary-homebar{
+    justify-content:flex-end;
+  }
+}

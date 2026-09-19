@@ -1,0 +1,46 @@
+/* v1.30: PC記事一覧の柄を完全に消す。iPhoneは変更しない */
+@media (min-width:981px){
+  #lessons{
+    position:relative !important;
+    padding:78px 3vw 98px !important;
+    background:
+      linear-gradient(135deg, #171b22 0%, #2a313b 22%, #5b6571 48%, #9ca5ad 74%, #e5dfd7 100%) !important;
+    overflow:hidden !important;
+  }
+
+  #lessons::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 38%) !important;
+    pointer-events:none !important;
+  }
+
+  #lessons::after{
+    content:"PLATINUM" !important;
+    position:absolute !important;
+    right:58px !important;
+    top:34px !important;
+    font-size:78px !important;
+    font-weight:800 !important;
+    letter-spacing:.20em !important;
+    color:rgba(255,255,255,.07) !important;
+    z-index:0 !important;
+  }
+
+  #lessons > .card{
+    position:relative !important;
+    z-index:1 !important;
+    max-width:860px !important;
+    margin:0 auto !important;
+    padding:44px 44px 42px !important;
+    background:linear-gradient(180deg, rgba(255,255,255,.84), rgba(243,241,237,.75)) !important;
+    border:1px solid rgba(255,255,255,.34) !important;
+    border-radius:34px !important;
+    box-shadow:
+      0 36px 90px rgba(12,16,24,.36),
+      inset 0 1px 0 rgba(255,255,255,.56) !important;
+    backdrop-filter: blur(17px) saturate(110%);
+  }
+}

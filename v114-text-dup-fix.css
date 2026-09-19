@@ -1,0 +1,11 @@
+/* v1.14: PC only text duplication fix, iPhone unchanged */
+@media (min-width:981px){
+  .ref-hero-side{display:none !important;}
+  .ref-slide{display:none !important;}
+  .feature-overlay{display:none !important;}
+  .feature-card img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+}

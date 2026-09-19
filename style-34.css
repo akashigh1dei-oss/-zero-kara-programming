@@ -1,0 +1,6 @@
+/* v1.53 iPhone glossary operation fix: PCと同じく検索欄を常時表示。 */
+@media (max-width:980px){
+  #glossaryNameMode{display:none!important}
+  #glossaryNamePanel{display:block!important}
+  #glossaryNamePanel[hidden]{display:block!important}
+}

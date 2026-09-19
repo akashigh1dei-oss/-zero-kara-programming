@@ -1,0 +1,260 @@
+/* v1.28: PC記事一覧をクール寄りに。柄なし・ダークグラデーション。iPhoneは変更しない */
+@media (min-width:981px){
+  #lessons{
+    position:relative !important;
+    padding:76px 3vw 96px !important;
+    background:
+      radial-gradient(circle at 16% 12%, rgba(255,255,255,.10), transparent 14%),
+      radial-gradient(circle at 86% 18%, rgba(255,255,255,.08), transparent 18%),
+      linear-gradient(135deg, #12141b 0%, #1c2330 24%, #2f3442 46%, #6a626e 76%, #ddd0c6 100%) !important;
+    overflow:hidden !important;
+  }
+
+  #lessons::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 32%),
+      linear-gradient(90deg, rgba(255,255,255,.04), transparent 30%, transparent 70%, rgba(255,255,255,.03));
+    pointer-events:none !important;
+  }
+
+  #lessons::after{
+    content:"LESSONS" !important;
+    position:absolute !important;
+    right:56px !important;
+    top:34px !important;
+    font-size:82px !important;
+    font-weight:800 !important;
+    letter-spacing:.22em !important;
+    color:rgba(255,255,255,.08) !important;
+    z-index:0 !important;
+  }
+
+  #lessons > .card{
+    position:relative !important;
+    z-index:1 !important;
+    max-width:860px !important;
+    margin:0 auto !important;
+    padding:42px 42px 40px !important;
+    background:linear-gradient(180deg, rgba(255,255,255,.84), rgba(250,246,242,.74)) !important;
+    border:1px solid rgba(255,255,255,.28) !important;
+    border-radius:34px !important;
+    box-shadow:
+      0 34px 90px rgba(10,13,21,.40),
+      inset 0 1px 0 rgba(255,255,255,.38) !important;
+    backdrop-filter: blur(16px) saturate(108%);
+  }
+
+  #lessons > .card > h1{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:16px !important;
+    margin:0 0 10px !important;
+    padding:0 !important;
+    background:none !important;
+    color:#171a22 !important;
+    box-shadow:none !important;
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif !important;
+    font-size:46px !important;
+    letter-spacing:.08em !important;
+    border:none !important;
+  }
+
+  #lessons > .card > h1::before{
+    content:"" !important;
+    display:inline-block !important;
+    width:62px !important;
+    height:4px !important;
+    border-radius:99px !important;
+    background:linear-gradient(90deg,#2d3444,#7d8596) !important;
+  }
+
+  #lessons .lessons-lead{
+    margin:0 0 22px !important;
+    color:#646870 !important;
+    font-size:14px !important;
+    line-height:1.8 !important;
+    letter-spacing:.04em !important;
+  }
+
+  #lessons .section-homebar{
+    display:flex !important;
+    justify-content:flex-end !important;
+    margin:-2px 0 20px !important;
+  }
+
+  #lessons .section-homebar .btn{
+    min-width:176px !important;
+    padding:12px 18px !important;
+    border-radius:999px !important;
+    border:1px solid rgba(46,56,74,.18) !important;
+    background:rgba(255,255,255,.70) !important;
+    color:#2f394d !important;
+    font-weight:700 !important;
+    box-shadow:0 10px 22px rgba(34,40,54,.08) !important;
+  }
+
+  #lessons .article-sort-wrap{
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin:0 0 28px !important;
+  }
+
+  #lessons .article-sort-label{
+    font-size:13px !important;
+    font-weight:700 !important;
+    color:#666a73 !important;
+    margin-right:4px !important;
+    letter-spacing:.06em !important;
+  }
+
+  #lessons .article-sort-btn{
+    border-radius:999px !important;
+    padding:10px 16px !important;
+    border:1px solid rgba(67,74,87,.13) !important;
+    background:rgba(255,255,255,.74) !important;
+    color:#42474f !important;
+    font-weight:700 !important;
+    box-shadow:0 4px 10px rgba(68,52,60,.04) !important;
+  }
+
+  #lessons .article-sort-btn.active{
+    background:linear-gradient(135deg,#1d2230,#3e4558) !important;
+    color:#fff !important;
+    border-color:transparent !important;
+    box-shadow:0 16px 30px rgba(31,39,57,.24) !important;
+  }
+
+  #lessons > .card > .card{
+    position:relative !important;
+    overflow:hidden !important;
+    margin:0 auto 26px !important;
+    max-width:760px !important;
+    padding:34px 32px 30px 36px !important;
+    border:none !important;
+    border-radius:24px !important;
+    background:
+      linear-gradient(140deg, rgba(255,255,255,.98), rgba(244,241,238,.92) 100%) !important;
+    box-shadow:
+      0 22px 44px rgba(34,38,50,.12),
+      inset 0 1px 0 rgba(255,255,255,.5) !important;
+  }
+
+  #lessons > .card > .card::before{
+    content:"FEATURED" !important;
+    position:absolute !important;
+    right:22px !important;
+    top:18px !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    letter-spacing:.18em !important;
+    color:#7c8491 !important;
+  }
+
+  #lessons > .card > .card::after{
+    content:"" !important;
+    position:absolute !important;
+    left:0 !important;
+    top:0 !important;
+    bottom:0 !important;
+    width:10px !important;
+    background:linear-gradient(180deg,#202632,#586077) !important;
+  }
+
+  #lessons > .card > .card h2{
+    margin:0 0 14px !important;
+    padding-right:110px !important;
+    font-size:32px !important;
+    line-height:1.35 !important;
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif !important;
+    color:#171a20 !important;
+  }
+
+  #lessons > .card > .card p{
+    color:#565c65 !important;
+    line-height:1.82 !important;
+  }
+
+  #lessons .lesson-item{
+    position:relative !important;
+    display:grid !important;
+    grid-template-columns:minmax(0, 1fr) 112px !important;
+    align-items:center !important;
+    gap:24px !important;
+    max-width:760px !important;
+    margin:16px auto !important;
+    padding:24px 24px 24px 30px !important;
+    border:none !important;
+    border-radius:22px !important;
+    background:rgba(255,255,255,.86) !important;
+    box-shadow:
+      0 14px 28px rgba(34,38,50,.10),
+      inset 0 1px 0 rgba(255,255,255,.38) !important;
+  }
+
+  #lessons .lesson-item::before{
+    content:"" !important;
+    position:absolute !important;
+    left:0 !important;
+    top:16px !important;
+    bottom:16px !important;
+    width:6px !important;
+    border-radius:999px !important;
+    background:linear-gradient(180deg,#262d3a,#697287) !important;
+  }
+
+  #lessons .lesson-item > div{
+    min-width:0 !important;
+  }
+
+  #lessons .lesson-item b{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-width:88px !important;
+    margin:0 0 8px !important;
+    padding:7px 12px !important;
+    border-radius:999px !important;
+    background:linear-gradient(135deg,#e4e8ee,#f7f8fa) !important;
+    color:#4b566b !important;
+    font-size:13px !important;
+    letter-spacing:.08em !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.7) !important;
+  }
+
+  #lessons .lesson-item br{
+    display:none !important;
+  }
+
+  #lessons .lesson-item .muted,
+  #lessons .lesson-item small{
+    display:block !important;
+    color:#767b84 !important;
+    font-size:13px !important;
+    margin-top:6px !important;
+  }
+
+  #lessons .lesson-item .btn.small,
+  #lessons > .card > .card .btn{
+    width:100% !important;
+    justify-content:center !important;
+    text-align:center !important;
+    border:none !important;
+    border-radius:13px !important;
+    padding:13px 16px !important;
+    background:linear-gradient(135deg,#12151d,#2f3444) !important;
+    color:#fff !important;
+    font-weight:700 !important;
+    box-shadow:0 14px 28px rgba(18,22,31,.24) !important;
+  }
+
+  #lessons .lesson-item:hover,
+  #lessons > .card > .card:hover{
+    transform:translateY(-2px) !important;
+    transition:.22s ease !important;
+  }
+}

@@ -1,0 +1,97 @@
+/* v1.48: translation controls are visually separated from navigation.
+   Translation JavaScript is intentionally unchanged. */
+.translation-zone-title,.ref-translation-heading{
+  font-weight:800;
+  letter-spacing:.02em;
+}
+@media (max-width:980px){
+  body > header .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  body > header .topbar .version{flex:0 0 auto}
+  body > header .mobile-translation-zone{
+    margin:14px auto 0;
+    padding:14px;
+    max-width:1180px;
+    background:#fffaf5;
+    border:1px solid #ddd2c8;
+    border-radius:12px;
+    box-sizing:border-box;
+  }
+  body > header .translation-zone-title{
+    margin:0 0 10px;
+    color:#171514;
+    font-size:.95rem;
+  }
+  body > header .mobile-translation-zone .langbox{
+    width:100%;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:10px;
+    align-items:center;
+  }
+  body > header .mobile-translation-zone #languageSelect{
+    width:100%;
+    min-width:0;
+  }
+  body > header .mobile-translation-zone #langStatus{
+    grid-column:1 / -1;
+    display:block;
+    min-width:0;
+    line-height:1.45;
+    overflow-wrap:anywhere;
+  }
+  body > header .mobile-translation-zone #onlineTranslateButton{
+    white-space:nowrap;
+  }
+  body > header > nav{
+    margin-top:16px!important;
+    padding-top:12px;
+    border-top:1px solid rgba(23,21,20,.10);
+  }
+}
+@media (min-width:981px){
+  .ref-translation-panel{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+    margin:0;
+    padding:14px 30px;
+    background:#fbf6f1;
+    border-top:1px solid #eee4db;
+    border-bottom:1px solid #e7ddd4;
+  }
+  .ref-translation-heading{
+    color:#3a322e;
+    font-size:.95rem;
+    white-space:nowrap;
+  }
+  .ref-translation-controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:0;
+  }
+  .ref-translation-controls .lang{
+    min-width:180px;
+    max-width:260px;
+    border:1px solid #c9c2ba;
+    border-radius:7px;
+    padding:10px 14px;
+    background:#fffaf6;
+  }
+  .ref-translation-controls .translate-btn{
+    border:0;
+    background:#171717;
+    color:#fff;
+    border-radius:7px;
+    padding:11px 18px;
+    font-weight:700;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+}

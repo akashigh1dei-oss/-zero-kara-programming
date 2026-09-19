@@ -1,0 +1,13 @@
+@media (min-width:981px){
+  .ref-dashboard .featured .feature-card{
+    position:relative!important; overflow:hidden!important;
+    border:3px solid rgba(255,255,255,.95)!important; border-radius:24px!important;
+    background:linear-gradient(135deg,#fff4cf 0%,#ffe6ee 52%,#e7f4ff 100%)!important;
+    box-shadow:0 14px 36px rgba(0,0,0,.18)!important;
+    transform:translateY(-2px); cursor:pointer;
+  }
+  .ref-dashboard .featured .feature-card:before{content:"NEW";position:absolute;right:18px;top:16px;z-index:2;font-size:12px;font-weight:900;letter-spacing:.12em;background:#111;color:#fff;padding:6px 10px;border-radius:999px}
+  .ref-dashboard .featured .feature-card .feature-copy{padding:28px 30px!important;min-height:210px!important}
+  .ref-dashboard .featured .feature-card h4{font-size:clamp(28px,2.7vw,40px)!important;padding-right:70px}
+  .ref-dashboard .featured .feature-card strong{display:inline-block;width:max-content;background:#111;color:#fff!important;padding:10px 16px;border-radius:999px}
+}

@@ -1,0 +1,25 @@
+.section-homebar{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:10px;
+  margin:10px 0 18px;
+}
+#roadmap > .section-homebar{
+  padding:18px 20px 0;
+  margin:0;
+}
+@media (min-width:981px){
+  .section-homebar{
+    justify-content:flex-end;
+  }
+  #lessons .section-homebar,
+  #glossary .section-homebar,
+  #profile .section-homebar{
+    margin:-8px 0 18px;
+  }
+  #roadmap > .section-homebar{
+    justify-content:flex-end;
+    padding:18px 24px 0;
+  }
+}

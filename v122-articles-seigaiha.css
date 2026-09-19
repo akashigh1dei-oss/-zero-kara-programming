@@ -1,0 +1,25 @@
+/* v1.22: PC記事一覧だけに薄い青海波柄。iPhone側は変更しない。 */
+@media (min-width:981px){
+  #lessons{
+    background-color:#f8f4ee !important;
+    background-image:
+      radial-gradient(circle at 50% 100%, transparent 23px, rgba(125,115,105,.10) 24px, rgba(125,115,105,.10) 25px, transparent 26px),
+      radial-gradient(circle at 0% 100%, transparent 23px, rgba(125,115,105,.10) 24px, rgba(125,115,105,.10) 25px, transparent 26px),
+      radial-gradient(circle at 100% 100%, transparent 23px, rgba(125,115,105,.10) 24px, rgba(125,115,105,.10) 25px, transparent 26px);
+    background-size:52px 26px;
+    background-position:0 0,26px 0,26px 0;
+    padding:26px 3vw 42px !important;
+  }
+
+  #lessons > .card{
+    background:rgba(255,255,255,.93) !important;
+    backdrop-filter:blur(1px);
+    border:1px solid rgba(190,180,170,.45);
+    box-shadow:0 8px 28px rgba(80,65,55,.06);
+  }
+
+  #lessons .lesson-item,
+  #lessons > .card > .card{
+    background:rgba(255,255,255,.92) !important;
+  }
+}

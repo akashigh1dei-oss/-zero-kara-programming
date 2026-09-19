@@ -1,0 +1,20 @@
+@media (min-width:981px){
+  .ref-actions .lang{
+    border:1px solid #c9c2ba !important;
+    border-radius:7px !important;
+    padding:11px 12px !important;
+    background:#fffaf6 !important;
+    color:#171717 !important;
+    font-size:13px !important;
+    min-width:120px;
+  }
+  .ref-actions .translate-btn{
+    border:1px solid #ca2f61 !important;
+    background:#ca2f61 !important;
+    color:#fff !important;
+    border-radius:7px !important;
+    padding:12px 16px !important;
+    font-weight:700 !important;
+    cursor:pointer !important;
+  }
+}
