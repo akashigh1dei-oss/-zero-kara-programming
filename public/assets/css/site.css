@@ -3784,3 +3784,15 @@ button,a,.btn,.translate-btn{max-width:100%}
     box-shadow:0 7px 16px rgba(145,70,74,.18);
   }
 }
+
+/* v2.34 PC featured card styled like Latest Articles */
+@media (min-width:981px){
+ .ref-dashboard .featured,.ref-dashboard .featured .feature-card,.ref-dashboard .featured .feature-card .feature-copy{
+  min-width:0!important;max-width:100%!important;box-sizing:border-box!important;overflow:hidden!important}
+ .ref-dashboard .featured .feature-card .feature-copy{min-height:0!important;padding:18px 20px!important}
+ .ref-dashboard .featured .feature-card h4{
+  font-size:clamp(20px,1.7vw,27px)!important;line-height:1.35!important;letter-spacing:.01em!important;
+  padding-right:58px!important;margin:8px 0 10px!important;max-width:100%!important;overflow-wrap:anywhere!important}
+ .ref-dashboard .featured .feature-card p{font-size:14px!important;line-height:1.65!important;max-width:100%!important;overflow-wrap:anywhere!important}
+ .ref-dashboard .featured .feature-card:before{right:12px!important;top:12px!important;font-size:10px!important;padding:5px 8px!important}
+}
