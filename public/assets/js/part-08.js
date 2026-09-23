@@ -15,3 +15,37 @@ function renderStoryQuiz(){const q=storyQuizQuestions[storyQuizIndex];document.g
 function answerStoryQuiz(i,b){if(storyQuizAnswers[storyQuizIndex]!==undefined)return;const q=storyQuizQuestions[storyQuizIndex];storyQuizAnswers[storyQuizIndex]=i;document.querySelectorAll('#storyQuizOptions button').forEach(x=>x.disabled=true);document.getElementById('storyQuizFeedback').textContent=(i===q.a?'正解！ ':'もう一歩。 ')+q.w;document.getElementById('storyQuizNext').hidden=false;}
 function finishStoryQuiz(){const score=storyQuizQuestions.filter((q,i)=>q.a===storyQuizAnswers[i]).length;document.getElementById('storyQuizCounter').textContent='10問回答完了';document.getElementById('storyQuizBar').style.width='100%';document.getElementById('storyQuizQuestion').textContent='結果：10問中 '+score+'問正解';document.getElementById('storyQuizHint').textContent=score===10?'全問正解です。第18〜20回の要点をしっかりつかめています。':'間違えた問題を下で確認して、もう一度挑戦できます。';document.getElementById('storyQuizOptions').innerHTML='';document.getElementById('storyQuizFeedback').textContent='';document.getElementById('storyQuizNext').hidden=true;document.getElementById('storyQuizRetry').hidden=false;document.getElementById('storyQuizPrev').hidden=false;const r=document.getElementById('storyQuizReview');r.innerHTML='';storyQuizQuestions.forEach((q,i)=>{if(q.a===storyQuizAnswers[i])return;const p=document.createElement('p');p.className='note';p.textContent='第'+(i+1)+'問：正解は「'+q.o[q.a]+'」。'+q.w;r.appendChild(p)});}
 document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.getElementById('storyQuizPrev').addEventListener('click',()=>{if(storyQuizIndex>0){storyQuizIndex--;renderStoryQuiz();}});document.getElementById('storyQuizNext').addEventListener('click',()=>{if(storyQuizIndex===9)finishStoryQuiz();else{storyQuizIndex++;renderStoryQuiz();}});document.getElementById('storyQuizRetry').addEventListener('click',()=>{storyQuizIndex=0;storyQuizAnswers=[];document.getElementById('storyQuizRetry').hidden=true;document.getElementById('storyQuizReview').innerHTML='';renderStoryQuiz();});});
+
+
+/* v2.31 robust list sorting */
+(function(){
+  function numOf(el){
+    var m=(el.textContent||"").match(/第\s*(\d+)\s*回/);
+    return m ? parseInt(m[1],10) : Number.MAX_SAFE_INTEGER;
+  }
+  function setup(pageId,newestId,ascId){
+    var page=document.getElementById(pageId), newest=document.getElementById(newestId), asc=document.getElementById(ascId);
+    if(!page||!newest||!asc) return;
+    var items=Array.from(page.querySelectorAll(':scope > .card > .lesson-item'));
+    if(!items.length) items=Array.from(page.querySelectorAll('.lesson-item'));
+    items.forEach(function(el,i){ if(!el.dataset.v231Original) el.dataset.v231Original=String(i); });
+    function apply(mode){
+      var parent=items[0] && items[0].parentNode;
+      if(!parent) return;
+      var sorted=items.slice().sort(function(a,b){
+        var na=numOf(a), nb=numOf(b);
+        if(na===nb) return (+a.dataset.v231Original)-(+b.dataset.v231Original);
+        return mode==='asc' ? na-nb : nb-na;
+      });
+      sorted.forEach(function(el){ parent.appendChild(el); });
+      newest.classList.toggle('active',mode==='newest');
+      asc.classList.toggle('active',mode==='asc');
+      newest.setAttribute('aria-pressed',mode==='newest'?'true':'false');
+      asc.setAttribute('aria-pressed',mode==='asc'?'true':'false');
+    }
+    newest.addEventListener('click',function(e){e.preventDefault();apply('newest');});
+    asc.addEventListener('click',function(e){e.preventDefault();apply('asc');});
+  }
+  function init(){setup('lessons','sortNewestBtn','sortAscBtn');setup('editorialIndex','editorialNewestBtn','editorialAscBtn');}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
