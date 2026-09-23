@@ -3637,3 +3637,83 @@ button,a,.btn,.translate-btn{max-width:100%}
 #contactQuickV181:focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
 @media(max-width:720px){#contactQuickV181{right:12px;bottom:12px;padding:13px 17px}}
 
+
+
+/* ===== v2.29 iPhone navigation/layout repair ===== */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden !important; max-width: 100% !important; }
+  body { padding-top: env(safe-area-inset-top, 0px); }
+
+  header, main, .page, .card { max-width: 100% !important; box-sizing: border-box !important; }
+
+  /* Main navigation: no more clipped horizontal strip */
+  header nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    padding: 12px 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  header nav button {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 11px 6px !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Remove the duplicated outer "ホームへ戻る" strip seen above cards */
+  main > .page > .section-homebar,
+  main > .page > .page-homebar {
+    display: none !important;
+  }
+
+  /* In-card home bar stays, but compact */
+  .card > .section-homebar {
+    margin: 0 0 24px 0 !important;
+  }
+  .card > .section-homebar .btn {
+    width: auto !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Lists and cards */
+  main { padding-left: 14px !important; padding-right: 14px !important; }
+  .page .card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+  }
+  .article-sort-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+  .article-sort-label { flex: 0 0 100% !important; text-align: left !important; }
+  .article-sort-btn { flex: 1 1 135px !important; min-width: 0 !important; }
+
+  .article-nav, .lesson-pager, .lesson-return {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  .article-nav .btn, .lesson-pager .btn, .lesson-return .btn {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  h1 { overflow-wrap: anywhere !important; }
+}
+
+/* v2.29 version marker */
