@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mmdei.com/sitemap.xml
+Sitemap: https://zero-kara-prog.mmdei.workers.dev/sitemap.xml
