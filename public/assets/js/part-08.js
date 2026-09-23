@@ -17,35 +17,38 @@ function finishStoryQuiz(){const score=storyQuizQuestions.filter((q,i)=>q.a===st
 document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.getElementById('storyQuizPrev').addEventListener('click',()=>{if(storyQuizIndex>0){storyQuizIndex--;renderStoryQuiz();}});document.getElementById('storyQuizNext').addEventListener('click',()=>{if(storyQuizIndex===9)finishStoryQuiz();else{storyQuizIndex++;renderStoryQuiz();}});document.getElementById('storyQuizRetry').addEventListener('click',()=>{storyQuizIndex=0;storyQuizAnswers=[];document.getElementById('storyQuizRetry').hidden=true;document.getElementById('storyQuizReview').innerHTML='';renderStoryQuiz();});});
 
 
-/* v2.31 robust list sorting */
+
+
+
+
+/* v2.33 sorting: verified direct DOM reorder */
 (function(){
-  function numOf(el){
-    var m=(el.textContent||"").match(/第\s*(\d+)\s*回/);
-    return m ? parseInt(m[1],10) : Number.MAX_SAFE_INTEGER;
-  }
-  function setup(pageId,newestId,ascId){
-    var page=document.getElementById(pageId), newest=document.getElementById(newestId), asc=document.getElementById(ascId);
-    if(!page||!newest||!asc) return;
-    var items=Array.from(page.querySelectorAll(':scope > .card > .lesson-item'));
-    if(!items.length) items=Array.from(page.querySelectorAll('.lesson-item'));
-    items.forEach(function(el,i){ if(!el.dataset.v231Original) el.dataset.v231Original=String(i); });
-    function apply(mode){
-      var parent=items[0] && items[0].parentNode;
-      if(!parent) return;
-      var sorted=items.slice().sort(function(a,b){
-        var na=numOf(a), nb=numOf(b);
-        if(na===nb) return (+a.dataset.v231Original)-(+b.dataset.v231Original);
-        return mode==='asc' ? na-nb : nb-na;
-      });
-      sorted.forEach(function(el){ parent.appendChild(el); });
-      newest.classList.toggle('active',mode==='newest');
-      asc.classList.toggle('active',mode==='asc');
-      newest.setAttribute('aria-pressed',mode==='newest'?'true':'false');
-      asc.setAttribute('aria-pressed',mode==='asc'?'true':'false');
-    }
-    newest.addEventListener('click',function(e){e.preventDefault();apply('newest');});
-    asc.addEventListener('click',function(e){e.preventDefault();apply('asc');});
-  }
-  function init(){setup('lessons','sortNewestBtn','sortAscBtn');setup('editorialIndex','editorialNewestBtn','editorialAscBtn');}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+ function n(el){var m=(el.textContent||'').match(/第\s*(\d+)\s*回/);return m?+m[1]:999999;}
+ function init(pageId,newId,ascId){
+   var page=document.getElementById(pageId), a=document.getElementById(newId), b=document.getElementById(ascId);
+   if(!page||!a||!b)return;
+   var list=[].slice.call(page.querySelectorAll('.lesson-item')).filter(function(x){return x.closest('.page')===page;});
+   if(!list.length)return;
+   var parent=list[0].parentNode;
+   list=list.filter(function(x){return x.parentNode===parent;});
+   list.forEach(function(x,i){x.dataset.v233Index=i;});
+   var marker=document.createComment('v233-sort-marker');
+   parent.insertBefore(marker,list[0]);
+   function run(mode){
+     var arr=list.slice().sort(function(x,y){
+       var d=n(x)-n(y);
+       if(!d)d=(+x.dataset.v233Index)-(+y.dataset.v233Index);
+       return mode==='asc'?d:-d;
+     });
+     var frag=document.createDocumentFragment();
+     arr.forEach(function(x){frag.appendChild(x);});
+     parent.insertBefore(frag,marker.nextSibling);
+     a.classList.toggle('active',mode==='newest'); b.classList.toggle('active',mode==='asc');
+     a.setAttribute('aria-pressed',mode==='newest'); b.setAttribute('aria-pressed',mode==='asc');
+   }
+   a.addEventListener('click',function(e){e.preventDefault();run('newest');},true);
+   b.addEventListener('click',function(e){e.preventDefault();run('asc');},true);
+ }
+ function boot(){init('lessons','sortNewestBtn','sortAscBtn');init('editorialIndex','editorialNewestBtn','editorialAscBtn');}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
