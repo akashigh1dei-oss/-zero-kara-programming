@@ -3940,10 +3940,10 @@ body.theme-rose main,body.theme-rose-ornate main{position:relative;z-index:11}
   body.theme-rose .page, body.theme-rose-ornate .page{background-image:none!important;box-shadow:revert!important;}
   body.theme-rose .card, body.theme-rose .note, body.theme-rose-ornate .card, body.theme-rose-ornate .note{background-color:revert!important;border-color:revert!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
   body.theme-rose::before, body.theme-rose-ornate::before{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:9998!important;pointer-events:none!important;background-color:transparent!important;background-repeat:no-repeat!important;background-position:center!important;background-size:100% 100%!important;opacity:1!important;}
-  body.theme-rose::before{background-image:url("../img/theme-lineart.png")!important;}
-  body.theme-rose-ornate::before{background-image:url("../img/theme-art.png")!important;}
+  body.theme-rose::before{background-image:url("/assets/img/theme-lineart.png?v=247")!important;}
+  body.theme-rose-ornate::before{background-image:url("/assets/img/theme-art.png?v=247")!important;}
   body.theme-rose::after, body.theme-rose-ornate::after{display:none!important;}
-  .swatch-rose{background-image:url("../img/theme-lineart.png")!important;background-size:cover!important;}
-  .swatch-ornate{background-image:url("../img/theme-art.png")!important;background-size:cover!important;}
+  .swatch-rose{background-image:url("/assets/img/theme-lineart.png?v=247")!important;background-size:cover!important;}
+  .swatch-ornate{background-image:url("/assets/img/theme-art.png?v=247")!important;background-size:cover!important;}
 }
 @media (min-width:981px){body.theme-rose::before,body.theme-rose-ornate::before{display:none!important;}}
