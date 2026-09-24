@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
 /* v2.33 sorting: verified direct DOM reorder */
 (function(){
  function n(el){var m=(el.textContent||'').match(/第\s*(\d+)\s*回/);return m?+m[1]:999999;}
- function init(pageId,newId,ascId){
+ function init(pageId,newId,ascId,defaultMode){
    var page=document.getElementById(pageId), a=document.getElementById(newId), b=document.getElementById(ascId);
    if(!page||!a||!b)return;
    var list=[].slice.call(page.querySelectorAll('.lesson-item')).filter(function(x){return x.closest('.page')===page;});
@@ -46,10 +46,11 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
      a.classList.toggle('active',mode==='newest'); b.classList.toggle('active',mode==='asc');
      a.setAttribute('aria-pressed',mode==='newest'); b.setAttribute('aria-pressed',mode==='asc');
    }
+   if(defaultMode)run(defaultMode);
    a.addEventListener('click',function(e){e.preventDefault();run('newest');},true);
    b.addEventListener('click',function(e){e.preventDefault();run('asc');},true);
  }
- function boot(){init('lessons','sortNewestBtn','sortAscBtn');init('editorialIndex','editorialNewestBtn','editorialAscBtn'); setTimeout(function(){var b=document.getElementById('sortAscBtn');if(b)b.click();},0);}
+ function boot(){init('lessons','sortNewestBtn','sortAscBtn','asc');init('editorialIndex','editorialNewestBtn','editorialAscBtn','newest');}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
 
@@ -88,4 +89,29 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
    });
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+})();
+
+
+/* v2.39: theme picker. Easy to extend by adding a button + CSS class. */
+(function(){
+  var KEY='zeroKaraThemeV239';
+  var allowed=['simple','rose','rose-ornate'];
+  function applyTheme(name){
+    if(allowed.indexOf(name)<0) name='simple';
+    document.body.classList.remove('theme-rose','theme-rose-ornate');
+    if(name==='rose') document.body.classList.add('theme-rose');
+    if(name==='rose-ornate') document.body.classList.add('theme-rose-ornate');
+    document.querySelectorAll('.theme-choice[data-theme]').forEach(function(btn){
+      btn.setAttribute('aria-pressed',String(btn.dataset.theme===name));
+    });
+    try{localStorage.setItem(KEY,name);}catch(e){}
+  }
+  function bootTheme(){
+    var saved='simple'; try{saved=localStorage.getItem(KEY)||'simple';}catch(e){}
+    applyTheme(saved);
+    document.querySelectorAll('.theme-choice[data-theme]').forEach(function(btn){
+      btn.addEventListener('click',function(){applyTheme(btn.dataset.theme);});
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bootTheme);else bootTheme();
 })();
