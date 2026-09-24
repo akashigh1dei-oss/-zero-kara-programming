@@ -3828,24 +3828,27 @@ button,a,.btn,.translate-btn{max-width:100%}
 .v235-course-nav .v235-jump{display:none!important;}
 
 
-/* v2.39: selectable page themes. Content layout is unchanged; only the outer frame changes. */
-.theme-picker{margin:0 0 18px;padding:14px 16px;background:rgba(255,255,255,.96);position:relative;z-index:2}
+/* v2.40: three clearly distinct selectable frames. Page content itself is unchanged. */
+.theme-picker{margin:0 0 18px;padding:14px 16px;background:rgba(255,255,255,.96);position:relative;z-index:20}
 .theme-picker-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
 .theme-picker-head .muted{font-size:.82rem}
 .theme-picker-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
-.theme-choice{appearance:none;border:1px solid #d8d2ce;border-radius:14px;background:#fff;color:#332d2f;padding:9px;display:flex;align-items:center;gap:9px;justify-content:center;font:inherit;font-weight:750;cursor:pointer;min-height:54px}
+.theme-choice{appearance:none;border:1px solid #d8d2ce;border-radius:14px;background:#fff;color:#332d2f;padding:9px;display:flex;align-items:center;gap:9px;justify-content:center;font:inherit;font-weight:750;cursor:pointer;min-height:58px}
 .theme-choice[aria-pressed="true"]{border-color:#c45d79;box-shadow:0 0 0 2px rgba(196,93,121,.13)}
-.theme-swatch{width:34px;height:34px;border-radius:10px;flex:0 0 auto;border:1px solid #e7deda;background:#faf8f5}
-.swatch-simple{background:linear-gradient(135deg,#f5f7f6,#fff)}
-.swatch-rose{background:radial-gradient(circle at 22% 22%,transparent 0 6px,#e8a2b3 6.5px 7.5px,transparent 8px),linear-gradient(135deg,#fffaf8,#fff)}
-.swatch-ornate{background:radial-gradient(circle at 20% 20%,transparent 0 5px,#d98ca1 5.5px 6.5px,transparent 7px),radial-gradient(circle at 80% 80%,transparent 0 5px,#d6aa77 5.5px 6.5px,transparent 7px),linear-gradient(135deg,#fff9f6,#fff)}
+.theme-swatch{width:42px;height:42px;border-radius:10px;flex:0 0 auto;border:1px solid #e7deda;background:#faf8f5;background-size:cover;background-position:center}
+.swatch-simple{background:linear-gradient(135deg,#fbf8f4,#fff)}
+.swatch-rose{background-color:#fffaf8;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23df8fa4' stroke-width='2'%3E%3Cpath d='M2 98C8 64 8 34 31 6M31 6c-18 0-22 18-9 25 12 6 27-5 22-18C40 3 27 1 19 9c-8 8-5 20 5 23M8 70c15-1 22-8 25-19M9 51c11 2 17 7 20 16'/%3E%3C/g%3E%3C/svg%3E")}
+.swatch-ornate{background-color:#fff9f6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23d67891' stroke-width='2'%3E%3Cpath d='M2 98C9 66 7 30 32 5M32 5c-18 0-24 18-10 27 13 8 31-4 25-19C42 1 27 0 18 10c-10 11-4 25 8 27M7 77c18-3 25-11 29-25M7 55c13 1 20 7 25 18M22 92c16-7 31-8 47-2M56 90c8-11 18-18 38-20'/%3E%3C/g%3E%3Cg fill='none' stroke='%23cba06d' stroke-width='1'%3E%3Cpath d='M1 95Q25 78 45 95T99 91M6 42Q20 34 29 45T52 44'/%3E%3C/g%3E%3C/svg%3E")}
+
 body.theme-rose,body.theme-rose-ornate{background:#fbf8f4}
-body.theme-rose::before,body.theme-rose-ornate::before{content:"";position:fixed;z-index:1;pointer-events:none;inset:8px;border-radius:20px}
-body.theme-rose::before{border:1px solid rgba(216,121,146,.42);box-shadow:inset 0 0 0 5px rgba(255,255,255,.42)}
-body.theme-rose::after,body.theme-rose-ornate::after{position:fixed;z-index:1;pointer-events:none;color:rgba(205,105,133,.52);font-family:Georgia,"Times New Roman",serif;line-height:1;white-space:pre}
-body.theme-rose::after{content:"❦  ♡  ❦";font-size:19px;left:50%;bottom:11px;transform:translateX(-50%);letter-spacing:7px}
-body.theme-rose-ornate::before{inset:7px;border:1px solid rgba(205,105,133,.48);box-shadow:inset 0 0 0 4px rgba(255,255,255,.65),inset 0 0 0 6px rgba(205,164,112,.24),inset 0 0 0 10px rgba(255,255,255,.6)}
-body.theme-rose-ornate::after{content:"❦  ❧     ❦  ❧";font-size:22px;left:50%;bottom:9px;transform:translateX(-50%);letter-spacing:9px;color:rgba(190,93,121,.58);text-shadow:0 -1px 0 rgba(205,164,112,.25)}
-body.theme-rose main,body.theme-rose-ornate main{position:relative;z-index:2}
-@media(max-width:760px){.theme-picker-options{grid-template-columns:1fr}.theme-choice{justify-content:flex-start;padding-left:14px}body.theme-rose::before,body.theme-rose-ornate::before{inset:4px;border-radius:15px}}
+body.theme-rose::before,body.theme-rose-ornate::before,
+body.theme-rose::after,body.theme-rose-ornate::after{content:"";position:fixed;pointer-events:none;z-index:10;background-repeat:no-repeat}
+/* ② 上品な薔薇: thin single-line rose vines only at the outer edge. */
+body.theme-rose::before{inset:4px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1800' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23dc91a5' stroke-width='2.1' opacity='.72'%3E%3Cpath d='M25 340C18 210 36 92 128 24M128 24c-59-6-94 46-62 91 28 39 94 25 103-22 8-43-34-82-76-61-34 17-37 61-8 82 25 18 63 5 67-24 4-26-24-44-45-28-17 13-11 38 8 44M26 155c55 10 78 42 91 91M24 256c43-6 72-31 86-74M1175 340c7-130-11-248-103-316M1072 24c59-6 94 46 62 91-28 39-94 25-103-22-8-43 34-82 76-61 34 17 37 61 8 82-25 18-63 5-67-24-4-26 24-44 45-28 17 13 11 38-8 44M1174 155c-55 10-78 42-91 91M1176 256c-43-6-72-31-86-74M25 1460c-5 145 29 252 126 316M151 1776c-61 7-97-46-64-92 29-40 97-25 106 23 8 44-35 84-78 62-35-18-38-63-8-84 26-19 65-5 69 25M1175 1460c5 145-29 252-126 316M1049 1776c61 7 97-46 64-92-29-40-97-25-106 23-8 44 35 84 78 62 35-18 38-63 8-84-26-19-65-5-69 25'/%3E%3Cpath d='M25 340V1460M1175 340V1460' stroke-width='1.3' opacity='.55'/%3E%3C/g%3E%3C/svg%3E");background-size:100% 100%}
+/* ③ 装飾フレーム: more elaborate rose scrollwork, still kept outside content. */
+body.theme-rose-ornate::before{inset:3px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1800' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23d77f98' stroke-width='2.2' opacity='.78'%3E%3Cpath d='M22 420C16 245 28 100 125 24M125 24c-62-8-99 48-65 95 30 41 100 26 109-24 9-45-36-86-80-64-36 18-39 65-8 87 27 19 67 5 72-26 4-27-25-47-47-30-18 14-12 40 9 47M22 170c62 4 91 39 106 94M22 280c51-2 85-28 105-78M25 390c46-16 76-4 102 30M1178 420c6-175-6-320-103-396M1075 24c62-8 99 48 65 95-30 41-100 26-109-24-9-45 36-86 80-64 36 18 39 65 8 87-27 19-67 5-72-26-4-27 25-47 47-30 18 14 12 40-9 47M1178 170c-62 4-91 39-106 94M1178 280c-51-2-85-28-105-78M1175 390c-46-16-76-4-102 30M22 1380c-6 175 6 320 103 396M125 1776c-62 8-99-48-65-95 30-41 100-26 109 24 9 45-36 86-80 64-36-18-39-65-8-87 27-19 67-5 72 26M1178 1380c6 175-6 320-103 396M1075 1776c62 8 99-48 65-95-30-41-100-26-109 24-9 45 36 86 80 64 36-18 39-65 8-87-27-19-67-5-72 26'/%3E%3Cpath d='M22 420V1380M1178 420V1380' stroke-width='1.25' opacity='.58'/%3E%3C/g%3E%3Cg fill='none' stroke='%23c99b65' stroke-width='1.2' opacity='.5'%3E%3Cpath d='M150 20Q320 70 470 20T760 20T1050 20M150 1780Q320 1730 470 1780T760 1780T1050 1780'/%3E%3C/g%3E%3C/svg%3E");background-size:100% 100%}
+body.theme-rose-ornate::after{inset:13px;border:1px solid rgba(203,155,101,.22);border-radius:18px}
+body.theme-rose main,body.theme-rose-ornate main{position:relative;z-index:11}
+@media(max-width:760px){.theme-picker-options{grid-template-columns:1fr}.theme-choice{justify-content:flex-start;padding-left:14px}body.theme-rose::before,body.theme-rose-ornate::before{inset:1px}body.theme-rose-ornate::after{inset:7px;border-radius:12px}}
 @media(min-width:981px){#home>.theme-picker{display:block!important;max-width:1080px;margin:0 auto 18px}}
+
