@@ -3798,3 +3798,25 @@ button,a,.btn,.translate-btn{max-width:100%}
 }
 
 .v235-course-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:18px}.v235-course-nav .v235-select{width:auto;min-width:96px}.v235-jump{display:inline-flex;gap:6px;align-items:center}.v235-jump input{width:72px;padding:10px;border:1px solid #ccc;border-radius:10px}
+
+
+/* ===== v2.36 learning navigation: aligned 3-column premium controls ===== */
+.v235-course-nav{
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:10px!important;width:100%!important;box-sizing:border-box!important;
+ margin:0 0 20px!important;padding:14px!important;
+ border:1px solid rgba(111,93,76,.18)!important;border-radius:22px!important;
+ background:#fffdf9!important;box-shadow:0 10px 28px rgba(55,43,34,.06)!important;
+}
+.v235-course-nav>.btn,.v235-course-nav>.v235-select,.v235-course-nav>.v235-jump{
+ width:100%!important;min-width:0!important;box-sizing:border-box!important;margin:0!important;
+ min-height:52px!important;border-radius:15px!important;
+}
+.v235-course-nav>button:nth-child(1){background:#f5efe5!important;color:#594d41!important;border-color:#e6dbcf!important}
+.v235-course-nav>button:nth-child(2){background:#2a6952!important;color:#fff!important;border-color:#2a6952!important}
+.v235-course-nav>button:nth-child(3){background:#c16c4b!important;color:#fff!important;border-color:#c16c4b!important}
+.v235-course-nav .v235-select{grid-column:1;padding:0 14px!important;background:#edf2ec!important;color:#375c48!important;border:1px solid #d7e2d8!important;font-weight:700!important}
+.v235-course-nav .v235-jump{grid-column:2 / 4;display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}
+.v235-course-nav .v235-jump input{width:100%!important;min-width:0!important;height:52px!important;padding:0 14px!important;border:1px solid #ddd4c9!important;border-radius:15px!important;background:#faf8f4!important;font:inherit!important;box-sizing:border-box!important}
+.v235-course-nav .v235-jump button{width:100%!important;min-width:0!important;height:52px!important;background:#dfe7d9!important;color:#375c48!important;border:1px solid #d2ddcd!important;border-radius:15px!important;font-weight:700!important}
+@media(max-width:760px){.v235-course-nav{gap:8px!important;padding:10px!important}.v235-course-nav>.btn{padding:11px 5px!important;font-size:14px!important}.v235-course-nav .v235-select,.v235-course-nav .v235-jump input,.v235-course-nav .v235-jump button{font-size:14px!important}}
