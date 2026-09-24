@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
    a.addEventListener('click',function(e){e.preventDefault();run('newest');},true);
    b.addEventListener('click',function(e){e.preventDefault();run('asc');},true);
  }
- function boot(){init('lessons','sortNewestBtn','sortAscBtn');init('editorialIndex','editorialNewestBtn','editorialAscBtn');}
+ function boot(){init('lessons','sortNewestBtn','sortAscBtn');init('editorialIndex','editorialNewestBtn','editorialAscBtn'); setTimeout(function(){var b=document.getElementById('sortAscBtn');if(b)b.click();},0);}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
 
