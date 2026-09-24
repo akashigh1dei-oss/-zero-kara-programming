@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 /* v2.15: local-only learning history. No account, email address, or password is required. */
 function v215LearningIds(){
   return Array.from(document.querySelectorAll('section.page[id]')).map(function(el){return el.id;}).filter(function(id){
-    return /^lesson\d+$/.test(id) || /Lecture\d+(?:_p\d+)?$/.test(id);
+    return /^lesson\d+$/.test(id) || /^jsLecture\d+p\d+$/.test(id) || /^(?:python|sql|api)Lecture\d+(?:_p\d+)?$/.test(id) || /^languageStory\d+$/.test(id) || /^jsStory\d+$/.test(id);
   });
 }
 function v215LoadState(){

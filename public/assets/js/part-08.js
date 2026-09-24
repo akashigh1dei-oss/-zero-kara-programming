@@ -52,3 +52,41 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
  function boot(){init('lessons','sortNewestBtn','sortAscBtn');init('editorialIndex','editorialNewestBtn','editorialAscBtn');}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
+
+
+/* v2.35: unified learning navigation. Site-wide lesson numbers are the source of truth. */
+(function(){
+ function lessonRows(){
+   var page=document.getElementById('lessons'); if(!page)return [];
+   return [].slice.call(page.querySelectorAll('.lesson-item')).map(function(row){
+     var m=(row.textContent||'').match(/第\s*(\d+)\s*回/), b=row.querySelector('button[onclick]');
+     var x=b&&b.getAttribute('onclick')||'', idm=x.match(/showPage\(['\"]([^'\"]+)/), om=x.match(/openLesson\((\d+)\)/);
+     return m?{n:+m[1],id:idm?idm[1]:(om?'lesson'+om[1]:null),title:(row.querySelector('div')||row).textContent.trim()}:null;
+   }).filter(function(x){return x&&x.id;}).sort(function(a,b){return a.n-b.n;});
+ }
+ function rootFor(id){
+   if(/^jsLecture1p\d+$/.test(id))return 'jsLecture1p1';
+   var m=id.match(/^((?:python|sql|api)Lecture\d+)(?:_p\d+)?$/); if(m)return m[1];
+   return id;
+ }
+ function install(){
+   var rows=lessonRows(); if(!rows.length)return;
+   var byRoot={}; rows.forEach(function(x,i){byRoot[rootFor(x.id)]={row:x,index:i};});
+   document.querySelectorAll('section.page[id]').forEach(function(sec){
+     var hit=byRoot[rootFor(sec.id)]; if(!hit || sec.querySelector('.v235-course-nav'))return;
+     var nav=document.createElement('div'); nav.className='article-nav v235-course-nav';
+     var prev=rows[hit.index-1], next=rows[hit.index+1];
+     nav.innerHTML='<button class="btn secondary" type="button" '+(prev?'data-go="'+prev.id+'"':'disabled')+'>← 戻る</button>'+
+       '<button class="btn" type="button" data-go="lessons">メイン</button>'+
+       '<button class="btn secondary" type="button" '+(next?'data-go="'+next.id+'"':'disabled')+'>進む →</button>'+
+       '<select class="btn secondary v235-select" aria-label="学習回を選択"></select>'+
+       '<span class="v235-jump"><input inputmode="numeric" pattern="[0-9]*" min="1" max="'+rows.length+'" placeholder="番号" aria-label="回番号"><button class="btn secondary" type="button">移動</button></span>';
+     var sel=nav.querySelector('select'); rows.forEach(function(x){var o=document.createElement('option');o.value=x.id;o.textContent='第'+x.n+'回';if(x.n===hit.row.n)o.selected=true;sel.appendChild(o);});
+     nav.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){showPage(b.dataset.go);});});
+     sel.addEventListener('change',function(){showPage(sel.value);});
+     nav.querySelector('.v235-jump button').addEventListener('click',function(){var n=+nav.querySelector('input').value, x=rows.find(function(r){return r.n===n;});if(x)showPage(x.id);});
+     var card=sec.querySelector('.card,article'); if(card)card.insertBefore(nav,card.firstChild);
+   });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+})();
