@@ -3930,53 +3930,20 @@ body.theme-rose main,body.theme-rose-ornate main{position:relative;z-index:11}
   }
   .swatch-rose,.swatch-ornate{box-shadow:inset 0 0 0 1px rgba(211,125,151,.22)}
 }
+\n\n
 
-
-/* ===== v2.43 iPhone theme refinement =====
-   simple: original site, no added decoration
-   line art: rose linework intentionally overlaps into page edges
-   art: painterly rose decoration, kept away from controls/text
-*/
+/* ===== v2.45 iPhone FRAME-ONLY themes =====
+   IMPORTANT: decoration only. Existing page/content/cards/background/layout are untouched. */
 @media (max-width:980px){
-  /* ① SIMPLE: explicitly cancel every decorative layer. */
-  body:not(.theme-rose):not(.theme-rose-ornate)::before,
-  body:not(.theme-rose):not(.theme-rose-ornate)::after{content:none!important;display:none!important}
-
-  /* ② LINE ART: white/ivory base with fine rose vines entering the content area. */
-  body.theme-rose{background:#fffaf9!important;background-image:none!important}
-  body.theme-rose .page{
-    background-color:#fffaf9!important;
-    background-image:
-      linear-gradient(rgba(255,250,249,.82),rgba(255,250,249,.82)),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='520' viewBox='0 0 360 520'%3E%3Cg fill='none' stroke='%23d9859d' stroke-width='1.55' stroke-linecap='round' stroke-linejoin='round' opacity='.66'%3E%3Cpath d='M-18 75C42 48 82 62 94 103c11 38-31 65-60 42-26-21-7-59 24-52 25 6 26 38 5 47-17 7-32-10-23-24 7-11 24-8 26 5M52 145c23 28 25 66 13 105M66 190c29-18 54-15 76 8M62 222c-29-7-50 3-65 29M378 315c-61-27-101-13-113 28-11 38 31 65 60 42 26-21 7-59-24-52-25 6-26 38-5 47 17 7 32-10 23-24-7-11-24-8-26 5M308 385c-23 28-25 66-13 105M294 430c-29-18-54-15-76 8M298 462c29-7 50 3 65 29'/%3E%3Cpath d='M4 250c42 16 60 48 52 92M356 92c-42 16-60 48-52 92' opacity='.72'/%3E%3C/g%3E%3C/svg%3E")!important;
-    background-size:auto,360px 520px!important;
-    box-shadow:none!important;
-  }
-  body.theme-rose::before{
-    inset:0!important;opacity:.82!important;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844'%3E%3Cg fill='none' stroke='%23cf7892' stroke-width='1.35' opacity='.68'%3E%3Cpath d='M0 160C32 124 54 92 48 42M0 250c44-20 69-52 70-94M390 580c-44 20-69 52-70 94M390 690c-32 36-54 68-48 118'/%3E%3C/g%3E%3C/svg%3E")!important;
-    background-size:100% 100%!important;
-  }
-  body.theme-rose::after{display:none!important}
-
-  /* ③ ART: translucent painted roses, concentrated at corners and edges. */
-  body.theme-rose-ornate{background:#fff9f6!important;background-image:none!important}
-  body.theme-rose-ornate .page{
-    background-color:#fff9f6!important;
-    background-image:
-      linear-gradient(rgba(255,249,246,.84),rgba(255,249,246,.84)),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='390' height='620' viewBox='0 0 390 620'%3E%3Cg opacity='.58'%3E%3Cg transform='translate(24 70)'%3E%3Cellipse cx='0' cy='0' rx='55' ry='27' fill='%23e6a0ae' transform='rotate(-18)'/%3E%3Cellipse cx='20' cy='9' rx='45' ry='24' fill='%23d97891' transform='rotate(35)'/%3E%3Cellipse cx='4' cy='24' rx='39' ry='22' fill='%23f0b7c1' transform='rotate(75)'/%3E%3Cellipse cx='-17' cy='12' rx='35' ry='20' fill='%23c95f7c' transform='rotate(130)'/%3E%3Cellipse cx='3' cy='10' rx='18' ry='13' fill='%23f7ced5'/%3E%3C/g%3E%3Cg transform='translate(372 470) scale(.9)'%3E%3Cellipse cx='0' cy='0' rx='58' ry='28' fill='%23df879c' transform='rotate(18)'/%3E%3Cellipse cx='-20' cy='10' rx='46' ry='24' fill='%23efb0bb' transform='rotate(-35)'/%3E%3Cellipse cx='-3' cy='27' rx='40' ry='22' fill='%23cc6882' transform='rotate(-75)'/%3E%3Cellipse cx='20' cy='12' rx='36' ry='20' fill='%23f3c0c8' transform='rotate(-130)'/%3E%3Cellipse cx='0' cy='11' rx='18' ry='13' fill='%23f9d8dd'/%3E%3C/g%3E%3Cpath d='M5 118C64 142 73 193 56 245M385 418c-59 24-68 75-51 127' fill='none' stroke='%2397a77c' stroke-width='4' opacity='.5'/%3E%3Cellipse cx='52' cy='181' rx='29' ry='11' fill='%23a9b98d' transform='rotate(-28 52 181)' opacity='.52'/%3E%3Cellipse cx='338' cy='500' rx='29' ry='11' fill='%23a9b98d' transform='rotate(28 338 500)' opacity='.52'/%3E%3C/g%3E%3C/svg%3E")!important;
-    background-size:auto,390px 620px!important;
-    box-shadow:inset 0 0 0 1px rgba(198,119,142,.20)!important;
-  }
-  body.theme-rose-ornate::before{
-    inset:3px!important;opacity:.75!important;border-radius:18px!important;
-    background-image:linear-gradient(90deg,rgba(194,133,88,.35),rgba(213,132,157,.42),rgba(194,133,88,.35))!important;
-    background-size:100% 1px!important;background-position:center top!important;background-repeat:no-repeat!important;
-  }
-  body.theme-rose-ornate::after{inset:8px!important;border:1px solid rgba(194,133,88,.22)!important;border-radius:16px!important}
-
-  /* Keep text controls readable while allowing art to enter the surrounding page. */
-  body.theme-rose .card,body.theme-rose .note,
-  body.theme-rose-ornate .card,body.theme-rose-ornate .note{background-color:rgba(255,255,255,.90)!important}
+  body.theme-rose, body.theme-rose-ornate{background-image:none!important;background-color:var(--bg,#fbf8f4)!important;}
+  body.theme-rose main, body.theme-rose-ornate main, body.theme-rose .page, body.theme-rose-ornate .page{background:revert!important;}
+  body.theme-rose .page, body.theme-rose-ornate .page{background-image:none!important;box-shadow:revert!important;}
+  body.theme-rose .card, body.theme-rose .note, body.theme-rose-ornate .card, body.theme-rose-ornate .note{background-color:revert!important;border-color:revert!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
+  body.theme-rose::before, body.theme-rose-ornate::before{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:9998!important;pointer-events:none!important;background-color:transparent!important;background-repeat:no-repeat!important;background-position:center!important;background-size:100% 100%!important;opacity:1!important;}
+  body.theme-rose::before{background-image:url("../img/theme-lineart.png")!important;}
+  body.theme-rose-ornate::before{background-image:url("../img/theme-art.png")!important;}
+  body.theme-rose::after, body.theme-rose-ornate::after{display:none!important;}
+  .swatch-rose{background-image:url("../img/theme-lineart.png")!important;background-size:cover!important;}
+  .swatch-ornate{background-image:url("../img/theme-art.png")!important;background-size:cover!important;}
 }
+@media (min-width:981px){body.theme-rose::before,body.theme-rose-ornate::before{display:none!important;}}
