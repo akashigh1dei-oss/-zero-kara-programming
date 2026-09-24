@@ -80,11 +80,10 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
        '<button class="btn" type="button" data-go="lessons">メイン</button>'+
        '<button class="btn secondary" type="button" '+(next?'data-go="'+next.id+'"':'disabled')+'>進む →</button>'+
        '<select class="btn secondary v235-select" aria-label="学習回を選択"></select>'+
-       '<span class="v235-jump"><input inputmode="numeric" pattern="[0-9]*" min="1" max="'+rows.length+'" placeholder="番号" aria-label="回番号"><button class="btn secondary" type="button">移動</button></span>';
+       '<button class="btn secondary v235-move" type="button">移動</button>';
      var sel=nav.querySelector('select'); rows.forEach(function(x){var o=document.createElement('option');o.value=x.id;o.textContent='第'+x.n+'回';if(x.n===hit.row.n)o.selected=true;sel.appendChild(o);});
      nav.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){showPage(b.dataset.go);});});
-     sel.addEventListener('change',function(){showPage(sel.value);});
-     nav.querySelector('.v235-jump button').addEventListener('click',function(){var n=+nav.querySelector('input').value, x=rows.find(function(r){return r.n===n;});if(x)showPage(x.id);});
+     nav.querySelector('.v235-move').addEventListener('click',function(){showPage(sel.value);});
      var card=sec.querySelector('.card,article'); if(card)card.insertBefore(nav,card.firstChild);
    });
  }
