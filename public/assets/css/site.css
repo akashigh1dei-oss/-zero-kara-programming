@@ -4290,3 +4290,30 @@ body.theme-rose-ornate .card, body.theme-rose-ornate .note {
 }
 body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.68')!important;}
 body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.68')!important;}
+
+/* ===== v2.69 transparent gaps between content cards ===== */
+@media (max-width:760px){
+  body.theme-rose main,
+  body.theme-rose-ornate main,
+  body.theme-rose #app,
+  body.theme-rose-ornate #app,
+  body.theme-rose .page,
+  body.theme-rose-ornate .page{
+    background:transparent!important;
+    background-image:none!important;
+  }
+  body.theme-rose main section,
+  body.theme-rose-ornate main section{
+    background-color:transparent!important;
+    background-image:none!important;
+  }
+  body.theme-rose .card,
+  body.theme-rose .note,
+  body.theme-rose-ornate .card,
+  body.theme-rose-ornate .note{
+    background-color:rgba(255,255,255,.97)!important;
+    background-image:none!important;
+  }
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.69')!important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.69')!important;}
+}
