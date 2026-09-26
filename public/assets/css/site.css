@@ -4176,3 +4176,56 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     position:relative!important;z-index:3!important;
   }
 }
+
+
+/* ===== v2.63 ornate contact redesign ===== */
+@media (max-width:760px){
+  body.theme-rose-ornate #lineFriends .contact-v178{
+    background:transparent!important;
+    padding:18px 14px 34px!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-hero,
+  body.theme-rose-ornate #lineFriends .contact-note,
+  body.theme-rose-ornate #lineFriends .contact-box,
+  body.theme-rose-ornate #lineFriends .contact-action{
+    background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,249,251,.91))!important;
+    border:1px solid rgba(224,119,154,.28)!important;
+    box-shadow:0 14px 36px rgba(113,54,76,.12),inset 0 1px 0 rgba(255,255,255,.95)!important;
+    backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  }
+  body.theme-rose-ornate #lineFriends .contact-hero{
+    border-radius:28px;padding:28px 22px!important;margin:4px 0 18px;text-align:left!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-kicker{color:#c83870;opacity:1!important;letter-spacing:.2em}
+  body.theme-rose-ornate #lineFriends .contact-hero h1{font-family:Georgia,'Times New Roman','Yu Mincho',serif;font-size:2.15rem!important;letter-spacing:.03em}
+  body.theme-rose-ornate #lineFriends .contact-lead{margin:0!important;font-size:1rem!important}
+  body.theme-rose-ornate #lineFriends .contact-grid{gap:12px;margin-bottom:20px}
+  body.theme-rose-ornate #lineFriends .contact-box{border-radius:22px!important;padding:20px!important}
+  body.theme-rose-ornate #lineFriends .contact-no{color:#cf3f75;opacity:1!important}
+  body.theme-rose-ornate #lineFriends .contact-note{
+    border-radius:30px!important;padding:28px 20px 24px!important;margin:20px 0!important;overflow:hidden;
+  }
+  body.theme-rose-ornate #lineFriends .contact-note>strong{
+    display:block;text-align:center;font-family:Georgia,'Times New Roman','Yu Mincho',serif;font-size:1.65rem;letter-spacing:.04em;margin-bottom:10px;
+  }
+  body.theme-rose-ornate #lineFriends .contact-note>strong::before{content:'✉';color:#d33f77;margin-right:.55em;font-family:Arial,sans-serif}
+  body.theme-rose-ornate #lineFriends .contact-note>p:first-of-type{text-align:center;color:#665d61;margin-bottom:20px}
+  body.theme-rose-ornate #lineFriends .contact-mail-form{gap:18px}
+  body.theme-rose-ornate #lineFriends .contact-mail-form label{gap:8px;font-size:1rem;color:#241f21}
+  body.theme-rose-ornate #lineFriends .contact-mail-form input,
+  body.theme-rose-ornate #lineFriends .contact-mail-form textarea{
+    border:1px solid rgba(156,168,183,.55)!important;border-radius:17px!important;padding:15px 16px!important;
+    background:rgba(255,255,255,.97)!important;box-shadow:inset 0 1px 2px rgba(0,0,0,.025)!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-mail-form input{min-height:58px}
+  body.theme-rose-ornate #lineFriends .contact-mail-form textarea{min-height:190px}
+  body.theme-rose-ornate #lineFriends .contact-mail-form input:focus,
+  body.theme-rose-ornate #lineFriends .contact-mail-form textarea:focus{outline:3px solid rgba(222,63,119,.13)!important;border-color:#d94379!important}
+  body.theme-rose-ornate #lineFriends .contact-mail-form .btn{
+    width:100%;min-height:58px;border:0!important;border-radius:999px!important;color:#fff!important;font-size:1.08rem;font-weight:800;
+    background:linear-gradient(135deg,#e83f7c,#c92e67)!important;box-shadow:0 10px 24px rgba(198,43,98,.24)!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-mail-form .btn::before{content:'➤';margin-right:.55em}
+  body.theme-rose-ornate #lineFriends .contact-note>.muted{font-size:.9rem;line-height:1.8!important;color:#686064!important}
+  body.theme-rose-ornate #lineFriends .contact-action{border-radius:24px!important}
+}
