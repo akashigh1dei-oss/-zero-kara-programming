@@ -425,7 +425,6 @@
 </section>
 <section class="page" id="lesson1">
 <div class="card">
-<button class="btn secondary small" onclick="showPage('lessons')">← 学習一覧</button>
 <h1>第1回　介護職の私がゼロからプログラミングを始めた</h1>
 <p>私はプログラマーではありません。仕事の中で「もっと簡単にできないだろうか」と考えたことが、プログラミングに興味を持つきっかけでした。</p>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">入力を減らして、ボタンを選ぶだけの仕組みって作れるの？</div></div>
@@ -440,14 +439,14 @@
 <p>見た目ができても、ボタンが動かなければ完成ではありません。実際に押し、確認し、直すところまでを学習の一部にします。</p>
 <pre><code>&lt;button&gt;押してください&lt;/button&gt;</code></pre>
 <p><button class="btn" onclick="completeLesson(1)">第1回を完了にする</button></p>
-<div class="article-nav">
-<button class="btn next" onclick="openLesson(2)">第2回へ</button>
-</div>
+<nav class="course-nav simple-course-nav" aria-label="学習ナビゲーション">
+<button class="btn secondary course-list" onclick="showPage('lessons')">学習一覧</button>
+<button class="btn course-next" onclick="openLesson(2)">第2回へ →</button>
+</nav>
 </div>
 </section>
 <section class="page" id="lesson2">
 <div class="card">
-<button class="btn secondary small" onclick="showPage('lessons')">← 学習一覧</button>
 <h1>第2回　HTMLで本当にボタンを1個作ってみよう</h1>
 <h2>失敗例 — 形だけ作る</h2>
 <pre><code>&lt;button&gt;押してください&lt;/button&gt;</code></pre>
@@ -463,11 +462,11 @@ document.getElementById('hello').addEventListener('click', function(){
 <button class="btn" id="demoBtn">押してください</button>
 <p id="demoResult">↑ 実際に押せます。</p>
 <p><button class="btn" onclick="completeLesson(2)">第2回を完了にする</button></p>
-<div class="article-nav">
-<button class="btn secondary" onclick="openLesson(1)">← 第1回</button>
-<button class="btn" onclick="showPage('jsLecture1p1')">第3回へ →</button>
-<button class="btn secondary small" onclick="showPage('lessons')">学習一覧</button>
-</div>
+<nav class="course-nav simple-course-nav" aria-label="学習ナビゲーション">
+<button class="btn secondary course-prev" onclick="openLesson(1)">← 第1回</button>
+<button class="btn course-next" onclick="showPage('jsLecture1p1')">第3回へ →</button>
+<button class="btn secondary course-list" onclick="showPage('lessons')">学習一覧</button>
+</nav>
 </div>
 </section>
 <section class="page" id="languageStory6">
