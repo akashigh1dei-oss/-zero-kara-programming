@@ -4231,25 +4231,40 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
 }
 
 
-/* ===== v2.64 contact art rebuild: floral frame + clean reading surface ===== */
+
+/* ===== v2.65 ART: clean floral frame, no interior pattern ===== */
 @media (max-width:760px){
- body.theme-rose-ornate #lineFriends{position:relative;overflow:visible!important;padding-top:8px}
- body.theme-rose-ornate #lineFriends::before,
- body.theme-rose-ornate #lineFriends::after{
-   content:"";position:absolute;z-index:0;pointer-events:none;width:145px;height:310px;top:255px;
-   background-repeat:no-repeat;background-size:contain;opacity:.92;filter:drop-shadow(0 10px 18px rgba(110,45,70,.12));
- }
- body.theme-rose-ornate #lineFriends::before{left:-35px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 360'%3E%3Cg fill='none' stroke='%23bd6d83' stroke-width='2.1' stroke-linecap='round'%3E%3Cpath d='M26 348C30 275 44 212 80 150C100 115 117 72 110 25'/%3E%3Cpath d='M49 260C22 240 15 216 19 190M62 225C91 210 109 187 116 158M78 170C50 151 40 128 42 102M95 116C122 101 136 80 139 54'/%3E%3C/g%3E%3Cg fill='%23f5b8c9' stroke='%23c66b83' stroke-width='1.4'%3E%3Cpath d='M13 187c17-13 36-8 42 8-18 10-35 5-42-8z'/%3E%3Cpath d='M103 153c20-8 37 1 39 18-20 5-35-4-39-18z'/%3E%3Cpath d='M35 99c19-10 37-3 41 14-19 7-35 0-41-14z'/%3E%3Cpath d='M126 49c18-10 35-4 39 11-17 8-32 2-39-11z'/%3E%3C/g%3E%3Cg fill='%23fff5f7' stroke='%23b95f7a' stroke-width='1.7'%3E%3Ccircle cx='108' cy='28' r='20'/%3E%3Ccircle cx='82' cy='145' r='17'/%3E%3Ccircle cx='45' cy='265' r='18'/%3E%3C/g%3E%3Cg fill='%23d89b55'%3E%3Ccircle cx='108' cy='28' r='5'/%3E%3Ccircle cx='82' cy='145' r='4'/%3E%3Ccircle cx='45' cy='265' r='4'/%3E%3C/g%3E%3C/svg%3E")}
- body.theme-rose-ornate #lineFriends::after{right:-35px;transform:scaleX(-1);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 360'%3E%3Cg fill='none' stroke='%23bd6d83' stroke-width='2.1' stroke-linecap='round'%3E%3Cpath d='M26 348C30 275 44 212 80 150C100 115 117 72 110 25'/%3E%3Cpath d='M49 260C22 240 15 216 19 190M62 225C91 210 109 187 116 158M78 170C50 151 40 128 42 102M95 116C122 101 136 80 139 54'/%3E%3C/g%3E%3Cg fill='%23f5b8c9' stroke='%23c66b83' stroke-width='1.4'%3E%3Cpath d='M13 187c17-13 36-8 42 8-18 10-35 5-42-8z'/%3E%3Cpath d='M103 153c20-8 37 1 39 18-20 5-35-4-39-18z'/%3E%3Cpath d='M35 99c19-10 37-3 41 14-19 7-35 0-41-14z'/%3E%3Cpath d='M126 49c18-10 35-4 39 11-17 8-32 2-39-11z'/%3E%3C/g%3E%3Cg fill='%23fff5f7' stroke='%23b95f7a' stroke-width='1.7'%3E%3Ccircle cx='108' cy='28' r='20'/%3E%3Ccircle cx='82' cy='145' r='17'/%3E%3Ccircle cx='45' cy='265' r='18'/%3E%3C/g%3E%3Cg fill='%23d89b55'%3E%3Ccircle cx='108' cy='28' r='5'/%3E%3Ccircle cx='82' cy='145' r='4'/%3E%3Ccircle cx='45' cy='265' r='4'/%3E%3C/g%3E%3C/svg%3E")}
- body.theme-rose-ornate #lineFriends .contact-v178{position:relative;z-index:1;padding:14px 12px 30px!important}
- body.theme-rose-ornate #lineFriends .contact-hero{background:rgba(255,255,255,.88)!important;border:1px solid rgba(216,155,85,.30)!important;box-shadow:0 16px 38px rgba(95,42,61,.10)!important}
- body.theme-rose-ornate #lineFriends .contact-note{position:relative;isolation:isolate;background:rgba(255,255,255,.94)!important;border:1px solid rgba(216,155,85,.38)!important;box-shadow:0 22px 55px rgba(100,42,63,.16),inset 0 0 0 5px rgba(255,247,249,.82)!important;padding:34px 22px 28px!important}
- body.theme-rose-ornate #lineFriends .contact-note::before,
- body.theme-rose-ornate #lineFriends .contact-note::after{content:'✦';position:absolute;top:17px;color:#d29a56;font-size:14px;opacity:.8;z-index:-1}
- body.theme-rose-ornate #lineFriends .contact-note::before{left:22px} body.theme-rose-ornate #lineFriends .contact-note::after{right:22px}
- body.theme-rose-ornate #lineFriends .contact-note>strong{color:#262024;font-size:1.72rem!important}
- body.theme-rose-ornate #lineFriends .contact-mail-form label{font-weight:700!important;letter-spacing:.01em}
- body.theme-rose-ornate #lineFriends .contact-mail-form input,body.theme-rose-ornate #lineFriends .contact-mail-form textarea{border:1px solid #cfd4dc!important;background:#fff!important;box-shadow:0 5px 14px rgba(40,30,35,.04)!important}
- body.theme-rose-ornate #lineFriends .contact-mail-form .btn{background:linear-gradient(135deg,#ed4f89 0%,#d43772 55%,#bd285f 100%)!important;box-shadow:0 12px 28px rgba(190,40,95,.28)!important;letter-spacing:.08em}
- body.theme-rose-ornate #lineFriends .contact-box,body.theme-rose-ornate #lineFriends .contact-action{background:rgba(255,255,255,.90)!important}
+  body.theme-rose-ornate::before{
+    background-image:url('./../img/art-frame.png?v=2.65')!important;
+    opacity:1!important;background-size:100% auto!important;background-position:center top!important;
+  }
+  body.theme-rose-ornate #lineFriends::before,
+  body.theme-rose-ornate #lineFriends::after{content:none!important;display:none!important;background:none!important;}
+  body.theme-rose-ornate #lineFriends .contact-v178{background:transparent!important;padding:14px 12px 30px!important;}
+  body.theme-rose-ornate #lineFriends .contact-hero,
+  body.theme-rose-ornate #lineFriends .contact-note,
+  body.theme-rose-ornate #lineFriends .contact-box,
+  body.theme-rose-ornate #lineFriends .contact-action{
+    background:rgba(255,255,255,.965)!important;
+    border:1px solid rgba(229,91,137,.18)!important;
+    box-shadow:0 14px 34px rgba(91,42,59,.10)!important;
+    backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-hero{border-radius:26px!important;padding:26px 20px!important;}
+  body.theme-rose-ornate #lineFriends .contact-note{border-radius:28px!important;padding:30px 20px 25px!important;overflow:visible!important;}
+  body.theme-rose-ornate #lineFriends .contact-note::before,
+  body.theme-rose-ornate #lineFriends .contact-note::after{content:none!important;display:none!important;}
+  body.theme-rose-ornate #lineFriends .contact-note>strong{display:block;text-align:center;font-size:1.65rem!important;color:#171417!important;}
+  body.theme-rose-ornate #lineFriends .contact-note>strong::before{content:'✉';color:#df3f79;margin-right:.5em;font-family:Arial,sans-serif;}
+  body.theme-rose-ornate #lineFriends .contact-note>p:first-of-type{text-align:center;color:#5f595c;margin-bottom:20px!important;}
+  body.theme-rose-ornate #lineFriends .contact-mail-form input,
+  body.theme-rose-ornate #lineFriends .contact-mail-form textarea{
+    background:#fff!important;border:1px solid #ccd3dd!important;border-radius:17px!important;
+    box-shadow:none!important;position:relative!important;z-index:8!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-mail-form .btn{
+    width:100%;min-height:60px;border:0!important;border-radius:999px!important;color:#fff!important;
+    background:linear-gradient(135deg,#ef568b,#d92f70)!important;box-shadow:0 10px 24px rgba(204,45,103,.22)!important;
+  }
+  body.theme-rose-ornate #lineFriends .contact-mail-form .btn::before{content:'➤';margin-right:.55em;}
 }
