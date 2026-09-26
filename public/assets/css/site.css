@@ -4047,3 +4047,36 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     background:rgba(255,255,255,.91)!important;
   }
 }
+
+/* ===== v2.59 artwork-inside / text-on-top ===== */
+@media (max-width:760px){
+  body.theme-rose::before,
+  body.theme-rose-ornate::before{
+    opacity:1 !important;
+    z-index:2 !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+    background-repeat:repeat-y !important;
+  }
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.59') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.59') !important;}
+
+  /* Cards no longer mask the artwork: decoration can enter the square/card area. */
+  body.theme-rose .card, body.theme-rose .note,
+  body.theme-rose-ornate .card, body.theme-rose-ornate .note{
+    background:rgba(255,255,255,.18) !important;
+    position:relative !important;
+    z-index:3 !important;
+  }
+
+  /* Only readable contents sit clearly above the artwork. */
+  body.theme-rose .card > *, body.theme-rose .note > *,
+  body.theme-rose-ornate .card > *, body.theme-rose-ornate .note > *,
+  body.theme-rose h1,body.theme-rose h2,body.theme-rose h3,body.theme-rose p,body.theme-rose li,body.theme-rose label,
+  body.theme-rose-ornate h1,body.theme-rose-ornate h2,body.theme-rose-ornate h3,body.theme-rose-ornate p,body.theme-rose-ornate li,body.theme-rose-ornate label,
+  body.theme-rose button,body.theme-rose a,body.theme-rose input,body.theme-rose select,body.theme-rose textarea,
+  body.theme-rose-ornate button,body.theme-rose-ornate a,body.theme-rose-ornate input,body.theme-rose-ornate select,body.theme-rose-ornate textarea{
+    position:relative !important;
+    z-index:4 !important;
+  }
+}
