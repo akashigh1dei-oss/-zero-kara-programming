@@ -4017,3 +4017,33 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
   .theme-choice>span:last-child{display:block;min-width:0;overflow:visible;white-space:normal;word-break:keep-all;}
   .theme-picker-options{overflow:visible;}
 }
+
+/* ===== v2.58 softer iPhone decorative background ===== */
+@media (max-width:760px){
+  /* Fade only the decorative PNG layer. Text/buttons keep full opacity. */
+  body.theme-rose::before{
+    opacity:.24 !important;
+    background-image:url('./../img/line-art-frame.png?v=2.58') !important;
+  }
+  body.theme-rose-ornate::before{
+    opacity:.20 !important;
+    background-image:url('./../img/art-frame.png?v=2.58') !important;
+  }
+  /* Let the artwork sit behind the page instead of looking pasted on top. */
+  body.theme-rose::before,
+  body.theme-rose-ornate::before{
+    z-index:0 !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+    background-repeat:repeat-y !important;
+  }
+  body.theme-rose header,body.theme-rose nav,body.theme-rose main,body.theme-rose footer,
+  body.theme-rose-ornate header,body.theme-rose-ornate nav,body.theme-rose-ornate main,body.theme-rose-ornate footer{
+    position:relative;
+    z-index:1;
+  }
+  body.theme-rose .card,body.theme-rose .note,
+  body.theme-rose-ornate .card,body.theme-rose-ornate .note{
+    background:rgba(255,255,255,.91)!important;
+  }
+}
