@@ -4452,3 +4452,102 @@ section[id^="editorial"]:not(#editorialIndex) .article-nav button.secondary:not(
   grid-column:1 !important;
   grid-row:1 !important;
 }
+
+/* ===== v2.82 learning navigation premium card ===== */
+section[id^="jsLecture"] .article-nav,
+section[id^="jsStory"] .article-nav,
+section[id^="languageStory"] .article-nav,
+section[id^="pythonLecture"] .article-nav{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:12px !important;
+  margin:32px 0 8px !important;
+  padding:16px !important;
+  border:1px solid rgba(132,77,104,.18) !important;
+  border-radius:24px !important;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(255,247,250,.90)) !important;
+  box-shadow:0 14px 36px rgba(83,51,66,.10) !important;
+  backdrop-filter:blur(8px);
+}
+section[id^="jsLecture"] .article-nav .btn,
+section[id^="jsStory"] .article-nav .btn,
+section[id^="languageStory"] .article-nav .btn,
+section[id^="pythonLecture"] .article-nav .btn{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:56px !important;
+  margin:0 !important;
+  padding:13px 14px !important;
+  border-radius:16px !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+  letter-spacing:.02em !important;
+  box-shadow:0 8px 20px rgba(60,40,50,.08) !important;
+}
+section[id^="jsLecture"] .article-nav .btn:not(.secondary),
+section[id^="jsStory"] .article-nav .btn:not(.secondary),
+section[id^="languageStory"] .article-nav .btn:not(.secondary),
+section[id^="pythonLecture"] .article-nav .btn:not(.secondary){
+  background:linear-gradient(135deg,#171415,#3b3035) !important;
+  color:#fff !important;
+  border-color:transparent !important;
+}
+section[id^="jsLecture"] .article-nav .btn.secondary,
+section[id^="jsStory"] .article-nav .btn.secondary,
+section[id^="languageStory"] .article-nav .btn.secondary,
+section[id^="pythonLecture"] .article-nav .btn.secondary{
+  background:rgba(255,255,255,.92) !important;
+  color:#332b2f !important;
+  border:1px solid rgba(94,70,80,.20) !important;
+}
+section[id^="jsLecture"] .article-nav .btn[onclick*="lessons"],
+section[id^="jsStory"] .article-nav .btn[onclick*="lessons"],
+section[id^="languageStory"] .article-nav .btn[onclick*="lessons"],
+section[id^="pythonLecture"] .article-nav .btn[onclick*="lessons"]{
+  grid-column:1 / -1 !important;
+  min-height:48px !important;
+  box-shadow:none !important;
+}
+@media(max-width:560px){
+  section[id^="jsLecture"] .article-nav,
+  section[id^="jsStory"] .article-nav,
+  section[id^="languageStory"] .article-nav,
+  section[id^="pythonLecture"] .article-nav{
+    gap:9px !important;
+    padding:11px !important;
+    border-radius:20px !important;
+    margin-top:26px !important;
+  }
+  section[id^="jsLecture"] .article-nav .btn,
+  section[id^="jsStory"] .article-nav .btn,
+  section[id^="languageStory"] .article-nav .btn,
+  section[id^="pythonLecture"] .article-nav .btn{
+    min-height:52px !important;
+    padding:11px 8px !important;
+    border-radius:14px !important;
+    font-size:13px !important;
+  }
+}
+\n\n/* ===== v2.83 unified JavaScript lesson pager ===== */
+section[id^="jsLecture"] .lesson-pager{
+  display:grid !important; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) !important;
+  align-items:center !important; gap:10px !important; margin:34px 0 10px !important;
+  padding:14px !important; border:1px solid rgba(115,88,99,.18) !important; border-radius:22px !important;
+  background:rgba(255,252,250,.94) !important; box-shadow:0 12px 30px rgba(70,48,57,.10) !important;
+}
+section[id^="jsLecture"] .lesson-pager .btn{margin:0 !important; min-width:0 !important; min-height:48px !important; border-radius:14px !important; font-weight:800 !important;}
+section[id^="jsLecture"] .lesson-pager .pager-prev{grid-column:1 !important; grid-row:1 !important;}
+section[id^="jsLecture"] .lesson-pager .pager-pages{grid-column:2 !important; grid-row:1 !important; display:flex !important; gap:7px !important;}
+section[id^="jsLecture"] .lesson-pager .pager-pages .btn{width:44px !important; padding:0 !important;}
+section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{background:#171415 !important;color:#fff !important;border-color:#171415 !important;box-shadow:0 7px 16px rgba(23,20,21,.18) !important;}
+section[id^="jsLecture"] .lesson-pager .pager-next{grid-column:3 !important; grid-row:1 !important; background:#171415 !important;color:#fff !important;border-color:#171415 !important;}
+section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important; grid-row:2 !important; min-height:42px !important; background:transparent !important; box-shadow:none !important; color:#765c68 !important; border-color:transparent !important;}
+@media(max-width:560px){
+ section[id^="jsLecture"] .lesson-pager{grid-template-columns:1fr 1fr !important; gap:9px !important; padding:11px !important; border-radius:19px !important;}
+ section[id^="jsLecture"] .lesson-pager .pager-pages{grid-column:1 / -1 !important; grid-row:1 !important; justify-content:center !important;}
+ section[id^="jsLecture"] .lesson-pager .pager-prev{grid-column:1 !important; grid-row:2 !important;}
+ section[id^="jsLecture"] .lesson-pager .pager-next{grid-column:2 !important; grid-row:2 !important;}
+ section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important; grid-row:3 !important;}
+ section[id^="jsLecture"] .lesson-pager .btn{font-size:13px !important; min-height:48px !important; padding:10px 8px !important;}
+ section[id^="jsLecture"] .lesson-pager .pager-pages .btn{width:46px !important;}
+}
