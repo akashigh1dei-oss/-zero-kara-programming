@@ -730,7 +730,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <p class="muted">JavaScript講座・全10回 / 第2回 / 1ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>JavaScriptくん、電卓係に配属される</h1>
-<div class="article-nav"><button aria-current="page" aria-label="第2回の1ページ目" class="btn" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button></div>
+
 <p>第1回で、「在庫が2本以下なら知らせる」という仕事を任されたJavaScriptくん。</p>
 <p>翌日、KAZUはもう一つ仕事を頼むことにしました。</p>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">洗剤が1本300円。2本注文したら、いくらになる？</div></div>
@@ -765,14 +765,14 @@ const c = a * b;</code></pre>
 <p>そうです。</p>
 <p>JavaScriptくんが頭の中で600円と計算しても、画面に出さなければ、使う人には分かりません。</p>
 <p>次は、計算結果を画面へ出してもらいます。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture1p3')">← 第1回</button><button aria-current="page" aria-label="第2回の1ページ目" class="btn" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button><button class="btn" onclick="showPage('jsLecture2p2')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture1p3')">← 第1回</button><div class="pager-pages"><button aria-current="page" aria-label="第2回の1ページ目" class="btn" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture2p2')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture2p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第2回 / 2ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>計算結果を、ちゃんと画面に出してもらう</h1>
-<div class="article-nav"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-current="page" aria-label="第2回の2ページ目" class="btn" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button></div>
+
 <p>KAZUは、JavaScriptくんにもう一度頼みました。</p>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">600円って計算できたのは分かった。でも、画面に表示して。</div></div>
 <div class="chat"><div class="who">JavaScript</div><div class="bubble">表示する場所を教えてください。</div></div>
@@ -810,14 +810,14 @@ const c = a * b;</code></pre>
 <p>JavaScriptくんは、指示されたとおり計算しようとします。</p>
 <p>でも、正しく計算できない入力なら、こちらで止める仕組みが必要です。</p>
 <p>次は、動く機能を「使える機能」に近づけます。</p>
-<div class="article-nav"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-current="page" aria-label="第2回の2ページ目" class="btn" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture2p1')">← 前のページ</button><button class="btn" onclick="showPage('jsLecture2p3')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture2p1')">← 前のページ</button><div class="pager-pages"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-current="page" aria-label="第2回の2ページ目" class="btn" onclick="showPage('jsLecture2p2')">2</button><button aria-label="第2回の3ページ目" class="btn secondary" onclick="showPage('jsLecture2p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture2p3')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture2p3"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第2回 / 3ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>正しい数字だけ来るとは限らない</h1>
-<div class="article-nav"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-current="page" aria-label="第2回の3ページ目" class="btn" onclick="showPage('jsLecture2p3')">3</button></div>
+
 <p>KAZUは、数量入力欄を作りました。</p>
 <p>1、2、3……と数字を入れれば、計算できます。</p>
 <p>ところが、試しに空欄のままボタンを押してみました。</p>
@@ -858,14 +858,14 @@ if (!Number.isFinite(数量) || 数量 &lt; 0) {
 <p class="note"><b>第2回まとめ：</b>JavaScriptくんは計算が速い。ただし「何を入力として受け取るか」「間違った入力をどう扱うか」は、人が決めてあげる必要があります。</p>
 <p>次回は、JavaScriptの中で何度も登場する「変数」にもう少し踏み込みます。</p>
 <p>JavaScriptくんの机の上には、名前の付いた箱が並び始めます。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture1p3')">← 第1回へ</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧</button><button class="btn" onclick="showPage('jsLecture3p1')">第3回へ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture2p2')">← 前のページ</button><div class="pager-pages"><button aria-label="第2回の1ページ目" class="btn secondary" onclick="showPage('jsLecture2p1')">1</button><button aria-label="第2回の2ページ目" class="btn secondary" onclick="showPage('jsLecture2p2')">2</button><button aria-current="page" aria-label="第2回の3ページ目" class="btn" onclick="showPage('jsLecture2p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture3p1')">第3回へ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture3p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第3回 / 1ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>JavaScriptくんの机に、名前付きの箱が並び始めた</h1>
-<div class="article-nav"><button aria-current="page" aria-label="第3回の1ページ目" class="btn" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button></div>
+
 <p>電卓係として働き始めたJavaScriptくん。</p>
 <p>今度は、KAZUが在庫の数字を管理してほしいと頼みます。</p>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">在庫が3本ある。1本使ったら2本になるよね。それを覚えておいて。</div></div>
@@ -888,14 +888,14 @@ if (!Number.isFinite(数量) || 数量 &lt; 0) {
 <p>棚から本当に1本使っただけでは、JavaScriptの在庫は勝手に2にはなりません。</p>
 <p>人がボタンを押す、数量を入力する、バーコードを読むなど、現実の変化をプログラムへ伝える仕組みが必要です。</p>
 <p class="note"><b>今日の第一歩：</b>変数は、現実の情報をプログラムの中で扱うための「名前付きの値」。現実が変わったら、その変化をプログラムにも伝える。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture2p3')">← 第2回</button><button aria-current="page" aria-label="第3回の1ページ目" class="btn" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button><button class="btn" onclick="showPage('jsLecture3p2')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture2p3')">← 第2回</button><div class="pager-pages"><button aria-current="page" aria-label="第3回の1ページ目" class="btn" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture3p2')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture3p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第3回 / 2ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>変えていい箱と、変えない箱</h1>
-<div class="article-nav"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-current="page" aria-label="第3回の2ページ目" class="btn" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button></div>
+
 <p>JavaScriptくんの机には、いろいろな情報が並び始めました。</p>
 <p>現在の在庫、最低在庫、税率、数量。</p>
 <p>KAZUは全部同じように作ろうとしました。</p>
@@ -924,14 +924,14 @@ let 数量 = 1;</code></pre>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">つまり、「変える必要があるか」を先に考えるんだね。</div></div>
 <div class="chat"><div class="who">JavaScript</div><div class="bubble">はい。変わる理由があるものだけ、変えられるようにしておくと分かりやすいです。</div></div>
 <p class="note"><b>設計のコツ：</b>文法を覚えるより、「この値は途中で変わるのか？」と考える習慣を持つ。</p>
-<div class="article-nav"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-current="page" aria-label="第3回の2ページ目" class="btn" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture3p1')">← 前のページ</button><button class="btn" onclick="showPage('jsLecture3p3')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture3p1')">← 前のページ</button><div class="pager-pages"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-current="page" aria-label="第3回の2ページ目" class="btn" onclick="showPage('jsLecture3p2')">2</button><button aria-label="第3回の3ページ目" class="btn secondary" onclick="showPage('jsLecture3p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture3p3')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture3p3"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第3回 / 3ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>名前の付け方で、未来の自分が助かる</h1>
-<div class="article-nav"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-current="page" aria-label="第3回の3ページ目" class="btn" onclick="showPage('jsLecture3p3')">3</button></div>
+
 <p>ある日、KAZUは少し前に書いたコードを見返しました。</p>
 <pre><code>const a = 300;
 const b = 2;
@@ -967,14 +967,14 @@ const 合計金額 = 単価 * 数量;</code></pre>
 <p class="note"><b>第3回まとめ：</b>変数は値を扱うための仕組み。大切なのは、何を表す値か、途中で変わるか、名前を見て意味が分かるかです。</p>
 <p>次回は、JavaScriptくんに「判断」をもっと本格的に任せます。</p>
 <p>そして、たった1文字の記号が結果を逆にしてしまう怖さも体験します。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture2p3')">← 第2回へ</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧</button><button class="btn" onclick="showPage('jsLecture4p1')">第4回へ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture3p2')">← 前のページ</button><div class="pager-pages"><button aria-label="第3回の1ページ目" class="btn secondary" onclick="showPage('jsLecture3p1')">1</button><button aria-label="第3回の2ページ目" class="btn secondary" onclick="showPage('jsLecture3p2')">2</button><button aria-current="page" aria-label="第3回の3ページ目" class="btn" onclick="showPage('jsLecture3p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture4p1')">第4回へ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture4p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第4回 / 1ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>「2本以下なら発注」――でも、2本は入るの？</h1>
-<div class="article-nav"><button aria-current="page" aria-label="第4回の1ページ目" class="btn" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button></div>
+
 <p>KAZUは、在庫管理のルールをJavaScriptくんに説明しました。</p>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">洗剤は、在庫が2本以下になったら発注が必要。</div></div>
 <div class="chat"><div class="who">JavaScript</div><div class="bubble">了解しました。2本以下ですね。</div></div>
@@ -1005,14 +1005,14 @@ const 合計金額 = 単価 * 数量;</code></pre>
 </ul>
 <p>ここまで書けば、「2を含める」ことがはっきりします。</p>
 <p class="note"><b>第4回の第一歩：</b>記号から考えず、先に「どの数字なら、どの結果にしたいか」を決める。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture3p3')">← 第3回</button><button aria-current="page" aria-label="第4回の1ページ目" class="btn" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button><button class="btn" onclick="showPage('jsLecture4p2')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture3p3')">← 第3回</button><div class="pager-pages"><button aria-current="page" aria-label="第4回の1ページ目" class="btn" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture4p2')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture4p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第4回 / 2ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>境目を試せば、間違いが見つかる</h1>
-<div class="article-nav"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-current="page" aria-label="第4回の2ページ目" class="btn" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button></div>
+
 <p>KAZUは、在庫0本と10本でテストしました。</p>
 <p>0本なら「発注が必要です」。</p>
 <p>10本なら「在庫は足りています」。</p>
@@ -1041,14 +1041,14 @@ const 合計金額 = 単価 * 数量;</code></pre>
 <div class="chat"><div class="who">KAZU</div><div class="bubble">全部の数字を試さなくても、境目を狙えば効率がいいんだね。</div></div>
 <div class="chat"><div class="who">AI</div><div class="bubble">はい。条件が切り替わるところは、不具合が出やすい場所です。</div></div>
 <p class="note"><b>テストのコツ：</b>条件の境目、その1つ下、その1つ上。この3つをまず試す。</p>
-<div class="article-nav"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-current="page" aria-label="第4回の2ページ目" class="btn" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture4p1')">← 前のページ</button><button class="btn" onclick="showPage('jsLecture4p3')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture4p1')">← 前のページ</button><div class="pager-pages"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-current="page" aria-label="第4回の2ページ目" class="btn" onclick="showPage('jsLecture4p2')">2</button><button aria-label="第4回の3ページ目" class="btn secondary" onclick="showPage('jsLecture4p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture4p3')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture4p3"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第4回 / 3ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>条件が増えると、順番まで仕事になる</h1>
-<div class="article-nav"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-current="page" aria-label="第4回の3ページ目" class="btn" onclick="showPage('jsLecture4p3')">3</button></div>
+
 <p>在庫表示を、もっと分かりやすくしたいとKAZUは考えました。</p>
 <p>0本なら「在庫切れ」。</p>
 <p>1〜2本なら「発注が必要」。</p>
@@ -1080,14 +1080,14 @@ const 合計金額 = 単価 * 数量;</code></pre>
 <p>次回は、商品が増えてきます。</p>
 <p>KAZUはJavaScriptくんに100個の商品の確認を頼もうとします。</p>
 <p>そして、「同じことを100回書くの？」という問題にぶつかります。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture3p3')">← 第3回へ</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧</button><button class="btn" onclick="showPage('jsLecture5p1')">第5回へ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture4p2')">← 前のページ</button><div class="pager-pages"><button aria-label="第4回の1ページ目" class="btn secondary" onclick="showPage('jsLecture4p1')">1</button><button aria-label="第4回の2ページ目" class="btn secondary" onclick="showPage('jsLecture4p2')">2</button><button aria-current="page" aria-label="第4回の3ページ目" class="btn" onclick="showPage('jsLecture4p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture5p1')">第5回へ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture5p1"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第5回 / 1ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>商品100個を、1個ずつ書くつもり？</h1>
-<div class="article-nav"><button aria-current="page" aria-label="第5回の1ページ目" class="btn" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button></div>
+
 <p>ある日、KAZUは商品一覧を見ながら考えていました。</p>
 <p>洗剤、ゴミ袋、手袋、ペーパータオル……。</p>
 <p>商品が増えてきました。</p>
@@ -1114,14 +1114,14 @@ console.log("手袋");</code></pre>
 <p>人は100回同じ確認をすると疲れます。</p>
 <p>JavaScriptくんは、100回でも1000回でも、同じ指示なら同じように実行します。</p>
 <p class="note"><b>第5回の第一歩：</b>同じ形の処理を何度も書き始めたら、「繰り返しにできないか」を考える。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture4p3')">← 第4回</button><button aria-current="page" aria-label="第5回の1ページ目" class="btn" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button><button class="btn" onclick="showPage('jsLecture5p2')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture4p3')">← 第4回</button><div class="pager-pages"><button aria-current="page" aria-label="第5回の1ページ目" class="btn" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture5p2')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture5p2"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第5回 / 2ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>合計が合わない。途中経過を見せてもらう</h1>
-<div class="article-nav"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-current="page" aria-label="第5回の2ページ目" class="btn" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button></div>
+
 <p>次は、商品の金額を合計します。</p>
 <pre><code>const 金額一覧 = [300, 500, 200];
 let 合計 = 0;
@@ -1152,14 +1152,14 @@ for (const 金額 of 金額一覧) {
 <div class="chat"><div class="who">KAZU</div><div class="bubble">仕事でも、最後の数字だけ合わないより、途中の集計を見た方が原因を探しやすいね。</div></div>
 <div class="chat"><div class="who">AI</div><div class="bubble">同じです。プログラムでも「途中を見える化する」と原因を追いやすくなります。</div></div>
 <p class="note"><b>確認のコツ：</b>結果が違ったら、途中の値を表示して「どこから違うか」を探す。</p>
-<div class="article-nav"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-current="page" aria-label="第5回の2ページ目" class="btn" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button><button class="btn secondary" onclick="showPage('jsLecture5p1')">← 前のページ</button><button class="btn" onclick="showPage('jsLecture5p3')">次のページへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture5p1')">← 前のページ</button><div class="pager-pages"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-current="page" aria-label="第5回の2ページ目" class="btn" onclick="showPage('jsLecture5p2')">2</button><button aria-label="第5回の3ページ目" class="btn secondary" onclick="showPage('jsLecture5p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture5p3')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page js-lecture" id="jsLecture5p3"><article class="card">
 <button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button>
 <p class="muted">JavaScript講座・全10回 / 第5回 / 3ページ目（全3ページ）</p>
 <p>掲載日：2026年9月13日</p>
 <h1>便利な繰り返しほど、間違えると一気に広がる</h1>
-<div class="article-nav"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-current="page" aria-label="第5回の3ページ目" class="btn" onclick="showPage('jsLecture5p3')">3</button></div>
+
 <p>JavaScriptくんは、繰り返し処理が得意です。</p>
 <p>でも、その便利さには注意も必要です。</p>
 <p>もし条件を間違えたまま100件を処理すれば、100件まとめて間違えます。</p>
@@ -1195,8 +1195,8 @@ for (const 金額 of 金額一覧) {
 <p class="note"><b>第5回まとめ：</b>繰り返しは、大量の同じ作業を任せる仕組み。小さいデータで確認し、条件と途中経過を見てから件数を増やす。</p>
 <p>ここまでで、JavaScriptくんには「計算」「値の保持」「判断」「繰り返し」という仕事を任せられるようになりました。</p>
 <p>少しずつ、単なるボタンの動きから「システムらしい処理」へ近づいてきました。</p>
-<div class="article-nav"><button class="btn secondary" onclick="showPage('jsLecture4p3')">← 第4回へ</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧</button><button class="btn" onclick="showPage('quiz')">ミニテストへ →</button></div>
-</article></section>
+
+<div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture5p2')">← 前のページ</button><div class="pager-pages"><button aria-label="第5回の1ページ目" class="btn secondary" onclick="showPage('jsLecture5p1')">1</button><button aria-label="第5回の2ページ目" class="btn secondary" onclick="showPage('jsLecture5p2')">2</button><button aria-current="page" aria-label="第5回の3ページ目" class="btn" onclick="showPage('jsLecture5p3')">3</button></div><button class="btn pager-next" onclick="showPage('lessons')">学習一覧へ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section>
 <section class="page" id="editorialIndex">
 <div class="card">
 <div class="editor-date">編集後記・蓄積ページ</div>
@@ -1360,11 +1360,11 @@ for (const 金額 of 金額一覧) {
 <div class="article-nav"><button class="btn secondary" onclick="showPage('editorial1')">← 第1回</button><button class="btn" onclick="showPage('editorial3')">第3回へ →</button><button class="btn secondary" onclick="showPage('editorialIndex')">編集後記一覧へ</button></div>
 </div>
 </section>
-<section class="page js-lecture" id="jsLecture1p1"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 1ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>職場に、ものすごく速い新人が来た</h1><div class="article-nav"><button aria-current="page" aria-label="第1回の1ページ目" class="btn" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button></div><p>ある日、数人さんの職場に、新しい助手がやってきました。</p><p>名前は「JavaScriptくん」。</p><p>この助手、とにかく計算が速い。商品が100個あっても、同じ手順の計算を延々と続けられます。</p><p>ただし、仕事を頼むにはコツがあります。</p><p>数人さんが言いました。</p><p>「洗剤、そろそろ少ないから、いい感じにしておいて」</p><p>JavaScriptくんは動きません。</p><p>さぼっているのでしょうか。</p><p>いいえ。「そろそろ」「少ない」「いい感じ」の具体的な意味が、プログラムに書かれていないからです。</p><p>そこで、指示を変えます。</p><p>「洗剤の在庫が2本以下だったら、画面に『発注してください』と表示して」</p><p>これなら、動く仕組みを作れます。</p><pre><code>const 在庫 = 1;
+<section class="page js-lecture" id="jsLecture1p1"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 1ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>職場に、ものすごく速い新人が来た</h1><p>ある日、数人さんの職場に、新しい助手がやってきました。</p><p>名前は「JavaScriptくん」。</p><p>この助手、とにかく計算が速い。商品が100個あっても、同じ手順の計算を延々と続けられます。</p><p>ただし、仕事を頼むにはコツがあります。</p><p>数人さんが言いました。</p><p>「洗剤、そろそろ少ないから、いい感じにしておいて」</p><p>JavaScriptくんは動きません。</p><p>さぼっているのでしょうか。</p><p>いいえ。「そろそろ」「少ない」「いい感じ」の具体的な意味が、プログラムに書かれていないからです。</p><p>そこで、指示を変えます。</p><p>「洗剤の在庫が2本以下だったら、画面に『発注してください』と表示して」</p><p>これなら、動く仕組みを作れます。</p><pre><code>const 在庫 = 1;
 
 if (在庫 &lt;= 2) {
   alert("洗剤を発注してください");
-}</code></pre><p>今は記号を覚えなくても大丈夫です。書いてあることは、次の3つです。</p><ol><li>在庫は1本。</li><li>2本以下かどうか確かめる。</li><li>当てはまったら、お知らせを出す。</li></ol><p class="note"><strong>プログラミングの第一歩は、曖昧なお願いを、実行できる手順に変えることです。</strong></p><p>これは、職場の引き継ぎにも似ています。</p><p>「いつものようにお願いします」では、初めて担当する人には伝わりません。</p><p>「食事が終わったら食器を下げて、テーブルを拭いてください」なら、行動に移しやすくなります。</p><p>数人さんが発注システムについて決めた、</p><p>「最低在庫数に達したら、発注が必要と分かるようにする」</p><p>というルール。それは、まさにプログラムに必要な指示です。</p><p>コードを書き始める前から、設計は始まっています。</p><p>ただし、JavaScriptくんには棚を見る目はありません。</p><p>棚から洗剤を1本使っても、それだけでは画面の数字は変わりません。人が使用数を入力するなど、現実の変化を伝える仕組みが必要です。</p><p>計算を任せることと、現実の情報を集めることは、別々の仕事なのです。</p><div class="article-nav"><button aria-current="page" aria-label="第1回の1ページ目" class="btn" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button><button class="btn" onclick="showPage('jsLecture1p2')">次のページへ →</button></div></article></section><section class="page js-lecture" id="jsLecture1p2"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 2ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>画面の裏には、3人の担当者がいる</h1><div class="article-nav"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-current="page" aria-label="第1回の2ページ目" class="btn" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button></div><p>今度は、発注画面を一つ作ることにします。</p><p>登場するのは、3人の担当者です。</p><div class="js-table"><table><thead><tr><th>担当者</th><th>主な仕事</th><th>発注画面では</th></tr></thead><tbody><tr><td>HTMLさん</td><td>部品を用意する</td><td>商品名・入力欄・ボタンを置く</td></tr><tr><td>CSSさん</td><td>見た目を整える</td><td>色・文字の大きさ・配置を調整する</td></tr><tr><td>JavaScriptくん</td><td>動作を受け持つ</td><td>計算して、結果を表示する</td></tr></tbody></table></div><p>HTMLさんが「発注する」というボタンを置きました。</p><p>CSSさんが、ボタンを見やすい緑色にしました。</p><p>立派な画面になりました。</p><p>ところが、押しても発注処理が始まりません。</p><p>そこでJavaScriptくんの出番です。</p><p>「このボタンが押されたら、この処理をする」という指示をつなぎます。</p><p>まずは、押すと文字が変わる小さな例を見てみましょう。</p><pre><code>&lt;button onclick="返事する()"&gt;呼び出す&lt;/button&gt;
+}</code></pre><p>今は記号を覚えなくても大丈夫です。書いてあることは、次の3つです。</p><ol><li>在庫は1本。</li><li>2本以下かどうか確かめる。</li><li>当てはまったら、お知らせを出す。</li></ol><p class="note"><strong>プログラミングの第一歩は、曖昧なお願いを、実行できる手順に変えることです。</strong></p><p>これは、職場の引き継ぎにも似ています。</p><p>「いつものようにお願いします」では、初めて担当する人には伝わりません。</p><p>「食事が終わったら食器を下げて、テーブルを拭いてください」なら、行動に移しやすくなります。</p><p>数人さんが発注システムについて決めた、</p><p>「最低在庫数に達したら、発注が必要と分かるようにする」</p><p>というルール。それは、まさにプログラムに必要な指示です。</p><p>コードを書き始める前から、設計は始まっています。</p><p>ただし、JavaScriptくんには棚を見る目はありません。</p><p>棚から洗剤を1本使っても、それだけでは画面の数字は変わりません。人が使用数を入力するなど、現実の変化を伝える仕組みが必要です。</p><p>計算を任せることと、現実の情報を集めることは、別々の仕事なのです。</p><div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('lessons')">← 学習一覧</button><div class="pager-pages"><button aria-current="page" aria-label="第1回の1ページ目" class="btn" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture1p2')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section><section class="page js-lecture" id="jsLecture1p2"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 2ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>画面の裏には、3人の担当者がいる</h1><p>今度は、発注画面を一つ作ることにします。</p><p>登場するのは、3人の担当者です。</p><div class="js-table"><table><thead><tr><th>担当者</th><th>主な仕事</th><th>発注画面では</th></tr></thead><tbody><tr><td>HTMLさん</td><td>部品を用意する</td><td>商品名・入力欄・ボタンを置く</td></tr><tr><td>CSSさん</td><td>見た目を整える</td><td>色・文字の大きさ・配置を調整する</td></tr><tr><td>JavaScriptくん</td><td>動作を受け持つ</td><td>計算して、結果を表示する</td></tr></tbody></table></div><p>HTMLさんが「発注する」というボタンを置きました。</p><p>CSSさんが、ボタンを見やすい緑色にしました。</p><p>立派な画面になりました。</p><p>ところが、押しても発注処理が始まりません。</p><p>そこでJavaScriptくんの出番です。</p><p>「このボタンが押されたら、この処理をする」という指示をつなぎます。</p><p>まずは、押すと文字が変わる小さな例を見てみましょう。</p><pre><code>&lt;button onclick="返事する()"&gt;呼び出す&lt;/button&gt;
 
 &lt;p id="伝言"&gt;待機中です&lt;/p&gt;
 
@@ -1373,14 +1373,14 @@ function 返事する() {
   document.getElementById("伝言").textContent =
     "はい、何を計算しましょう？";
 }
-&lt;/script&gt;</code></pre><p>画面には、最初に次のものが出ます。</p><p>「呼び出す」ボタンと、「待機中です」という文字です。</p><p>ボタンを押すと、文字が変わります。</p><p>はい、何を計算しましょう？</p><p>このとき、裏側では3つのことが起きています。</p><ol><li>ボタンが押された。</li><li>「返事する」という名前の処理が呼ばれた。</li><li>「伝言」という目印の場所の文字を書き換えた。</li></ol><p>functionは、ひとまとまりの仕事に名前を付けるための書き方です。</p><p>ここでは、その仕事を「返事する」と名付けました。</p><p>id="伝言"は、画面の部品に付けた目印です。</p><p>職場で「そこの書類を取って」と言われても、書類が何枚もあれば迷いますよね。</p><p>「発注書と書かれたファイルを取って」なら、探す対象が分かります。</p><p>JavaScriptも同じです。画面のどの場所を変えるか、目印を使って指定できます。</p><p>ここまで分かると、以前の「ボタンが反応しない」という問題の見方が変わります。</p><p>見た目が完成していても、呼び出す処理の名前が違っていたり、途中でエラーが起きていたりすると、目的の動作にはつながりません。</p><p>画面があることと、仕事の流れがつながっていることは、それぞれ確認が必要です。</p><div class="article-nav"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-current="page" aria-label="第1回の2ページ目" class="btn" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button><button class="btn" onclick="showPage('jsLecture1p3')">次のページへ →</button></div></article></section><section class="page js-lecture" id="jsLecture1p3"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 3ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>小さな判断を、一つ任せてみる</h1><div class="article-nav"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-current="page" aria-label="第1回の3ページ目" class="btn" onclick="showPage('jsLecture1p3')">3</button></div><p>では、JavaScriptくんに発注の判断を一つ任せましょう。</p><p>今回は、次のルールです。</p><p>洗剤の在庫が2本以下なら、「発注が必要です」。3本以上なら、「在庫は足りています」。</p><p>コードにすると、こうなります。</p><pre><code>const 在庫 = 1;
+&lt;/script&gt;</code></pre><p>画面には、最初に次のものが出ます。</p><p>「呼び出す」ボタンと、「待機中です」という文字です。</p><p>ボタンを押すと、文字が変わります。</p><p>はい、何を計算しましょう？</p><p>このとき、裏側では3つのことが起きています。</p><ol><li>ボタンが押された。</li><li>「返事する」という名前の処理が呼ばれた。</li><li>「伝言」という目印の場所の文字を書き換えた。</li></ol><p>functionは、ひとまとまりの仕事に名前を付けるための書き方です。</p><p>ここでは、その仕事を「返事する」と名付けました。</p><p>id="伝言"は、画面の部品に付けた目印です。</p><p>職場で「そこの書類を取って」と言われても、書類が何枚もあれば迷いますよね。</p><p>「発注書と書かれたファイルを取って」なら、探す対象が分かります。</p><p>JavaScriptも同じです。画面のどの場所を変えるか、目印を使って指定できます。</p><p>ここまで分かると、以前の「ボタンが反応しない」という問題の見方が変わります。</p><p>見た目が完成していても、呼び出す処理の名前が違っていたり、途中でエラーが起きていたりすると、目的の動作にはつながりません。</p><p>画面があることと、仕事の流れがつながっていることは、それぞれ確認が必要です。</p><div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture1p1')">← 前のページ</button><div class="pager-pages"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-current="page" aria-label="第1回の2ページ目" class="btn" onclick="showPage('jsLecture1p2')">2</button><button aria-label="第1回の3ページ目" class="btn secondary" onclick="showPage('jsLecture1p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture1p3')">次のページ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div></article></section><section class="page js-lecture" id="jsLecture1p3"><article class="card"><button class="btn secondary" onclick="showPage('lessons')">← 学習一覧</button><p class="muted">JavaScript講座・全10回 / 第1回 / 3ページ目（全3ページ）</p><p>掲載日：2026年9月12日</p><h1>小さな判断を、一つ任せてみる</h1><p>では、JavaScriptくんに発注の判断を一つ任せましょう。</p><p>今回は、次のルールです。</p><p>洗剤の在庫が2本以下なら、「発注が必要です」。3本以上なら、「在庫は足りています」。</p><p>コードにすると、こうなります。</p><pre><code>const 在庫 = 1;
 const 最低在庫 = 2;
 
 if (在庫 &lt;= 最低在庫) {
   alert("発注が必要です");
 } else {
   alert("在庫は足りています");
-}</code></pre><p>急に難しそうに見えるかもしれませんが、順番に読むと単純です。</p><pre><code>const 在庫 = 1;</code></pre><p>「在庫」という名前を付けて、数字の1を扱います。</p><p>こうして情報に名前を付けると、数字だけを並べるより意味が分かりやすくなります。こうした名前付きの情報を扱う仕組みが「変数」です。なお、constで作った名前には、後から別の値を代入できません。</p><pre><code>if (在庫 &lt;= 最低在庫)</code></pre><p>「もし、在庫が最低在庫以下なら」という意味です。</p><p>&lt;=は「以下」。今回なら、2本ちょうども含みます。</p><pre><code>else</code></pre><p>「そうでなければ」という意味です。</p><p>今回は、在庫が2本以下ではない場合に「在庫は足りています」と表示します。</p><p>これで、在庫数によって返事が変わるようになりました。</p><p>動作を確かめてみましょう。</p><div class="js-table"><table><thead><tr><th>入れた在庫数</th><th>出てほしい結果</th></tr></thead><tbody><tr><td>0本</td><td>発注が必要です</td></tr><tr><td>1本</td><td>発注が必要です</td></tr><tr><td>2本</td><td>発注が必要です</td></tr><tr><td>3本</td><td>在庫は足りています</td></tr><tr><td>10本</td><td>在庫は足りています</td></tr></tbody></table></div><p>ここで、数人さんがわざと記号を変えたとします。</p><pre><code>if (在庫 &gt;= 最低在庫)</code></pre><p>&gt;=は「以上」です。</p><p>すると、10本あるのに「発注が必要です」と言い、0本なのに「在庫は足りています」と言ってしまいます。</p><p>JavaScriptくんは、胸を張って報告します。</p><p>「指示どおりに実行しました！」</p><p>たしかに、書かれた指示には従っています。でも、頼みたかった仕事とは逆です。</p><p>これが、動いてはいるけれど、結果が間違っている不具合です。</p><p>だから確認するときは、「何か表示された」で終わりにせず、「この数字なら、この結果になるはず」と比べます。</p><p>特に今回は、境目の2本と3本を確かめると、ルールの間違いを見つけやすくなります。</p><p>なお、この例は学習用です。本物の入力画面では、空欄やマイナスの数字が入った場合も考えます。それは、基本の動きを理解してから追加していきましょう。</p><p>今日の持ち帰りは、3つです。</p><ul><li>JavaScriptは、画面の動作や計算を担当する。</li><li>人が決めたルールを、具体的な指示にする。</li><li>動いた後は、期待どおりの結果か確かめる。</li></ul><p>次回は、この助手に「商品名」「単価」「数量」を渡します。</p><p>いよいよJavaScriptくん、電卓係に就任です。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('lessons')">学習一覧</button><button class="btn" onclick="showPage('jsLecture2p1')">第2回へ →</button></div><p><button class="btn" onclick="showPage('quiz')">全12問のミニテストに挑戦</button></p></article></section>
+}</code></pre><p>急に難しそうに見えるかもしれませんが、順番に読むと単純です。</p><pre><code>const 在庫 = 1;</code></pre><p>「在庫」という名前を付けて、数字の1を扱います。</p><p>こうして情報に名前を付けると、数字だけを並べるより意味が分かりやすくなります。こうした名前付きの情報を扱う仕組みが「変数」です。なお、constで作った名前には、後から別の値を代入できません。</p><pre><code>if (在庫 &lt;= 最低在庫)</code></pre><p>「もし、在庫が最低在庫以下なら」という意味です。</p><p>&lt;=は「以下」。今回なら、2本ちょうども含みます。</p><pre><code>else</code></pre><p>「そうでなければ」という意味です。</p><p>今回は、在庫が2本以下ではない場合に「在庫は足りています」と表示します。</p><p>これで、在庫数によって返事が変わるようになりました。</p><p>動作を確かめてみましょう。</p><div class="js-table"><table><thead><tr><th>入れた在庫数</th><th>出てほしい結果</th></tr></thead><tbody><tr><td>0本</td><td>発注が必要です</td></tr><tr><td>1本</td><td>発注が必要です</td></tr><tr><td>2本</td><td>発注が必要です</td></tr><tr><td>3本</td><td>在庫は足りています</td></tr><tr><td>10本</td><td>在庫は足りています</td></tr></tbody></table></div><p>ここで、数人さんがわざと記号を変えたとします。</p><pre><code>if (在庫 &gt;= 最低在庫)</code></pre><p>&gt;=は「以上」です。</p><p>すると、10本あるのに「発注が必要です」と言い、0本なのに「在庫は足りています」と言ってしまいます。</p><p>JavaScriptくんは、胸を張って報告します。</p><p>「指示どおりに実行しました！」</p><p>たしかに、書かれた指示には従っています。でも、頼みたかった仕事とは逆です。</p><p>これが、動いてはいるけれど、結果が間違っている不具合です。</p><p>だから確認するときは、「何か表示された」で終わりにせず、「この数字なら、この結果になるはず」と比べます。</p><p>特に今回は、境目の2本と3本を確かめると、ルールの間違いを見つけやすくなります。</p><p>なお、この例は学習用です。本物の入力画面では、空欄やマイナスの数字が入った場合も考えます。それは、基本の動きを理解してから追加していきましょう。</p><p>今日の持ち帰りは、3つです。</p><ul><li>JavaScriptは、画面の動作や計算を担当する。</li><li>人が決めたルールを、具体的な指示にする。</li><li>動いた後は、期待どおりの結果か確かめる。</li></ul><p>次回は、この助手に「商品名」「単価」「数量」を渡します。</p><p>いよいよJavaScriptくん、電卓係に就任です。</p><div class="article-nav lesson-pager"><button class="btn secondary pager-prev" onclick="showPage('jsLecture1p2')">← 前のページ</button><div class="pager-pages"><button aria-label="第1回の1ページ目" class="btn secondary" onclick="showPage('jsLecture1p1')">1</button><button aria-label="第1回の2ページ目" class="btn secondary" onclick="showPage('jsLecture1p2')">2</button><button aria-current="page" aria-label="第1回の3ページ目" class="btn" onclick="showPage('jsLecture1p3')">3</button></div><button class="btn pager-next" onclick="showPage('jsLecture2p1')">第2回へ →</button><button class="btn secondary pager-list" onclick="showPage('lessons')">学習一覧</button></div><p><button class="btn" onclick="showPage('quiz')">全12問のミニテストに挑戦</button></p></article></section>
 <section class="page" id="editorial5"><article class="card editorial-reading">
 <button class="btn secondary small" onclick="showPage('editorialIndex')">← 編集後記一覧</button>
 <div class="editor-date">第5回・記載日：2026年9月13日</div>
