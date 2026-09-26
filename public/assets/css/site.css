@@ -4080,3 +4080,33 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     z-index:4 !important;
   }
 }
+
+/* ===== v2.60 artwork enters cards / readable text shield ===== */
+@media (max-width:760px){
+  /* Keep artwork fully visible inside the card area. */
+  body.theme-rose .card, body.theme-rose .note,
+  body.theme-rose-ornate .card, body.theme-rose-ornate .note{
+    background:rgba(255,255,255,.08) !important;
+  }
+
+  /* Shield only text, not the whole card, so artwork still shows around it. */
+  body.theme-rose .card :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose .note :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose-ornate .card :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose-ornate .note :is(h1,h2,h3,h4,p,li,label,.title,.subtitle){
+    position:relative !important;
+    z-index:7 !important;
+    background:rgba(255,255,255,.86) !important;
+    box-shadow:0 0 0 3px rgba(255,255,255,.52) !important;
+    border-radius:5px;
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+  }
+
+  /* Controls remain completely readable and above the artwork. */
+  body.theme-rose :is(button,a,input,select,textarea),
+  body.theme-rose-ornate :is(button,a,input,select,textarea){
+    position:relative !important;
+    z-index:8 !important;
+  }
+}
