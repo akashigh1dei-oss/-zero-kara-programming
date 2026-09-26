@@ -3988,3 +3988,32 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     pointer-events:none;
   }
 }
+
+/* ===== v2.57 iPhone frame/readability fix ===== */
+@media (max-width:760px){
+  /* Keep decorative PNGs at the edge; do not stretch them through the text area. */
+  body.theme-rose::before,
+  body.theme-rose-ornate::before{
+    inset:0 !important;
+    background-position:center top !important;
+    background-size:100% auto !important;
+    background-repeat:repeat-y !important;
+    z-index:5 !important;
+  }
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.57') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.57') !important;}
+
+  /* All readable/interface content stays above the decoration. */
+  header,nav,main,footer,.theme-picker,.page,.card,.note,button,a,input,select,textarea{
+    position:relative;
+    z-index:6;
+  }
+  body.theme-rose main,body.theme-rose-ornate main{padding-left:14px!important;padding-right:14px!important;box-sizing:border-box;}
+  body.theme-rose .card,body.theme-rose .note,
+  body.theme-rose-ornate .card,body.theme-rose-ornate .note{
+    background:rgba(255,255,255,.94)!important;
+  }
+  .theme-choice{min-width:0;overflow:visible;white-space:normal;line-height:1.35;height:auto!important;}
+  .theme-choice>span:last-child{display:block;min-width:0;overflow:visible;white-space:normal;word-break:keep-all;}
+  .theme-picker-options{overflow:visible;}
+}
