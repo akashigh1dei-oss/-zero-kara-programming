@@ -4528,40 +4528,60 @@ section[id^="pythonLecture"] .article-nav .btn[onclick*="lessons"]{
     font-size:13px !important;
   }
 }
-\n\n/* ===== v2.83 unified JavaScript lesson pager ===== */
-section[id^="jsLecture"] .lesson-pager{
-  display:grid !important; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) !important;
-  align-items:center !important; gap:10px !important; margin:34px 0 10px !important;
-  padding:14px !important; border:1px solid rgba(115,88,99,.18) !important; border-radius:22px !important;
-  background:rgba(255,252,250,.94) !important; box-shadow:0 12px 30px rgba(70,48,57,.10) !important;
-}
-section[id^="jsLecture"] .lesson-pager .btn{margin:0 !important; min-width:0 !important; min-height:48px !important; border-radius:14px !important; font-weight:800 !important;}
-section[id^="jsLecture"] .lesson-pager .pager-prev{grid-column:1 !important; grid-row:1 !important;}
-section[id^="jsLecture"] .lesson-pager .pager-pages{grid-column:2 !important; grid-row:1 !important; display:flex !important; gap:7px !important;}
-section[id^="jsLecture"] .lesson-pager .pager-pages .btn{width:44px !important; padding:0 !important;}
-section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{background:#171415 !important;color:#fff !important;border-color:#171415 !important;box-shadow:0 7px 16px rgba(23,20,21,.18) !important;}
-section[id^="jsLecture"] .lesson-pager .pager-next{grid-column:3 !important; grid-row:1 !important; background:#171415 !important;color:#fff !important;border-color:#171415 !important;}
-section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important; grid-row:2 !important; min-height:42px !important; background:transparent !important; box-shadow:none !important; color:#765c68 !important; border-color:transparent !important;}
-@media(max-width:560px){
- section[id^="jsLecture"] .lesson-pager{grid-template-columns:1fr 1fr !important; gap:9px !important; padding:11px !important; border-radius:19px !important;}
- section[id^="jsLecture"] .lesson-pager .pager-pages{grid-column:1 / -1 !important; grid-row:1 !important; justify-content:center !important;}
- section[id^="jsLecture"] .lesson-pager .pager-prev{grid-column:1 !important; grid-row:2 !important;}
- section[id^="jsLecture"] .lesson-pager .pager-next{grid-column:2 !important; grid-row:2 !important;}
- section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important; grid-row:3 !important;}
- section[id^="jsLecture"] .lesson-pager .btn{font-size:13px !important; min-height:48px !important; padding:10px 8px !important;}
- section[id^="jsLecture"] .lesson-pager .pager-pages .btn{width:46px !important;}
-}
+\n\n
 
-
-/* ===== v2.84 iPhone lesson navigation hard reset ===== */
+/* ===== v2.85 canonical learning navigation: single source of truth ===== */
+.course-nav,
 section[id^="jsLecture"] .lesson-pager{
+  box-sizing:border-box !important;
+  width:100% !important;
+  margin:32px 0 8px !important;
+  padding:14px !important;
+  border:1px solid rgba(115,88,99,.16) !important;
+  border-radius:22px !important;
+  background:rgba(255,253,251,.96) !important;
+  box-shadow:0 12px 30px rgba(70,48,57,.08) !important;
+}
+.simple-course-nav{
   display:grid !important;
   grid-template-columns:1fr 1fr !important;
   gap:10px !important;
-  width:100% !important;
+}
+.simple-course-nav .course-list{grid-column:1 / -1 !important;grid-row:2 !important;}
+.simple-course-nav .course-prev{grid-column:1 !important;grid-row:1 !important;}
+.simple-course-nav .course-next{grid-column:2 !important;grid-row:1 !important;}
+.simple-course-nav:not(:has(.course-prev)) .course-next{grid-column:1 / -1 !important;}
+.course-nav .btn,
+section[id^="jsLecture"] .lesson-pager .btn{
   box-sizing:border-box !important;
-  overflow:hidden !important;
-  padding:14px !important;
+  margin:0 !important;
+  min-width:0 !important;
+  min-height:52px !important;
+  padding:11px 12px !important;
+  border-radius:15px !important;
+  font-weight:800 !important;
+  line-height:1.2 !important;
+  white-space:normal !important;
+  position:static !important;
+  transform:none !important;
+}
+.course-nav .course-next,
+section[id^="jsLecture"] .lesson-pager .pager-next{
+  background:#171415 !important;
+  color:#fff !important;
+  border-color:#171415 !important;
+}
+.course-nav .course-list,
+section[id^="jsLecture"] .lesson-pager .pager-list{
+  background:transparent !important;
+  color:#6f5962 !important;
+  box-shadow:none !important;
+}
+section[id^="jsLecture"] .lesson-pager{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  gap:10px !important;
+  overflow:visible !important;
 }
 section[id^="jsLecture"] .lesson-pager .pager-pages{
   grid-column:1 / -1 !important;
@@ -4571,61 +4591,30 @@ section[id^="jsLecture"] .lesson-pager .pager-pages{
   align-items:center !important;
   gap:8px !important;
   width:100% !important;
-}
-section[id^="jsLecture"] .lesson-pager .pager-prev{
-  grid-column:1 !important;
-  grid-row:2 !important;
-}
-section[id^="jsLecture"] .lesson-pager .pager-next{
-  grid-column:2 !important;
-  grid-row:2 !important;
-}
-section[id^="jsLecture"] .lesson-pager .pager-list{
-  grid-column:1 / -1 !important;
-  grid-row:3 !important;
-}
-section[id^="jsLecture"] .lesson-pager > .btn{
-  width:100% !important;
-  max-width:none !important;
-  min-width:0 !important;
   margin:0 !important;
-  transform:none !important;
-  position:static !important;
-  white-space:nowrap !important;
-  box-sizing:border-box !important;
 }
+section[id^="jsLecture"] .lesson-pager .pager-prev{grid-column:1 !important;grid-row:2 !important;width:100% !important;}
+section[id^="jsLecture"] .lesson-pager .pager-next{grid-column:2 !important;grid-row:2 !important;width:100% !important;}
+section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important;grid-row:3 !important;width:100% !important;min-height:46px !important;}
 section[id^="jsLecture"] .lesson-pager .pager-pages .btn{
   flex:0 0 48px !important;
   width:48px !important;
   height:48px !important;
   min-height:48px !important;
   padding:0 !important;
-  margin:0 !important;
   display:inline-flex !important;
   align-items:center !important;
   justify-content:center !important;
+  border-radius:14px !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{
+  background:#171415 !important;
+  color:#fff !important;
+  border-color:#171415 !important;
+  box-shadow:0 7px 16px rgba(23,20,21,.16) !important;
 }
 @media(max-width:560px){
-  section[id^="jsLecture"] .lesson-pager{
-    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
-    gap:9px !important;
-    padding:12px !important;
-    margin:28px 0 8px !important;
-  }
-  section[id^="jsLecture"] .lesson-pager > .btn{
-    min-height:54px !important;
-    padding:10px 6px !important;
-    font-size:13px !important;
-    line-height:1.2 !important;
-  }
-  section[id^="jsLecture"] .lesson-pager .pager-pages .btn{
-    flex-basis:46px !important;
-    width:46px !important;
-    height:46px !important;
-    min-height:46px !important;
-    font-size:14px !important;
-  }
-  section[id^="jsLecture"] .lesson-pager .pager-list{
-    min-height:46px !important;
-  }
+  .course-nav,section[id^="jsLecture"] .lesson-pager{margin:26px 0 6px !important;padding:11px !important;gap:8px !important;border-radius:18px !important;}
+  .course-nav .btn,section[id^="jsLecture"] .lesson-pager > .btn{min-height:50px !important;padding:10px 8px !important;font-size:14px !important;}
+  section[id^="jsLecture"] .lesson-pager .pager-pages .btn{flex-basis:44px !important;width:44px !important;height:44px !important;min-height:44px !important;font-size:14px !important;}
 }
