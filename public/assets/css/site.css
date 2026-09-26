@@ -4452,34 +4452,3 @@ section[id^="editorial"]:not(#editorialIndex) .article-nav button.secondary:not(
   grid-column:1 !important;
   grid-row:1 !important;
 }
-\n\n/* ===== v2.79 unified lesson/editorial navigation ===== */
-main > section.page:not(#home) .article-nav{
-  display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  gap:10px !important; align-items:stretch !important; margin-top:32px !important;
-}
-main > section.page:not(#home) .article-nav > .btn{
-  width:100% !important; min-width:0 !important; min-height:52px !important;
-  margin:0 !important; display:flex !important; align-items:center !important;
-  justify-content:center !important; text-align:center !important; border-radius:14px !important;
-}
-main > section.page:not(#home) .article-nav > .btn[onclick*="lessons"],
-main > section.page:not(#home) .article-nav > .btn[onclick*="editorialIndex"]{
-  grid-column:1 / -1 !important;
-}
-main > section.page:not(#home) .lesson-return{
-  display:flex !important; flex-wrap:wrap !important; gap:8px !important; margin-bottom:18px !important;
-}
-main > section.page:not(#home) .lesson-return .btn{margin:0 !important;}
-@media(max-width:560px){
-  main > section.page:not(#home) .article-nav{gap:8px !important;}
-  main > section.page:not(#home) .article-nav > .btn{min-height:50px !important; padding:10px 8px !important; font-size:13px !important;}
-  main > section.page:not(#home) .lesson-pager-row{gap:8px !important;}
-  main > section.page:not(#home) .lesson-page-numbers{display:flex !important; overflow-x:auto !important; scrollbar-width:none; padding:2px !important;}
-  main > section.page:not(#home) .lesson-page-numbers::-webkit-scrollbar{display:none;}
-}
-
-/* v2.80: unified reading-chain navigation */
-.reading-chain-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0 8px;padding-top:18px;border-top:1px solid rgba(127,127,127,.22)}
-.reading-chain-nav .btn{width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center}
-.reading-chain-nav .reading-list{grid-column:1/-1}
-@media(max-width:640px){.reading-chain-nav{grid-template-columns:1fr;gap:10px}.reading-chain-nav .reading-list{grid-column:auto}.reading-chain-nav .btn{min-height:52px}}
