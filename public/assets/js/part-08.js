@@ -55,38 +55,57 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
 })();
 
 
-/* v2.35: unified learning navigation. Site-wide lesson numbers are the source of truth. */
+/* v2.87: build one navigation from the learning list and actual page order. */
 (function(){
  function lessonRows(){
-   var page=document.getElementById('lessons'); if(!page)return [];
+   var page=document.getElementById('lessons');if(!page)return [];
    return [].slice.call(page.querySelectorAll('.lesson-item')).map(function(row){
      var m=(row.textContent||'').match(/第\s*(\d+)\s*回/), b=row.querySelector('button[onclick]');
      var x=b&&b.getAttribute('onclick')||'', idm=x.match(/showPage\(['\"]([^'\"]+)/), om=x.match(/openLesson\((\d+)\)/);
-     return m?{n:+m[1],id:idm?idm[1]:(om?'lesson'+om[1]:null),title:(row.querySelector('div')||row).textContent.trim()}:null;
+     return m?{n:+m[1],id:idm?idm[1]:(om?'lesson'+om[1]:null)}:null;
    }).filter(function(x){return x&&x.id;}).sort(function(a,b){return a.n-b.n;});
  }
  function rootFor(id){
-   if(/^jsLecture1p\d+$/.test(id))return 'jsLecture1p1';
-   var m=id.match(/^((?:python|sql|api)Lecture\d+)(?:_p\d+)?$/); if(m)return m[1];
-   return id;
+   var j=id.match(/^(jsLecture\d+)p\d+$/);if(j)return j[1]+'p1';
+   var m=id.match(/^((?:python|sql|api)Lecture\d+)(?:_p\d+)?$/);return m?m[1]:id;
+ }
+ function pageNumber(id){var m=id.match(/(?:_p|p)(\d+)$/);return m?+m[1]:1;}
+ function button(label,id,cls){
+   var b=document.createElement('button');b.type='button';b.className='learning-nav-button '+cls;b.textContent=label;
+   if(id)b.addEventListener('click',function(){showPage(id);});else b.disabled=true;
+   return b;
  }
  function install(){
-   var rows=lessonRows(); if(!rows.length)return;
-   var byRoot={}; rows.forEach(function(x,i){byRoot[rootFor(x.id)]={row:x,index:i};});
-   document.querySelectorAll('section.page[id]').forEach(function(sec){
-     var hit=byRoot[rootFor(sec.id)]; if(!hit || sec.querySelector('.v235-course-nav'))return;
-     var nav=document.createElement('div'); nav.className='article-nav v235-course-nav';
-     var prev=rows[hit.index-1], next=rows[hit.index+1];
-     nav.innerHTML='<button class="btn secondary" type="button" '+(prev?'data-go="'+prev.id+'"':'disabled')+'>← 戻る</button>'+
-       '<button class="btn" type="button" data-go="lessons">メイン</button>'+
-       '<button class="btn secondary" type="button" '+(next?'data-go="'+next.id+'"':'disabled')+'>進む →</button>'+
-       '<select class="btn secondary v235-select" aria-label="学習回を選択"></select>'+
-       '<button class="btn secondary v235-move" type="button">移動</button>';
-     var sel=nav.querySelector('select'); rows.forEach(function(x){var o=document.createElement('option');o.value=x.id;o.textContent='第'+x.n+'回';if(x.n===hit.row.n)o.selected=true;sel.appendChild(o);});
-     nav.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){showPage(b.dataset.go);});});
-     nav.querySelector('.v235-move').addEventListener('click',function(){showPage(sel.value);});
-     var card=sec.querySelector('.card,article'); if(card)card.insertBefore(nav,card.firstChild);
-   });
+   var rows=lessonRows();if(!rows.length)return;
+   var sections=[].slice.call(document.querySelectorAll('section.page[id]'));
+   var groups=rows.map(function(row){
+     var root=rootFor(row.id),pages=sections.filter(function(sec){return rootFor(sec.id)===root;});
+     pages.sort(function(a,b){return pageNumber(a.id)-pageNumber(b.id);});
+     return {row:row,pages:pages};
+   }).filter(function(group){return group.pages.length;});
+   groups.forEach(function(group,gi){group.pages.forEach(function(sec,pi){
+     var card=sec.querySelector('article.card, .card');if(!card)return;
+     [].slice.call(sec.querySelectorAll('.lesson-pager, .course-nav, .v235-course-nav, .article-nav')).forEach(function(old){
+       if(old.closest('section.page')!==sec)return;
+       var quiz=old.querySelector('button[onclick*="jsStoryQuiz18to20"]');
+       if(quiz){quiz.classList.add('lesson-quiz-link');old.parentNode.insertBefore(quiz,old);}
+       old.remove();
+     });
+     var before=pi?group.pages[pi-1].id:(gi?groups[gi-1].pages.slice(-1)[0].id:null);
+     var after=pi<group.pages.length-1?group.pages[pi+1].id:(gi<groups.length-1?groups[gi+1].pages[0].id:null);
+     var nav=document.createElement('nav');nav.className='unified-learning-nav';nav.setAttribute('aria-label','学習の進め方');
+     var heading=document.createElement('div');heading.className='learning-nav-heading';
+     heading.textContent='第'+group.row.n+'回'+(group.pages.length>1?' ・ '+(pi+1)+' / '+group.pages.length+'ページ':'');nav.appendChild(heading);
+     if(group.pages.length>1){
+       var nums=document.createElement('div');nums.className='learning-nav-pages';nums.setAttribute('aria-label','この回のページ');
+       group.pages.forEach(function(p,i){var b=button(''+(i+1),p.id,'learning-nav-number');if(i===pi){b.setAttribute('aria-current','page');b.disabled=true;}nums.appendChild(b);});nav.appendChild(nums);
+     }
+     var pair=document.createElement('div');pair.className='learning-nav-pair';
+     pair.appendChild(button(before?'← '+(pi?'前のページ':'第'+groups[gi-1].row.n+'回'):'最初のページ',before,'learning-nav-prev'));
+     pair.appendChild(button(after?(pi<group.pages.length-1?'次のページ':'第'+groups[gi+1].row.n+'回')+' →':'最後のページ',after,'learning-nav-next'));
+     nav.appendChild(pair);nav.appendChild(button('学習一覧に戻る','lessons','learning-nav-list'));
+     card.appendChild(nav);
+   });});
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
