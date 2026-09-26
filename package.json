@@ -1,6 +1,6 @@
 {
   "name": "zero-kara-prog",
-  "version": "2.49.0",
+  "version": "2.52.0",
   "private": true,
   "scripts": {
     "check:deploy": "wrangler deploy --config wrangler.jsonc --dry-run",
