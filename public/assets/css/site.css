@@ -3979,10 +3979,10 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     opacity:1 !important;
   }
   body.theme-rose::before{
-    background-image:url('/assets/img/line-art-frame.png?v=2.56') !important;
+    background-image:url('/assets/img/line-art-frame.png?v=2.72') !important;
   }
   body.theme-rose-ornate::before{
-    background-image:url('/assets/img/art-frame.png?v=2.56') !important;
+    background-image:url('/assets/img/art-frame.png?v=2.72') !important;
   }
   body:not(.theme-rose):not(.theme-rose-ornate)::before{
     pointer-events:none;
@@ -4000,8 +4000,8 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     background-repeat:repeat-y !important;
     z-index:5 !important;
   }
-  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.57') !important;}
-  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.57') !important;}
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72') !important;}
 
   /* All readable/interface content stays above the decoration. */
   header,nav,main,footer,.theme-picker,.page,.card,.note,button,a,input,select,textarea{
@@ -4023,11 +4023,11 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
   /* Fade only the decorative PNG layer. Text/buttons keep full opacity. */
   body.theme-rose::before{
     opacity:.24 !important;
-    background-image:url('./../img/line-art-frame.png?v=2.58') !important;
+    background-image:url('./../img/line-art-frame.png?v=2.72') !important;
   }
   body.theme-rose-ornate::before{
     opacity:.20 !important;
-    background-image:url('./../img/art-frame.png?v=2.58') !important;
+    background-image:url('./../img/art-frame.png?v=2.72') !important;
   }
   /* Let the artwork sit behind the page instead of looking pasted on top. */
   body.theme-rose::before,
@@ -4058,8 +4058,8 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     background-position:center top !important;
     background-repeat:repeat-y !important;
   }
-  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.59') !important;}
-  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.59') !important;}
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72') !important;}
 
   /* Cards no longer mask the artwork: decoration can enter the square/card area. */
   body.theme-rose .card, body.theme-rose .note,
@@ -4122,8 +4122,8 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     background-position:center top !important;
     background-repeat:repeat-y !important;
   }
-  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.61') !important;}
-  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.61') !important;}
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72') !important;}
 
   /* The square/card does not hide the artwork. */
   body.theme-rose .card, body.theme-rose .note,
@@ -4162,8 +4162,8 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     background-color:transparent!important;background-position:center top!important;
     background-size:100% auto!important;background-repeat:repeat-y!important;
   }
-  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.62')!important;}
-  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.62')!important;}
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72')!important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72')!important;}
 
   /* Keep the decoration visible through cards, but every real UI/content layer above it. */
   body.theme-rose :is(header,nav,main,footer,.page,.card,.note,.theme-picker),
@@ -4235,7 +4235,7 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
 /* ===== v2.67 ART: clean floral frame, no interior pattern ===== */
 @media (max-width:760px){
   body.theme-rose-ornate::before{
-    background-image:url('./../img/art-frame.png?v=2.65')!important;
+    background-image:url('./../img/art-frame.png?v=2.72')!important;
     opacity:1!important;background-size:100% auto!important;background-position:center top!important;
   }
   body.theme-rose-ornate #lineFriends::before,
@@ -4288,8 +4288,8 @@ body.theme-rose .card, body.theme-rose .note,
 body.theme-rose-ornate .card, body.theme-rose-ornate .note {
   background-color:rgba(255,255,255,.94) !important;
 }
-body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.68')!important;}
-body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.68')!important;}
+body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72')!important;}
+body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72')!important;}
 
 /* ===== v2.69 transparent gaps between content cards ===== */
 @media (max-width:760px){
@@ -4314,6 +4314,123 @@ body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.
     background-color:rgba(255,255,255,.97)!important;
     background-image:none!important;
   }
-  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.69')!important;}
-  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.69')!important;}
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.72')!important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.72')!important;}
+}
+
+/* ===== v2.73 desktop layout for NON-HOME pages only =====
+   Important: #home is intentionally excluded so the top page keeps its current layout. */
+@media (min-width: 981px){
+  main > section.page:not(#home){
+    width:min(1180px, calc(100% - 64px))!important;
+    max-width:1180px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:28px!important;
+    padding-right:28px!important;
+    box-sizing:border-box!important;
+  }
+  main > section.page:not(#home) > article,
+  main > section.page:not(#home) > .card,
+  main > section.page:not(#home) .lesson-page-content{
+    max-width:980px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  main > section.page:not(#home) .lesson-item{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:24px!important;
+  }
+  main > section.page:not(#home) .lesson-item .btn{
+    min-width:110px;
+  }
+  main > section.page:not(#home) p,
+  main > section.page:not(#home) li{
+    line-height:1.85;
+  }
+  main > section.page:not(#home) .lesson-pager-row{
+    max-width:980px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* ===== v2.74 HOME desktop protection =====
+   Keep the HOME page on the existing mobile/iPhone-oriented layout.
+   Desktop enhancements remain limited to NON-HOME pages. */
+@media (min-width:981px){
+  /* Do not introduce desktop-only theme controls/decorations on HOME. */
+  #home > .theme-picker{display:none!important;}
+  /* The v2.73 desktop content-width rules intentionally remain scoped to :not(#home). */
+}
+
+/* v2.76 editorial navigation polish — editorial pages only */
+[id^="editorial"] .editorial-reading .article-nav{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:12px !important;
+  margin-top:34px !important;
+  padding-top:24px !important;
+  border-top:1px solid rgba(113,76,94,.18) !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:54px !important;
+  margin:0 !important;
+  padding:12px 16px !important;
+  border:1px solid rgba(132,77,104,.26) !important;
+  border-radius:15px !important;
+  font:inherit !important;
+  font-size:14px !important;
+  font-weight:750 !important;
+  line-height:1.35 !important;
+  letter-spacing:.02em !important;
+  cursor:pointer !important;
+  box-shadow:0 7px 18px rgba(91,55,73,.08) !important;
+  transition:transform .16s ease,box-shadow .16s ease,filter .16s ease !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button:not(.secondary){
+  background:linear-gradient(135deg,#8d506d,#b76f91) !important;
+  color:#fff !important;
+  border-color:transparent !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button.secondary{
+  background:linear-gradient(180deg,#fff,#fbf3f7) !important;
+  color:#6d3f55 !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 10px 24px rgba(91,55,73,.14) !important;
+  filter:saturate(1.04) !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button:active{
+  transform:translateY(0) scale(.985) !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button:focus-visible{
+  outline:3px solid rgba(183,111,145,.28) !important;
+  outline-offset:3px !important;
+}
+[id^="editorial"] .editorial-reading .article-nav button:nth-child(3){
+  grid-column:1 / -1 !important;
+  min-height:46px !important;
+  background:#fff !important;
+  color:#755166 !important;
+  box-shadow:none !important;
+}
+@media(max-width:560px){
+  [id^="editorial"] .editorial-reading .article-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:9px !important;
+    margin-top:28px !important;
+    padding-top:20px !important;
+  }
+  [id^="editorial"] .editorial-reading .article-nav button{
+    min-height:52px !important;
+    padding:10px 8px !important;
+    border-radius:13px !important;
+    font-size:13px !important;
+  }
 }
