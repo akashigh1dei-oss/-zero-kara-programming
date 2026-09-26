@@ -3930,9 +3930,7 @@ body.theme-rose main,body.theme-rose-ornate main{position:relative;z-index:11}
   }
   .swatch-rose,.swatch-ornate{box-shadow:inset 0 0 0 1px rgba(211,125,151,.22)}
 }
-
-
-
+\n\n
 
 /* ===== v2.49 FRAME-ONLY themes: CSS-only, no external image link =====
    Decoration only. Existing page/content/cards/layout/functions are untouched.
@@ -3963,28 +3961,20 @@ body.theme-rose::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='h
 body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1800' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23d77f98' stroke-width='2.2' opacity='.82'%3E%3Cpath d='M22 420C16 245 28 100 125 24M125 24c-62-8-99 48-65 95 30 41 100 26 109-24 9-45-36-86-80-64-36 18-39 65-8 87 27 19 67 5 72-26 4-27-25-47-47-30-18 14-12 40 9 47M22 170c62 4 91 39 106 94M22 280c51-2 85-28 105-78M25 390c46-16 76-4 102 30M1178 420c6-175-6-320-103-396M1075 24c62-8 99 48 65 95-30 41-100 26-109-24-9-45 36-86 80-64 36 18 39 65 8 87-27 19-67 5-72-26-4-27 25-47 47-30 18 14 12 40-9 47M1178 170c-62 4-91 39-106 94M1178 280c-51-2-85-28-105-78M1175 390c-46-16-76-4-102 30M22 1380c-6 175 6 320 103 396M125 1776c-62 8-99-48-65-95 30-41 100-26 109 24 9 45-36 86-80 64-36-18-39-65-8-87 27-19 67-5 72 26M1178 1380c6 175-6 320-103 396M1075 1776c62 8 99-48 65-95-30 41-100 26-109-24-9-45 36-86 80-64 36 18 39 65 8 87 27 19 67 5 72-26'/%3E%3Cpath d='M22 420V1380M1178 420V1380' stroke-width='1.25' opacity='.62'/%3E%3C/g%3E%3Cg fill='none' stroke='%23c99b65' stroke-width='1.2' opacity='.55'%3E%3Cpath d='M150 20Q320 70 470 20T760 20T1050 20M150 1780Q320 1730 470 1780T760 1780T1050 1780'/%3E%3C/g%3E%3C/svg%3E")!important}
 @media(max-width:760px){#home>.theme-picker{margin:0 0 18px}}
 
-/* ===== v2.54 CSS DELIVERY + THEME STABILITY FIX =====
-   Final authoritative theme rules. Keeps the page content/layout intact. */
-#home > .theme-picker { display:block !important; }
-body.theme-rose::before,
-body.theme-rose-ornate::before {
-  content:"" !important;
-  display:block !important;
-  position:fixed !important;
-  inset:3px !important;
-  z-index:9998 !important;
-  pointer-events:none !important;
-  background:transparent !important;
-  border-radius:18px !important;
-  opacity:1 !important;
+/* v2.55: real image frame for iPhone Line Art theme */
+@media (max-width: 760px){
+  body.theme-rose::before{
+    content:"" !important;
+    display:block !important;
+    position:fixed !important;
+    inset:0 !important;
+    z-index:9998 !important;
+    pointer-events:none !important;
+    background-color:transparent !important;
+    background-image:url('/assets/img/line-art-frame.png?v=2.55') !important;
+    background-repeat:no-repeat !important;
+    background-position:center top !important;
+    background-size:100% 100% !important;
+    opacity:1 !important;
+  }
 }
-body.theme-rose::before {
-  border:3px double rgba(220,145,165,.92) !important;
-  box-shadow:inset 0 0 0 5px rgba(220,145,165,.10) !important;
-}
-body.theme-rose-ornate::before {
-  border:4px double rgba(215,127,152,.96) !important;
-  box-shadow:inset 0 0 0 6px rgba(201,155,101,.18), inset 0 0 0 10px rgba(215,127,152,.08) !important;
-}
-body.theme-rose::after,
-body.theme-rose-ornate::after { display:none !important; }
