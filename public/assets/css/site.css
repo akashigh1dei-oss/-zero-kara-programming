@@ -4152,3 +4152,27 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     z-index:5 !important;
   }
 }
+
+/* ===== v2.62 final iPhone artwork layer fix ===== */
+@media (max-width:760px){
+  body.theme-rose,body.theme-rose-ornate{isolation:isolate!important;}
+  body.theme-rose::before,body.theme-rose-ornate::before{
+    content:""!important;display:block!important;position:fixed!important;inset:0!important;
+    opacity:1!important;z-index:0!important;pointer-events:none!important;
+    background-color:transparent!important;background-position:center top!important;
+    background-size:100% auto!important;background-repeat:repeat-y!important;
+  }
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.62')!important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.62')!important;}
+
+  /* Keep the decoration visible through cards, but every real UI/content layer above it. */
+  body.theme-rose :is(header,nav,main,footer,.page,.card,.note,.theme-picker),
+  body.theme-rose-ornate :is(header,nav,main,footer,.page,.card,.note,.theme-picker){
+    position:relative!important;z-index:2!important;
+  }
+  body.theme-rose :is(.card,.note),body.theme-rose-ornate :is(.card,.note){background:transparent!important;}
+  body.theme-rose :is(h1,h2,h3,h4,h5,h6,p,li,label,small,strong,span,button,a,input,select,textarea),
+  body.theme-rose-ornate :is(h1,h2,h3,h4,h5,h6,p,li,label,small,strong,span,button,a,input,select,textarea){
+    position:relative!important;z-index:3!important;
+  }
+}
