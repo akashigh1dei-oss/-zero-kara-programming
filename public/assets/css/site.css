@@ -4110,3 +4110,45 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
     z-index:8 !important;
   }
 }
+
+/* ===== v2.61 iPhone: artwork inside frame, all content above ===== */
+@media (max-width:760px){
+  body.theme-rose::before,
+  body.theme-rose-ornate::before{
+    opacity:1 !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+    background-repeat:repeat-y !important;
+  }
+  body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.61') !important;}
+  body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.61') !important;}
+
+  /* The square/card does not hide the artwork. */
+  body.theme-rose .card, body.theme-rose .note,
+  body.theme-rose-ornate .card, body.theme-rose-ornate .note{
+    background:transparent !important;
+    position:relative !important;
+    z-index:2 !important;
+  }
+
+  /* Remove v2.60 white text shields. Text itself is always above artwork. */
+  body.theme-rose .card :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose .note :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose-ornate .card :is(h1,h2,h3,h4,p,li,label,.title,.subtitle),
+  body.theme-rose-ornate .note :is(h1,h2,h3,h4,p,li,label,.title,.subtitle){
+    position:relative !important;
+    z-index:4 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  body.theme-rose header,body.theme-rose nav,body.theme-rose main,body.theme-rose footer,
+  body.theme-rose-ornate header,body.theme-rose-ornate nav,body.theme-rose-ornate main,body.theme-rose-ornate footer,
+  body.theme-rose :is(button,a,input,select,textarea),
+  body.theme-rose-ornate :is(button,a,input,select,textarea){
+    position:relative !important;
+    z-index:5 !important;
+  }
+}
