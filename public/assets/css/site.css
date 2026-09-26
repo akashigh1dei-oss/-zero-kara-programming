@@ -4477,3 +4477,9 @@ main > section.page:not(#home) .lesson-return .btn{margin:0 !important;}
   main > section.page:not(#home) .lesson-page-numbers{display:flex !important; overflow-x:auto !important; scrollbar-width:none; padding:2px !important;}
   main > section.page:not(#home) .lesson-page-numbers::-webkit-scrollbar{display:none;}
 }
+
+/* v2.80: unified reading-chain navigation */
+.reading-chain-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0 8px;padding-top:18px;border-top:1px solid rgba(127,127,127,.22)}
+.reading-chain-nav .btn{width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center}
+.reading-chain-nav .reading-list{grid-column:1/-1}
+@media(max-width:640px){.reading-chain-nav{grid-template-columns:1fr;gap:10px}.reading-chain-nav .reading-list{grid-column:auto}.reading-chain-nav .btn{min-height:52px}}
