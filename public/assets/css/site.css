@@ -4268,3 +4268,25 @@ body.theme-rose-ornate::before{background-image:url("data:image/svg+xml,%3Csvg x
   }
   body.theme-rose-ornate #lineFriends .contact-mail-form .btn::before{content:'➤';margin-right:.55em;}
 }
+
+/* v2.68: keep floral frame outside cards; remove old swirl/pattern from content */
+body.theme-rose .card,
+body.theme-rose .note,
+body.theme-rose-ornate .card,
+body.theme-rose-ornate .note,
+body.theme-rose main section,
+body.theme-rose-ornate main section {
+  background-image:none !important;
+}
+body.theme-rose .card::before, body.theme-rose .card::after,
+body.theme-rose .note::before, body.theme-rose .note::after,
+body.theme-rose-ornate .card::before, body.theme-rose-ornate .card::after,
+body.theme-rose-ornate .note::before, body.theme-rose-ornate .note::after {
+  background-image:none !important;
+}
+body.theme-rose .card, body.theme-rose .note,
+body.theme-rose-ornate .card, body.theme-rose-ornate .note {
+  background-color:rgba(255,255,255,.94) !important;
+}
+body.theme-rose::before{background-image:url('./../img/line-art-frame.png?v=2.68')!important;}
+body.theme-rose-ornate::before{background-image:url('./../img/art-frame.png?v=2.68')!important;}
