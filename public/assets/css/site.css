@@ -4551,3 +4551,81 @@ section[id^="jsLecture"] .lesson-pager .pager-list{grid-column:1 / -1 !important
  section[id^="jsLecture"] .lesson-pager .btn{font-size:13px !important; min-height:48px !important; padding:10px 8px !important;}
  section[id^="jsLecture"] .lesson-pager .pager-pages .btn{width:46px !important;}
 }
+
+
+/* ===== v2.84 iPhone lesson navigation hard reset ===== */
+section[id^="jsLecture"] .lesson-pager{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:10px !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+  padding:14px !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-pages{
+  grid-column:1 / -1 !important;
+  grid-row:1 !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:8px !important;
+  width:100% !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-prev{
+  grid-column:1 !important;
+  grid-row:2 !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-next{
+  grid-column:2 !important;
+  grid-row:2 !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-list{
+  grid-column:1 / -1 !important;
+  grid-row:3 !important;
+}
+section[id^="jsLecture"] .lesson-pager > .btn{
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+  margin:0 !important;
+  transform:none !important;
+  position:static !important;
+  white-space:nowrap !important;
+  box-sizing:border-box !important;
+}
+section[id^="jsLecture"] .lesson-pager .pager-pages .btn{
+  flex:0 0 48px !important;
+  width:48px !important;
+  height:48px !important;
+  min-height:48px !important;
+  padding:0 !important;
+  margin:0 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+@media(max-width:560px){
+  section[id^="jsLecture"] .lesson-pager{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:9px !important;
+    padding:12px !important;
+    margin:28px 0 8px !important;
+  }
+  section[id^="jsLecture"] .lesson-pager > .btn{
+    min-height:54px !important;
+    padding:10px 6px !important;
+    font-size:13px !important;
+    line-height:1.2 !important;
+  }
+  section[id^="jsLecture"] .lesson-pager .pager-pages .btn{
+    flex-basis:46px !important;
+    width:46px !important;
+    height:46px !important;
+    min-height:46px !important;
+    font-size:14px !important;
+  }
+  section[id^="jsLecture"] .lesson-pager .pager-list{
+    min-height:46px !important;
+  }
+}
