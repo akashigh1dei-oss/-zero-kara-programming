@@ -23,7 +23,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ゼロから始めるプログラム言語", "url": "https://zero-kara-prog.mmdei.workers.dev/", "inLanguage": "ja", "description": "プログラミング初心者が、作りながら学ぶ学習サイト。HTML・CSS・JavaScriptからPython・SQL・APIへ。実践記事、用語集、ヒント付きミニテスト、制作の編集後記を掲載しています。"}</script>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
 <!-- v1.81 contact unified baseline: v1.76 preserved; staged refactor starts from contact area. -->
-<link href="./assets/css/site.css?v=2.87" rel="stylesheet"/>
+<link href="./assets/css/site.css?v=2.91" rel="stylesheet"/>
 </head>
 <body>
 <div aria-live="polite" data-no-translate="true" id="iphoneTranslationVeil">翻訳中…</div>
@@ -402,30 +402,30 @@
 <button aria-pressed="false" class="article-sort-btn" data-sort-mode="newest" data-sort-target="lessons" id="sortNewestBtn" type="button">新しい順</button>
 <button aria-pressed="true" class="article-sort-btn active" data-sort-mode="asc" data-sort-target="lessons" id="sortAscBtn" type="button">古い順</button>
 </div>
-<div class="lesson-item"><div><b>第1回</b><br/>介護職の私がゼロからプログラミングを始めた</div><button class="btn small" onclick="openLesson(1)">読む</button></div>
-<div class="lesson-item"><div><b>第2回</b><br/>HTMLで本当にボタンを1個作ってみよう</div><button class="btn small" onclick="openLesson(2)">読む</button></div>
-<div class="lesson-item"><div><b>第3回　JavaScript講座</b><br/>職場に、ものすごく速い新人が来た<br/><span class="muted">全3ページ・2026年9月12日</span></div><button class="btn small" onclick="showPage('jsLecture1p1')">読む</button></div>
-<div class="lesson-item"><div><b>第4回　JavaScript講座</b><br/>商品名・単価・数量を渡して、電卓係に任せる<br/><span class="muted">全3ページ・2026年9月13日</span></div><button class="btn small" onclick="showPage('jsLecture2p1')">読む</button></div>
-<div class="lesson-item"><div><b>第5回　JavaScript講座</b><br/>変数は「名前付きの箱」なのか？実際に動かして確かめる<br/><span class="muted">全3ページ・2026年9月13日</span></div><button class="btn small" onclick="showPage('jsLecture3p1')">読む</button></div>
-<div class="lesson-item"><div><b>第6回　JavaScript講座</b><br/>if文で「判断」を任せる。境目の数字がいちばん大事<br/><span class="muted">全3ページ・2026年9月13日</span></div><button class="btn small" onclick="showPage('jsLecture4p1')">読む</button></div>
-<div class="lesson-item"><div><b>第7回　JavaScript講座</b><br/>繰り返しで、同じ仕事を何度も書かない<br/><span class="muted">全3ページ・2026年9月13日</span></div><button class="btn small" onclick="showPage('jsLecture5p1')">読む</button></div>
-<div class="lesson-item"><div><b>第8回</b><br/>TypeScriptくん、心配性だけど事故を減らす<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><button class="btn small" onclick="showPage('languageStory6')">読む</button></div>
-<div class="lesson-item"><div><b>第9回</b><br/>Javaさん、制服を着て大企業に出勤する<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><button class="btn small" onclick="showPage('languageStory7')">読む</button></div>
-<div class="lesson-item"><div><b>第10回</b><br/>C#さん、Microsoft村の万能職人<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><button class="btn small" onclick="showPage('languageStory8')">読む</button></div>
+<div class="lesson-item"><div><b>第1回</b><br/>介護職の私がゼロからプログラミングを始めた</div><a class="btn small" href="/lessons/01/" onclick="event.preventDefault();openLesson(1)">読む</a></div>
+<div class="lesson-item"><div><b>第2回</b><br/>HTMLで本当にボタンを1個作ってみよう</div><a class="btn small" href="/lessons/02/" onclick="event.preventDefault();openLesson(2)">読む</a></div>
+<div class="lesson-item"><div><b>第3回　JavaScript講座</b><br/>職場に、ものすごく速い新人が来た<br/><span class="muted">全3ページ・2026年9月12日</span></div><a class="btn small" href="/lessons/03/" onclick="event.preventDefault();showPage('jsLecture1p1')">読む</a></div>
+<div class="lesson-item"><div><b>第4回　JavaScript講座</b><br/>商品名・単価・数量を渡して、電卓係に任せる<br/><span class="muted">全3ページ・2026年9月13日</span></div><a class="btn small" href="/lessons/04/" onclick="event.preventDefault();showPage('jsLecture2p1')">読む</a></div>
+<div class="lesson-item"><div><b>第5回　JavaScript講座</b><br/>変数は「名前付きの箱」なのか？実際に動かして確かめる<br/><span class="muted">全3ページ・2026年9月13日</span></div><a class="btn small" href="/lessons/05/" onclick="event.preventDefault();showPage('jsLecture3p1')">読む</a></div>
+<div class="lesson-item"><div><b>第6回　JavaScript講座</b><br/>if文で「判断」を任せる。境目の数字がいちばん大事<br/><span class="muted">全3ページ・2026年9月13日</span></div><a class="btn small" href="/lessons/06/" onclick="event.preventDefault();showPage('jsLecture4p1')">読む</a></div>
+<div class="lesson-item"><div><b>第7回　JavaScript講座</b><br/>繰り返しで、同じ仕事を何度も書かない<br/><span class="muted">全3ページ・2026年9月13日</span></div><a class="btn small" href="/lessons/07/" onclick="event.preventDefault();showPage('jsLecture5p1')">読む</a></div>
+<div class="lesson-item"><div><b>第8回</b><br/>TypeScriptくん、心配性だけど事故を減らす<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><a class="btn small" href="/lessons/08/" onclick="event.preventDefault();showPage('languageStory6')">読む</a></div>
+<div class="lesson-item"><div><b>第9回</b><br/>Javaさん、制服を着て大企業に出勤する<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><a class="btn small" href="/lessons/09/" onclick="event.preventDefault();showPage('languageStory7')">読む</a></div>
+<div class="lesson-item"><div><b>第10回</b><br/>C#さん、Microsoft村の万能職人<br/><span class="muted">プログラム言語の世界・2026年9月13日</span></div><a class="btn small" href="/lessons/10/" onclick="event.preventDefault();showPage('languageStory8')">読む</a></div>
 <div class="card"><h2>Python・SQL・API　各3話レクチャー</h2><p>3つの技術を、基礎→使い方→実践の順に3話ずつ学びます。</p><p class="muted">追加日：2026年9月16日</p></div>
-<div class="lesson-item"><div><b>第11回　Python編 第1話</b><br/>「表示して」と頼んだだけなのに<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('pythonLecture1')">読む</button></div>
-<div class="lesson-item"><div><b>第12回　Python編 第2話</b><br/>察してくれない優秀な作業員<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('pythonLecture2')">読む</button></div>
-<div class="lesson-item"><div><b>第13回　Python編 第3話</b><br/>自動化したのに、注文が届かない<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('pythonLecture3')">読む</button></div>
-<div class="lesson-item"><div><b>第14回　SQL編 第1話</b><br/>倉庫を建てたら、まず棚の話になった<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('sqlLecture1')">読む</button></div>
-<div class="lesson-item"><div><b>第15回　SQL編 第2話</b><br/>「少ないもの持ってきて」が通じるまで<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('sqlLecture2')">読む</button></div>
-<div class="lesson-item"><div><b>第16回　SQL編 第3話</b><br/>WHEREさん、今日は帰らないでください<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('sqlLecture3')">読む</button></div>
-<div class="lesson-item"><div><b>第17回　API編 第1話</b><br/>道路を作ったら、受付がいた<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture1')">読む</button></div>
-<div class="lesson-item"><div><b>第18回　API編 第2話</b><br/>お願いしたのに、返事がまだ来ない<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture2')">読む</button></div>
-<div class="lesson-item"><div><b>第19回　API編 第3話</b><br/>地雷原に、帰り道をつける<br/><span class="muted">全8ページ・2026年9月15日更新</span></div><button class="btn small" onclick="showPage('apiLecture3')">読む</button></div>
+<div class="lesson-item"><div><b>第11回　Python編 第1話</b><br/>「表示して」と頼んだだけなのに<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/11/" onclick="event.preventDefault();showPage('pythonLecture1')">読む</a></div>
+<div class="lesson-item"><div><b>第12回　Python編 第2話</b><br/>察してくれない優秀な作業員<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/12/" onclick="event.preventDefault();showPage('pythonLecture2')">読む</a></div>
+<div class="lesson-item"><div><b>第13回　Python編 第3話</b><br/>自動化したのに、注文が届かない<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/13/" onclick="event.preventDefault();showPage('pythonLecture3')">読む</a></div>
+<div class="lesson-item"><div><b>第14回　SQL編 第1話</b><br/>倉庫を建てたら、まず棚の話になった<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/14/" onclick="event.preventDefault();showPage('sqlLecture1')">読む</a></div>
+<div class="lesson-item"><div><b>第15回　SQL編 第2話</b><br/>「少ないもの持ってきて」が通じるまで<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/15/" onclick="event.preventDefault();showPage('sqlLecture2')">読む</a></div>
+<div class="lesson-item"><div><b>第16回　SQL編 第3話</b><br/>WHEREさん、今日は帰らないでください<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/16/" onclick="event.preventDefault();showPage('sqlLecture3')">読む</a></div>
+<div class="lesson-item"><div><b>第17回　API編 第1話</b><br/>道路を作ったら、受付がいた<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/17/" onclick="event.preventDefault();showPage('apiLecture1')">読む</a></div>
+<div class="lesson-item"><div><b>第18回　API編 第2話</b><br/>お願いしたのに、返事がまだ来ない<br/><span class="muted">全3ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/18/" onclick="event.preventDefault();showPage('apiLecture2')">読む</a></div>
+<div class="lesson-item"><div><b>第19回　API編 第3話</b><br/>地雷原に、帰り道をつける<br/><span class="muted">全8ページ・2026年9月15日更新</span></div><a class="btn small" href="/lessons/19/" onclick="event.preventDefault();showPage('apiLecture3')">読む</a></div>
 <div class="card"><h2>JavaScript実践編　配列・for文・DOM</h2><p>「覚える」から「実際に画面を動かす」へ。笑いながら仕組みを理解する3回です。</p><p class="muted">追加日：2026年9月18日</p></div>
-<div class="lesson-item"><div><b>第20回　JavaScript実践編</b><br/>配列との出会い――箱が増えすぎて、部屋が大変なことになった<br/><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory18')">読む</button></div>
-<div class="lesson-item"><div><b>第21回　JavaScript実践編</b><br/>for文登場――同じ仕事を10回？ コンピュータにやらせろ！<br/><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory19')">読む</button></div>
-<div class="lesson-item"><div><b>第22回　JavaScript実践編</b><br/>DOM操作――ついにJavaScriptが画面を動かした！<br/><span class="muted">全3話・2026年9月18日</span></div><button class="btn small" onclick="showPage('jsStory20')">読む</button></div>
+<div class="lesson-item"><div><b>第20回　JavaScript実践編</b><br/>配列との出会い――箱が増えすぎて、部屋が大変なことになった<br/><span class="muted">全3話・2026年9月18日</span></div><a class="btn small" href="/lessons/20/" onclick="event.preventDefault();showPage('jsStory18')">読む</a></div>
+<div class="lesson-item"><div><b>第21回　JavaScript実践編</b><br/>for文登場――同じ仕事を10回？ コンピュータにやらせろ！<br/><span class="muted">全3話・2026年9月18日</span></div><a class="btn small" href="/lessons/21/" onclick="event.preventDefault();showPage('jsStory19')">読む</a></div>
+<div class="lesson-item"><div><b>第22回　JavaScript実践編</b><br/>DOM操作――ついにJavaScriptが画面を動かした！<br/><span class="muted">全3話・2026年9月18日</span></div><a class="btn small" href="/lessons/22/" onclick="event.preventDefault();showPage('jsStory20')">読む</a></div>
 </div>
 </section>
 <section class="page" id="lesson1">
@@ -2418,16 +2418,16 @@ if (在庫 &lt;= 最低在庫) {
 <div id="translationLinks"></div>
 <div class="dialog-actions"><button class="btn secondary" id="closeTranslationDialog" type="button">元の画面に戻る</button></div>
 </dialog>
-<script src="./assets/js/part-01.js?v=2.87"></script>
-<script src="./assets/js/part-02.js?v=2.87"></script>
+<script src="./assets/js/part-01.js?v=2.91"></script>
+<script src="./assets/js/part-02.js?v=2.91"></script>
 <!-- Cloudflare Web Analytics -->
 <script data-cf-beacon='{"token": "ac1a4d4e091a4e8a87ca2acf3e842de0"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script>
 <!-- End Cloudflare Web Analytics -->
-<script src="./assets/js/part-03.js?v=2.87"></script>
-<script src="./assets/js/part-04.js?v=2.87"></script>
-<script src="./assets/js/part-05.js?v=2.87"></script>
+<script src="./assets/js/part-03.js?v=2.91"></script>
+<script src="./assets/js/part-04.js?v=2.91"></script>
+<script src="./assets/js/part-05.js?v=2.91"></script>
 <!-- v1.67: final-check self-check. Does not modify site behavior. -->
-<script src="./assets/js/part-06.js?v=2.87"></script>
+<script src="./assets/js/part-06.js?v=2.91"></script>
 <section class="page" id="pythonLecture1"><article class="card editorial-reading long-lesson paginated-lesson">
 <div class="lesson-return"><button class="btn secondary small" onclick="showPage('lessons')" type="button">← 学習一覧</button><button class="btn secondary small" onclick="showPage('home')" type="button">ホームへ戻る</button></div>
 <p class="muted">学習レクチャー・2026年9月15日更新</p>
@@ -3216,8 +3216,8 @@ async function loadWeather() {
 </article></section>
 <!-- v1.98 cleanup: removed unused invalid s0.js; structured data remains embedded as application/ld+json. -->
 <!-- v1.91 security baseline: current static site only. Future shop/payment must use server-side validation, authenticated admin access, payment-provider hosted/tokenized flows, idempotency, audit logs, and secrets kept out of client HTML. -->
-<script id="v192-reliability-fix" src="./assets/js/part-07.js?v=2.87"></script>
-<script src="./assets/js/part-08.js?v=2.87"></script>
+<script id="v192-reliability-fix" src="./assets/js/part-07.js?v=2.91"></script>
+<script src="./assets/js/part-08.js?v=2.91"></script>
 <!-- v2.34: version display synchronized with current package -->
 </body>
 </html>

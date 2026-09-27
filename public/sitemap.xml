@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://zero-kara-prog.mmdei.workers.dev/</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/01/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/02/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/03/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/04/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/05/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/06/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/07/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/08/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/09/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/10/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/11/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/12/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/13/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/14/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/15/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/16/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/17/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/18/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/19/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/20/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/21/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://zero-kara-prog.mmdei.workers.dev/lessons/22/</loc><lastmod>2026-09-28</lastmod></url>
 </urlset>
