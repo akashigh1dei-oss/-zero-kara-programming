@@ -4682,3 +4682,14 @@ section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{
  .unified-learning-nav .learning-nav-button{min-height:52px!important;padding:9px 7px!important;font-size:14px!important}
  .unified-learning-nav .learning-nav-number{min-height:44px!important;min-width:44px!important;width:44px!important;max-width:44px!important;padding:0!important}
 }
+
+/* v2.90: crawlable lesson links retain the existing button appearance. */
+#lessons .lesson-item > a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
