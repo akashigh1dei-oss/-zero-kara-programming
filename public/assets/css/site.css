@@ -4693,3 +4693,28 @@ section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* v2.93: keep the first-lesson pager buttons in separate grid cells on iPhone.
+   The older [onclick*="lessons"] rule also matched the previous button. */
+section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-prev[onclick*="lessons"] {
+  grid-column:1 !important;
+  grid-row:2 !important;
+  width:100% !important;
+  max-width:100% !important;
+  position:static !important;
+  transform:none !important;
+}
+section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-next {
+  grid-column:2 !important;
+  grid-row:2 !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  position:static !important;
+  transform:none !important;
+}
+section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="lessons"] {
+  grid-column:1 / -1 !important;
+  grid-row:3 !important;
+  position:static !important;
+  transform:none !important;
+}
