@@ -20,7 +20,11 @@ document.querySelectorAll('nav button[data-page]').forEach(btn=>{
 /* v2.08: Reload/startup must return to Home instead of a stale glossary view.
    Contact keeps its explicit hash because that route is intentionally restorable. */
 document.addEventListener('DOMContentLoaded',()=>{
-  if(location.hash !== '#lineFriends'){
+  const hashPage=(location.hash||'').replace(/^#/,'');
+  const restorable=new Set(['lineFriends','editorialIndex']);
+  if(restorable.has(hashPage) && document.getElementById(hashPage)){
+    showPage(hashPage);
+  }else{
     showPage('home');
     try{ history.replaceState(null,'',location.pathname + location.search); }catch(e){}
   }
