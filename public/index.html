@@ -30,7 +30,7 @@
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.95</div>
+<div class="version">v2.96</div>
 </div>
 <div aria-label="翻訳" class="translation-zone mobile-translation-zone">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -443,7 +443,6 @@
 <h2>作って、動かして、確認する</h2>
 <p>見た目ができても、ボタンが動かなければ完成ではありません。実際に押し、確認し、直すところまでを学習の一部にします。</p>
 <pre><code>&lt;button&gt;押してください&lt;/button&gt;</code></pre>
-<p><button class="btn" onclick="completeLesson(1)">第1回を完了にする</button></p>
 <nav class="course-nav simple-course-nav" aria-label="学習ナビゲーション">
 <button class="btn secondary course-list" onclick="showPage('lessons')">学習一覧</button>
 <button class="btn course-next" onclick="openLesson(2)">第2回へ →</button>
@@ -466,7 +465,6 @@ document.getElementById('hello').addEventListener('click', function(){
 &lt;/script&gt;</code></pre>
 <button class="btn" id="demoBtn">押してください</button>
 <p id="demoResult">↑ 実際に押せます。</p>
-<p><button class="btn" onclick="completeLesson(2)">第2回を完了にする</button></p>
 <nav class="course-nav simple-course-nav" aria-label="学習ナビゲーション">
 <button class="btn secondary course-prev" onclick="openLesson(1)">← 第1回</button>
 <button class="btn course-next" onclick="showPage('jsLecture1p1')">第3回へ →</button>
@@ -606,7 +604,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <h2>第3話　ボタンを押した――動いた！</h2><pre><code>&lt;button onclick="changeMessage()"&gt;押してみる&lt;/button&gt;</code></pre><pre><code>function changeMessage() {
   document.getElementById("message").textContent =
     "成功しました！";
-}</code></pre><p>HTMLが骨組みを作る。CSSが見た目を整える。JavaScriptが動きを与える。変数がデータを覚え、ifが判断し、functionが仕事をまとめ、配列が整理し、forが繰り返し、DOMがHTMLとJavaScriptをつなぐ。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">最初はボタン一つ直すのにも苦労した。でも今なら、そのボタンがなぜ動くのか少し分かる。</div></div><p>プログラミングはコードを丸暗記することではない。「こうしたい」という人間の考えを、「こうしてください」というコンピュータの言葉へ変えていくことだ。</p><p class="note"><strong>次回予告：</strong>習ったものを全部使って、自分で一つ作ってみる。物語は「ミニアプリ制作編」へ続く。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory19')">← 第19回</button><button class="btn" onclick="showPage('jsStoryQuiz18to20')">第18〜20回 ミニテスト10問 →</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧へ</button></div></article></section>
+}</code></pre><p>HTMLが骨組みを作る。CSSが見た目を整える。JavaScriptが動きを与える。変数がデータを覚え、ifが判断し、functionが仕事をまとめ、配列が整理し、forが繰り返し、DOMがHTMLとJavaScriptをつなぐ。</p><div class="chat"><div class="who">KAZU</div><div class="bubble">最初はボタン一つ直すのにも苦労した。でも今なら、そのボタンがなぜ動くのか少し分かる。</div></div><p>プログラミングはコードを丸暗記することではない。「こうしたい」という人間の考えを、「こうしてください」というコンピュータの言葉へ変えていくことだ。</p><p class="note"><strong>次回予告：</strong>習ったものを全部使って、自分で一つ作ってみる。物語は「ミニアプリ制作編」へ続く。</p><div class="article-nav"><button class="btn secondary" onclick="showPage('jsStory19')">← 第19回</button><button class="btn" onclick="showPage('jsStoryQuiz18to20')">第20〜22回 ミニテスト10問 →</button><button class="btn secondary" onclick="showPage('lessons')">学習一覧へ</button></div></article></section>
 <section class="page" id="progress">
 <div class="card">
 <h1>学習進捗</h1>
@@ -617,7 +615,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 </section>
 <section class="page" id="jsStoryQuiz18to20"><div class="card">
 <button class="btn secondary small" onclick="showPage('quiz')">← ミニテスト一覧</button>
-<h1>ミニテスト 2 — 第18〜20回</h1>
+<h1>ミニテスト 2 — 第20〜22回</h1>
 <p>配列・for文・DOM操作を10問で確認します。答えを選ぶと、その場で理由が表示されます。</p>
 <p id="storyQuizCounter"></p><div class="progress"><span id="storyQuizBar" style="width:0%"></span></div>
 <h2 id="storyQuizQuestion"></h2><p class="note" id="storyQuizHint"></p><div id="storyQuizOptions"></div>
@@ -631,7 +629,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <p>ミニテストを番号順に整理しました。上から順番に進められます。</p>
 <div class="lesson-list">
 <div class="lesson-item"><div><b>ミニテスト 1</b><br/>HTML・CSS・JavaScript 基礎編<br/><span class="muted">全12問</span></div><button class="btn small" onclick="showPage('quizBasic')">始める →</button></div>
-<div class="lesson-item"><div><b>ミニテスト 2</b><br/>JavaScript実践編　第18〜20回<br/><span class="muted">配列・for文・DOM操作／全10問</span></div><button class="btn small" onclick="showPage('jsStoryQuiz18to20')">始める →</button></div>
+<div class="lesson-item"><div><b>ミニテスト 2</b><br/>JavaScript実践編　第20〜22回<br/><span class="muted">配列・for文・DOM操作／全10問</span></div><button class="btn small" onclick="showPage('jsStoryQuiz18to20')">始める →</button></div>
 </div>
 <div class="article-nav"><button class="btn secondary" onclick="showPage('home')">← ホーム</button><button class="btn" onclick="showPage('quizBasic')">ミニテスト1へ →</button></div>
 </div></section>
@@ -3217,7 +3215,7 @@ async function loadWeather() {
 <!-- v1.98 cleanup: removed unused invalid s0.js; structured data remains embedded as application/ld+json. -->
 <!-- v1.91 security baseline: current static site only. Future shop/payment must use server-side validation, authenticated admin access, payment-provider hosted/tokenized flows, idempotency, audit logs, and secrets kept out of client HTML. -->
 <script id="v192-reliability-fix" src="./assets/js/part-07.js?v=2.93"></script>
-<script src="./assets/js/part-08.js?v=2.93"></script>
+<script src="./assets/js/part-08.js?v=2.96"></script>
 <!-- v2.34: version display synchronized with current package -->
 </body>
 </html>
