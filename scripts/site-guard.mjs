@@ -15,7 +15,17 @@ if (largeCards !== ids.length) fail(`学習ページのTwitterカード設定が
 const sitemapPath = resolve(root, 'public/sitemap.xml');
 let sitemap = readFileSync(sitemapPath, 'utf8');
 const base = 'https://mmdei.com';
-const required = ['/', '/lessons/', ...ids.map((id) => `/lessons/${id}/`)];
+const editorialData = worker.match(/const EDITORIAL_PAGES = (.*);\nconst LESSON_HUB = /)?.[1];
+if (!editorialData) fail('編集後記のページがありません');
+const editorialPages = JSON.parse(editorialData);
+const editorialIds = Object.keys(editorialPages);
+if (editorialIds.join(',') !== '51,52,53') fail('編集後記の三話が揃っていません');
+for (const id of editorialIds) {
+  const page = editorialPages[id];
+  if (!page.includes(`<link rel="canonical" href="https://mmdei.com/editorial/${id}/"`)) fail(`編集後記 ${id} のcanonicalが不正です`);
+  if (!page.includes('property="og:title"') || !page.includes('name="twitter:card"')) fail(`編集後記 ${id} の共有タグが不足しています`);
+}
+const required = ['/', '/lessons/', ...ids.map((id) => `/lessons/${id}/`), ...editorialIds.map((id) => `/editorial/${id}/`)];
 const existing = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 if (new Set(existing).size !== existing.length) fail('サイトマップに同じURLが重複しています');
 const missing = required.filter((path) => !existing.includes(base + path));
@@ -43,5 +53,4 @@ for (const match of html.matchAll(/<(?:script|img|link)\b[^>]*?\b(?:src|href)=["
 for (const path of ['worker.js', ...Array.from({ length: 8 }, (_, i) => `public/assets/js/part-0${i + 1}.js`)]) {
   execFileSync(process.execPath, ['--check', resolve(root, path)], { stdio: 'pipe' });
 }
-console.log(`公開前チェック合格: 学習ページ ${ids.length} 件、サイトマップ ${required.length} 件`);
-
+console.log(`公開前チェック合格: 学習ページ ${ids.length} 件、編集後記 ${editorialIds.length} 件、サイトマップ ${required.length} 件`);
