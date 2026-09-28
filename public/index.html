@@ -35,7 +35,7 @@
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v2.99</div>
+<div class="version">v3.00</div>
 </div>
 <div aria-label="翻訳" class="translation-zone mobile-translation-zone">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -61,6 +61,7 @@
 <div class="iphone-featured-sub">「届いた！」までの長い夜。感想・ご意見もお待ちしています。</div>
 <div class="iphone-featured-link">続きを読む →</div>
 </section>
+<section aria-label="新しい編集後記・全3話" class="iphone-featured-now iphone-featured-below-translate"><div class="iphone-featured-label">📚 新しい編集後記・全3話</div><div class="iphone-featured-title">赤い犯人とPODの海とGoogleの門番</div><div class="iphone-featured-sub">エラー処理、OGP、Googleとの出会いを描いた三話。</div><a class="iphone-featured-link" href="/editorial/51/">第一話から読む →</a></section>
 <nav>
 <button class="active" data-page="home">ホーム</button>
 <button data-page="lessons">学習</button>
@@ -155,6 +156,7 @@
 <section class="ref-dashboard">
 <div class="featured">
 <div class="section-kicker">FEATURED</div>
+<p><a href="/editorial/51/">📚 新しい編集後記・全3話「赤い犯人とPODの海とGoogleの門番」を読む →</a></p>
 <div class="section-title-row">
 <h3>今、読みたい記事</h3>
 <button onclick="showPage('lessons')">すべて見る　→</button>
@@ -1277,6 +1279,9 @@ for (const 金額 of 金額一覧) {
 <div class="lesson-item"><div><b>第48回</b><br/>構造化 ― 整理したら、壊れた。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial48')">読む</button></div>
 <div class="lesson-item"><div><b>第49回</b><br/>沈黙の修正 ― お前、何か言え。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial49')">読む</button></div>
 <div class="lesson-item"><div><b>第50回</b><br/>iPhoneのアート ― バラとの戦い。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial50')">読む</button></div>
+<div class="lesson-item"><div><b>第51回・全3話の第1話</b><br/>エラー処理――犯人は最後の一行<br/><span class="muted">2026年9月28日・GitHub Actions／エラー処理／サイト制作</span></div><a class="btn small" href="/editorial/51/">読む</a></div>
+<div class="lesson-item"><div><b>第52回・全3話の第2話</b><br/>PODの海――画像一枚、行方不明<br/><span class="muted">2026年9月28日・OGP／ファイル構成／SNS共有</span></div><a class="btn small" href="/editorial/52/">読む</a></div>
+<div class="lesson-item"><div><b>第53回・全3話の第3話</b><br/>Googleとの出会い――門番の三枚の札<br/><span class="muted">2026年9月28日・Google Search Console／サイトマップ／インデックス登録</span></div><a class="btn small" href="/editorial/53/">読む</a></div>
 <div class="lesson-item"><div><b>番外編</b><br/>深夜0時、404号室の扉を開けた<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorialExtra404')">読む</button></div>
 <div class="note">第1回・第2回は当時の記録として保存しています。新しい記録は別ページで追加します。</div>
 </div>
@@ -3222,5 +3227,6 @@ async function loadWeather() {
 <script id="v192-reliability-fix" src="./assets/js/part-07.js?v=2.93"></script>
 <script src="./assets/js/part-08.js?v=2.96"></script>
 <!-- v2.34: version display synchronized with current package -->
+<script>window.addEventListener("load",()=>{if(location.hash==="#editorialIndex"&&typeof showPage==="function")showPage("editorialIndex")});</script>
 </body>
 </html>
