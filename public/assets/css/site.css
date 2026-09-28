@@ -4660,7 +4660,7 @@ section[id^="jsLecture"] .lesson-pager .pager-pages .btn[aria-current="page"]{
 }
 .unified-learning-nav .learning-nav-heading{color:#674452;font-weight:800;font-size:14px;letter-spacing:.04em;text-align:center;line-height:1.5}
 .unified-learning-nav .learning-nav-pages{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important;min-width:0!important}
-.unified-learning-nav .learning-nav-pair{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;min-width:0!important}
+.unified-learning-nav .learning-nav-pair{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;min-width:0!important}
 .unified-learning-nav .learning-nav-button{
   position:static!important;display:flex!important;align-items:center!important;justify-content:center!important;
   float:none!important;transform:none!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;
@@ -4744,3 +4744,39 @@ section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="l
 .page[id^="editorial"] .editorial-nav-unified > .editorial-next{background:#3b2732!important;border-color:#3b2732!important;color:#fff!important}
 .page[id^="editorial"] .editorial-nav-unified > .editorial-action:focus-visible{outline:3px solid #ad6a8b!important;outline-offset:3px!important}
 @media(max-width:420px){.page[id^="editorial"] .editorial-nav-unified{gap:7px!important;padding:9px!important}.page[id^="editorial"] .editorial-nav-unified > .editorial-action{font-size:13px!important;padding:9px 3px!important;min-height:50px!important}}
+
+/* v3.08: make the forward action prominent on small screens. */
+.unified-learning-nav .learning-nav-next:not(:disabled),
++.page[id^="editorial"] .editorial-nav-unified > .editorial-next:not(:disabled) {
++  background:#15566d!important;border:2px solid #15566d!important;color:#fff!important;
++  font-size:17px!important;font-weight:850!important;letter-spacing:.02em!important;
++  min-height:58px!important;box-shadow:0 4px 12px rgba(21,86,109,.26)!important;
++  text-shadow:none!important;opacity:1!important;
++}
++.unified-learning-nav .learning-nav-next:not(:disabled):active,
++.page[id^="editorial"] .editorial-nav-unified > .editorial-next:not(:disabled):active {
++  background:#0e3d4e!important;
++}
++.unified-learning-nav .learning-nav-next:disabled {
++  opacity:1!important;background:#f2ecef!important;color:#655a60!important;
++  border:1px solid #d4c8ce!important;box-shadow:none!important;
++}
++@media(max-width:560px) {
++  .unified-learning-nav .learning-nav-next:not(:disabled),
++  .page[id^="editorial"] .editorial-nav-unified > .editorial-next:not(:disabled) {
++    font-size:16px!important;min-height:56px!important;padding:8px 4px!important;
++  }
++}
++
+/* v3.11: two-way AI help room */
+.help-ai-room{margin:32px 0;padding:clamp(16px,4vw,26px);border:1px solid #c7dde3;border-radius:20px;background:#f4fafb}
+.help-ai-room h2{margin-top:0}.help-ai-messages{display:grid;gap:12px;max-height:440px;overflow-y:auto;margin:18px 0;padding:14px;border:1px solid #d9e4e7;border-radius:14px;background:#fff}
+.help-ai-messages p{margin:0}.help-ai-bubble{max-width:92%;padding:11px 14px;border-radius:14px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}
+.help-ai-user{justify-self:end;background:#15566d;color:#fff}.help-ai-answer{justify-self:start;background:#edf4f6;color:#193b49}
+.help-ai-room label{display:block;margin-bottom:7px;font-weight:800}.help-ai-room textarea{display:block;box-sizing:border-box;width:100%;min-height:85px;padding:12px;font:inherit;border:1px solid #90adb7;border-radius:12px;background:#fff;color:#26353b}
+.help-ai-room textarea:focus-visible,.help-ai-room button:focus-visible{outline:3px solid #15566d;outline-offset:2px}.help-ai-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.help-ai-actions .btn{min-height:48px}
+@media(max-width:560px){.help-ai-room{padding:14px}.help-ai-messages{padding:10px}.help-ai-bubble{max-width:100%}}
+
+/* v3.12: clear contact submission result. */
+#contactStatus{min-height:1.5em;font-weight:750;color:#174a63;margin:12px 0 0}
+#contactSend:disabled{opacity:.65;cursor:wait}
