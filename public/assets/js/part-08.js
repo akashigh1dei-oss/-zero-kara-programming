@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
 
 /* v2.33 sorting: verified direct DOM reorder */
 (function(){
- function n(el){var m=(el.textContent||'').match(/第\s*(\d+)\s*回/);return m?+m[1]:999999;}
+ function n(el){var order=el.getAttribute('data-editorial-order');if(order)return +order;var m=(el.textContent||'').match(/第\s*(\d+)\s*回/);return m?+m[1]:999999;}
  function init(pageId,newId,ascId,defaultMode){
    var page=document.getElementById(pageId), a=document.getElementById(newId), b=document.getElementById(ascId);
    if(!page||!a||!b)return;
@@ -101,9 +101,10 @@ document.addEventListener('DOMContentLoaded',()=>{renderStoryQuiz();document.get
        group.pages.forEach(function(p,i){var b=button(''+(i+1),p.id,'learning-nav-number');if(i===pi){b.setAttribute('aria-current','page');b.disabled=true;}nums.appendChild(b);});nav.appendChild(nums);
      }
      var pair=document.createElement('div');pair.className='learning-nav-pair';
-     pair.appendChild(button(before?'← '+(pi?'前のページ':'第'+groups[gi-1].row.n+'回'):'最初のページ',before,'learning-nav-prev'));
-     pair.appendChild(button(after?(pi<group.pages.length-1?'次のページ':'第'+groups[gi+1].row.n+'回')+' →':'最後のページ',after,'learning-nav-next'));
-     nav.appendChild(pair);nav.appendChild(button('学習一覧に戻る','lessons','learning-nav-list'));
+     pair.appendChild(button('← 戻る',before,'learning-nav-prev'));
+     pair.appendChild(button('メイン','lessons','learning-nav-list'));
+     pair.appendChild(button('次へ →',after,'learning-nav-next'));
+     nav.appendChild(pair);
      card.appendChild(nav);
    });});
  }
