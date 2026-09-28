@@ -44,4 +44,4 @@ for (const path of ['worker.js', ...Array.from({ length: 8 }, (_, i) => `public/
   execFileSync(process.execPath, ['--check', resolve(root, path)], { stdio: 'pipe' });
 }
 console.log(`公開前チェック合格: 学習ページ ${ids.length} 件、サイトマップ ${required.length} 件`);
-/site-guard.mjs 
+
