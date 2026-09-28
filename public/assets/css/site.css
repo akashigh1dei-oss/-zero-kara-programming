@@ -4718,3 +4718,8 @@ section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="l
   position:static !important;
   transform:none !important;
 }
+
+/* v3.02: editorial navigation unified on iPhone/PC */
+.editorial-reading .editorial-nav-unified{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%!important;align-items:stretch!important}
+.editorial-reading .editorial-nav-unified .btn{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;min-width:0!important;min-height:54px!important;padding:10px 6px!important;margin:0!important;border-radius:14px!important;font-size:clamp(13px,3.7vw,16px)!important;white-space:nowrap!important;text-align:center!important;text-decoration:none!important}
+@media(max-width:420px){.editorial-reading .editorial-nav-unified{gap:7px!important}.editorial-reading .editorial-nav-unified .btn{font-size:13px!important;padding:9px 3px!important}}
