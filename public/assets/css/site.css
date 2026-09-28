@@ -4723,3 +4723,24 @@ section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="l
 .editorial-reading .editorial-nav-unified{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%!important;align-items:stretch!important}
 .editorial-reading .editorial-nav-unified .btn{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;min-width:0!important;min-height:54px!important;padding:10px 6px!important;margin:0!important;border-radius:14px!important;font-size:clamp(13px,3.7vw,16px)!important;white-space:nowrap!important;text-align:center!important;text-decoration:none!important}
 @media(max-width:420px){.editorial-reading .editorial-nav-unified{gap:7px!important}.editorial-reading .editorial-nav-unified .btn{font-size:13px!important;padding:9px 3px!important}}
+
+/* v3.04: one editorial pager on all chapters, including the extra story. */
+.page[id^="editorial"] .editorial-nav-unified {
+  position:static!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;
+  margin:28px 0 8px!important;padding:12px!important;border:1px solid #e5d4dd!important;
+  border-radius:20px!important;background:#fff9fc!important;box-shadow:0 10px 28px rgba(75,39,58,.08)!important;
+}
+.page[id^="editorial"] .editorial-nav-unified > .editorial-action {
+  position:static!important;float:none!important;transform:none!important;grid-column:auto!important;grid-row:auto!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;
+  width:100%!important;min-width:0!important;max-width:100%!important;min-height:54px!important;
+  margin:0!important;padding:10px 6px!important;border:1px solid #dfcbd4!important;
+  border-radius:14px!important;background:#fff!important;color:#30252b!important;
+  box-shadow:none!important;text-align:center!important;text-decoration:none!important;white-space:normal!important;
+  font-size:15px!important;font-weight:800!important;line-height:1.3!important;cursor:pointer!important;
+}
+.page[id^="editorial"] .editorial-nav-unified > .editorial-action:nth-child(2){background:#fff0f6!important;color:#674452!important}
+.page[id^="editorial"] .editorial-nav-unified > .editorial-next{background:#3b2732!important;border-color:#3b2732!important;color:#fff!important}
+.page[id^="editorial"] .editorial-nav-unified > .editorial-action:focus-visible{outline:3px solid #ad6a8b!important;outline-offset:3px!important}
+@media(max-width:420px){.page[id^="editorial"] .editorial-nav-unified{gap:7px!important;padding:9px!important}.page[id^="editorial"] .editorial-nav-unified > .editorial-action{font-size:13px!important;padding:9px 3px!important;min-height:50px!important}}
