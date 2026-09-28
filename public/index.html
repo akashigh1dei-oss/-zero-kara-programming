@@ -61,7 +61,7 @@
 <div class="iphone-featured-sub">「届いた！」までの長い夜。感想・ご意見もお待ちしています。</div>
 <div class="iphone-featured-link">続きを読む →</div>
 </section>
-<section aria-label="新しい編集後記・全3話" class="iphone-featured-now iphone-featured-below-translate"><div class="iphone-featured-label">📚 新しい編集後記・全3話</div><div class="iphone-featured-title">赤い犯人とPODの海とGoogleの門番</div><div class="iphone-featured-sub">エラー処理、OGP、Googleとの出会いを描いた三話。</div><a class="iphone-featured-link" href="/editorial/51/">第一話から読む →</a></section>
+<section aria-label="新しい編集後記・全3話" class="iphone-featured-now iphone-featured-below-translate"><div class="iphone-featured-label">📚 第二章・全3話</div><div class="iphone-featured-title">赤い犯人とPODの海とGoogleの門番</div><div class="iphone-featured-sub">エラー処理、OGP、Googleとの出会いを描いた三話。</div><a class="iphone-featured-link" href="/editorial/51/">第一話から読む →</a></section>
 <nav>
 <button class="active" data-page="home">ホーム</button>
 <button data-page="lessons">学習</button>
@@ -156,7 +156,7 @@
 <section class="ref-dashboard">
 <div class="featured">
 <div class="section-kicker">FEATURED</div>
-<p><a href="/editorial/51/">📚 新しい編集後記・全3話「赤い犯人とPODの海とGoogleの門番」を読む →</a></p>
+<p><a href="/editorial/51/">📚 第二章・全3話「赤い犯人とPODの海とGoogleの門番」を読む →</a></p>
 <div class="section-title-row">
 <h3>今、読みたい記事</h3>
 <button onclick="showPage('lessons')">すべて見る　→</button>
@@ -661,12 +661,33 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <section class="page" id="help">
 <div class="card">
 <h1>困ったとき</h1>
-<h2>ボタンを押しても動かない</h2>
-<p>① HTMLにボタンがあるか → ② JavaScriptが読み込まれているか → ③ idなどの名前が一致しているか、の順に確認します。</p>
-<h2>変更したのに表示が変わらない</h2>
-<p>保存したファイルが最新か、ブラウザで再読み込みしたかを確認します。</p>
-<h2>分からない言葉がある</h2>
-<p><button class="btn secondary" onclick="showPage('glossary')">用語集を開く</button></p>
+<p>うまく動かないときは、まず「どのページで」「何をしたら」「どうなったか」を確かめましょう。一つずつ確認すれば、原因を探しやすくなります。</p>
+
+<h2>次の学習ページへ進めない</h2>
+<ol><li>画面下の「次へ」を押します。最後のページで灰色になっている場合は、それ以上進むページはありません。</li><li>「メイン」を押すと学習一覧に戻れます。一覧から読みたい回を選び直してください。</li><li>別のページに飛ぶ、同じページに戻るなどの場合は、ページ名と押したボタンを控えてください。</li></ol>
+<p><button class="btn secondary" type="button" onclick="showPage('lessons')">学習一覧を開く</button></p>
+
+<h2>ボタンを押しても動かない・画面が真っ白になる</h2>
+<ol><li>数秒待ってから、ブラウザーの再読み込みを一度試します。</li><li>ほかの学習ページやトップページも開けるか確認します。</li><li>同じ場所で繰り返す場合は、ページ名・ボタン名・表示されたメッセージを記録してください。画面の写真も役立ちます。</li></ol>
+<p>お問い合わせフォームで送信ボタンを押した後は、結果が分かるまで何度も押さず、まず送信結果を確認してください。</p>
+
+<h2>教材どおりに書いたのに動かない</h2>
+<ol><li>大文字と小文字、半角の記号、引用符、括弧の閉じ忘れを見直します。</li><li>HTMLの <code>id</code> とJavaScriptで指定した名前が同じか確認します。</li><li>保存したファイルを開いているか、ブラウザーを再読み込みしたか確認します。</li></ol>
+<p>エラー表示が出ている場合は、その文を消さずに控えてください。原因を探す大切な手掛かりです。</p>
+
+<h2>言葉の意味が分からない</h2>
+<p>用語集では、名前や読み方から探せます。例えば「HTML」「変数」「API」などを入力し、説明と使用例を確認してください。</p>
+<p><button class="btn secondary" type="button" onclick="showPage('glossary')">用語集で調べる</button></p>
+
+<div class="help-ai-room" aria-labelledby="helpAiTitle"><h2 id="helpAiTitle">AIに相談する</h2>
+<p>学習中の疑問や画面の困りごとを聞いてください。返事を読んで、続けて質問できます。</p>
+<p class="muted">質問と直近の会話をAIに送ります。画面を閉じると会話の表示は消えます。名前・メールアドレス・パスワードは入力しないでください。AIの答えは間違うこともあります。</p>
+<div id="helpAiMessages" class="help-ai-messages" role="log" aria-live="polite" aria-label="AIとの会話"><p>こんにちは。困ったことを聞いてください。</p></div>
+<form id="helpAiForm"><label for="helpAiQuestion">質問を書く</label><textarea id="helpAiQuestion" rows="3" maxlength="800" required placeholder="例：次へを押してもページが変わりません"></textarea><div class="help-ai-actions"><button class="btn" type="submit" id="helpAiSend">AIに聞く</button><button class="btn secondary" type="button" id="helpAiClear">会話を消す</button></div></form>
+<p id="helpAiStatus" role="status"></p></div>
+<h2>解決しないときは、お知らせください</h2>
+<p>「開いていたページ」「押したボタンや行った操作」「期待した動き」「実際に起きたこと」「iPhone・PCなどの端末」を書いていただくと、確認しやすくなります。画面の写真をお持ちなら、まず文章で状況をお知らせください。パスワードなどの秘密の情報は送らないでください。</p>
+<p><button class="btn" type="button" onclick="showPage('lineFriends')">お問い合わせを開く</button></p>
 </div>
 </section>
 <section class="page" id="profile">
@@ -1255,10 +1276,11 @@ for (const 金額 of 金額一覧) {
 <div class="lesson-item"><div><b>第48回</b><br/>構造化 ― 整理したら、壊れた。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial48')">読む</button></div>
 <div class="lesson-item"><div><b>第49回</b><br/>沈黙の修正 ― お前、何か言え。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial49')">読む</button></div>
 <div class="lesson-item"><div><b>第50回</b><br/>iPhoneのアート ― バラとの戦い。<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorial50')">読む</button></div>
-<div class="lesson-item"><div><b>第51回・全3話の第1話</b><br/>エラー処理――犯人は最後の一行<br/><span class="muted">2026年9月28日・GitHub Actions／エラー処理／サイト制作</span></div><a class="btn small" href="/editorial/51/">読む</a></div>
-<div class="lesson-item"><div><b>第52回・全3話の第2話</b><br/>PODの海――画像一枚、行方不明<br/><span class="muted">2026年9月28日・OGP／ファイル構成／SNS共有</span></div><a class="btn small" href="/editorial/52/">読む</a></div>
-<div class="lesson-item"><div><b>第53回・全3話の第3話</b><br/>Googleとの出会い――門番の三枚の札<br/><span class="muted">2026年9月28日・Google Search Console／サイトマップ／インデックス登録</span></div><a class="btn small" href="/editorial/53/">読む</a></div>
-<div class="lesson-item"><div><b>番外編</b><br/>深夜0時、404号室の扉を開けた<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorialExtra404')">読む</button></div>
+<div class="lesson-item" data-editorial-order="50.5"><div><b>番外編</b><br/>深夜0時、404号室の扉を開けた<br/><span class="muted">2026年9月26日</span></div><button class="btn small" onclick="showPage('editorialExtra404')">読む</button></div>
+<div class="lesson-item"><div><b>第二章・第51回／全3話の第1話</b><br/>エラー処理――犯人は最後の一行<br/><span class="muted">2026年9月28日・GitHub Actions／エラー処理／サイト制作</span></div><a class="btn small" href="/editorial/51/">読む</a></div>
+<div class="lesson-item"><div><b>第二章・第52回／全3話の第2話</b><br/>PODの海――画像一枚、行方不明<br/><span class="muted">2026年9月28日・OGP／ファイル構成／SNS共有</span></div><a class="btn small" href="/editorial/52/">読む</a></div>
+<div class="lesson-item"><div><b>第二章・第53回／全3話の第3話</b><br/>Googleとの出会い――門番の三枚の札<br/><span class="muted">2026年9月28日・Google Search Console／サイトマップ／インデックス登録</span></div><a class="btn small" href="/editorial/53/">読む</a></div>
+
 <div class="note">第1回・第2回は当時の記録として保存しています。新しい記録は別ページで追加します。</div>
 </div>
 </section>
@@ -1976,14 +1998,15 @@ if (在庫 &lt;= 最低在庫) {
 <div class="contact-box"><span class="contact-no">03</span><h2>作品・PRのご相談</h2><p>作品紹介、スポンサー・PR掲載などのご相談。</p></div>
 </div>
 <div class="contact-note"><strong>メールフォーム</strong><p>下のフォームからお問い合わせを送信できます。</p>
-<form action="https://api.web3forms.com/submit" class="contact-mail-form" method="POST">
+<form action="https://api.web3forms.com/submit" class="contact-mail-form" id="contactMailForm" method="POST">
 <input name="access_key" type="hidden" value="75c30378-c1f0-4b95-bf82-a0281ef512ab"/>
 <input name="subject" type="hidden" value="ゼロから始めるプログラム言語｜お問い合わせ"/>
 <input autocomplete="off" class="hidden" name="botcheck" style="display:none" tabindex="-1" type="checkbox"/>
 <label>お名前<input autocomplete="name" name="name" required="" type="text"/></label>
 <label>返信用メールアドレス<input autocomplete="email" name="email" required="" type="email"/></label>
 <label>お問い合わせ内容<textarea maxlength="4000" name="message" required="" rows="6"></textarea></label>
-<button class="btn" type="submit">送信する</button>
+<button class="btn" id="contactSend" type="submit">送信する</button>
+<p id="contactStatus" role="status" aria-live="polite"></p>
 </form><p class="muted">送信内容はお問い合わせ対応のために利用します。送信前にプライバシーポリシーをご確認ください。</p></div><div class="contact-action"><h2>お問い合わせ窓口</h2><p>お問い合わせは、このページのメールフォームに一本化しています。感想・ご意見・ご質問・不具合のご報告はこちらからお送りください。</p></div><div class="contact-bottom"><button class="btn secondary" onclick="showPage('privacyPolicy')">プライバシーポリシー</button><button class="btn secondary" onclick="showPage('home')">ホームへ戻る</button></div>
 </div></section><section class="page" id="editorial3"><article class="card editorial-reading"><p class="editor-date">第3回・記載日：2026年9月12日</p><p class="muted">KAZU × AI 編集後記</p><h1>公開できた。その先にも、確かめることがあった</h1>
 <p>2026年9月12日、Cloudflareでホームページを初めて公開できました。「ひと通り動きます」と伝えられたのは、一つの区切りでした。自分の手元で見ていたページが、インターネットから開けるようになったのです。</p>
@@ -2306,7 +2329,7 @@ if (在庫 &lt;= 最低在庫) {
 <h2>6．当サイト独自のアクセスログ</h2>
 <p>当サイトのプログラムでは、サイト運営や障害確認のため、アクセス先のパス、HTTPメソッド、応答ステータス、国・地域・都市、Cloudflareのデータセンター情報、端末種別などを記録する場合があります。当サイト独自のログには、IPアドレス、Cookie、URLのクエリ文字列、お問い合わせ本文、メールアドレスなどの入力内容を記録しない設計としています。</p>
 <h2>7．学習進捗の保存・Cookie等</h2>
-<p>学習済みの記事などの情報は、次回も続きから利用できるよう、お使いのブラウザーのローカルストレージ等に保存する場合があります。この学習進捗保存機能は、その情報を運営者へ送信することを目的としたものではありません。</p>
+<p>学習済みの記事などの情報は、次回も続きから利用できるよう、お使いのブラウザーのローカルストレージ等に保存する場合があります。この学習進捗保存機能は、その情報を運営者へ送信することを目的としたものではありません。</p><h2>AI相談室</h2><p>AI相談を利用すると、質問と直近の会話が回答を作るためCloudflare Workers AIへ送信されます。相談内容をサイトの学習進捗には保存しません。個人情報や秘密の情報は入力しないでください。AIの回答は正確さを保証するものではありません。</p>
 <p>外部サービスの利用に伴い、Cookieその他の技術が利用される場合があります。利用者はブラウザーの設定等からCookieを制限・削除できる場合があります。</p>
 <h2>8．第三者提供・外部委託</h2>
 <p>運営者が取得した個人情報は、本人の同意がある場合、法令に基づく場合その他法令上認められる場合を除き、第三者へ提供しません。サイト運営に必要な範囲で外部サービスを利用する場合は、各サービス提供者において情報が処理されることがあります。</p>
@@ -3140,6 +3163,8 @@ async function loadWeather() {
 <!-- v1.91 security baseline: current static site only. Future shop/payment must use server-side validation, authenticated admin access, payment-provider hosted/tokenized flows, idempotency, audit logs, and secrets kept out of client HTML. -->
 <script id="v192-reliability-fix" src="./assets/js/part-07.js?v=2.93"></script>
 <script src="./assets/js/part-08.js?v=2.96"></script>
+<script src="./assets/js/help-chat.js?v=3.11" defer></script>
+<script src="./assets/js/contact.js?v=3.12" defer></script>
 <!-- v2.34: version display synchronized with current package -->
 <script>window.addEventListener("load",()=>{if(location.hash==="#editorialIndex"&&typeof showPage==="function")showPage("editorialIndex")});</script>
 <script>window.addEventListener("load",()=>{const id=location.hash.slice(1);if(id&&document.getElementById(id)&&typeof showPage==="function")showPage(id);});window.addEventListener("hashchange",()=>{const id=location.hash.slice(1);if(id&&document.getElementById(id)&&typeof showPage==="function")showPage(id);});</script></body>
