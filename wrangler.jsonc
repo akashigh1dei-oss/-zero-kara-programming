@@ -11,5 +11,29 @@
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "ratelimits": [
+    {
+      "name": "HELP_SESSION_LIMIT",
+      "namespace_id": "90172901",
+      "simple": {
+        "limit": 4,
+        "period": 60
+      }
+    },
+    {
+      "name": "HELP_GLOBAL_LIMIT",
+      "namespace_id": "90172902",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    }
+  ],
+  "vars": {
+    "HELP_AI_ENABLED": "false"
   }
 }
