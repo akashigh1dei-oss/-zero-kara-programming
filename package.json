@@ -1,13 +1,14 @@
 {
   "name": "zero-kara-prog",
-  "version": "3.1.0",
+  "version": "3.16.0",
   "private": true,
   "scripts": {
     "check:site": "node scripts/site-guard.mjs --fix",
     "precheck:deploy": "npm run check:site",
     "check:deploy": "wrangler deploy --config wrangler.jsonc --dry-run",
     "deploy": "wrangler deploy --config wrangler.jsonc",
-    "predeploy": "npm run check:site"
+    "predeploy": "npm run check:site",
+    "repair:site": "node scripts/site-guard.mjs --fix"
   },
   "devDependencies": {
     "wrangler": "4.135.0"

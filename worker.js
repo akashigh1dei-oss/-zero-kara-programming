@@ -108,6 +108,18 @@ export default {
       }
     } else {
       response = await env.ASSETS.fetch(request);
+      // Friendly 404: keep the real HTTP 404 status, but give visitors a safe way back.
+      if (response.status === 404 && (request.method === "GET" || request.method === "HEAD")) {
+        const accept = request.headers.get("accept") || "";
+        const looksLikePage = accept.includes("text/html") || !url.pathname.split("/").pop()?.includes(".");
+        if (looksLikePage) {
+          const notFoundHtml = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>404 ページが見つかりません｜ゼロから始めるプログラム言語</title><style>:root{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:#263044;background:#fff9f7}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px}.box{width:min(680px,100%);background:#fff;border:1px solid #efdfe6;border-radius:22px;padding:28px;box-shadow:0 10px 35px rgba(80,40,60,.08)}h1{margin:.2em 0;color:#743854;font-size:clamp(1.7rem,7vw,2.6rem)}p{line-height:1.8}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.actions a{display:inline-block;padding:12px 18px;border:1px solid #d9acbf;border-radius:999px;text-decoration:none;color:#743854;background:#fff}.actions a:first-child{background:#8b3b65;color:#fff;border-color:#8b3b65}</style></head><body><main class="box"><p>404</p><h1>ページが見つかりません</h1><p>URLが変わったか、リンク先が存在しない可能性があります。下のボタンから安全に戻れます。</p><nav class="actions" aria-label="404ページからの移動"><a href="/">メインへ戻る</a><a href="/lessons/">学習ロードマップへ</a></nav></main></body></html>`;
+          response = new Response(request.method === "HEAD" ? null : notFoundHtml, {
+            status: 404,
+            headers: {"Content-Type":"text/html; charset=utf-8","Cache-Control":"no-store","X-Content-Type-Options":"nosniff"}
+          });
+        }
+      }
     }
 
     // Privacy-conscious access log: no IP, query string, form body or email.
