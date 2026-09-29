@@ -50,6 +50,50 @@ for (const match of html.matchAll(/<(?:script|img|link)\b[^>]*?\b(?:src|href)=["
   if (!asset || asset.startsWith('../')) continue;
   if (!existsSync(resolve(root, 'public', asset))) fail(`参照先ファイルがありません: ${value}`);
 }
+
+
+// 404 prevention guard: inspect internal links in every generated HTML page before deploy.
+// Safe automatic repairs are intentionally limited to canonical trailing-slash normalization.
+const knownRoutes = new Set(required);
+const generatedPages = [
+  ['/', html],
+  ['/lessons/', worker.match(/const LESSON_HUB = (`[^`]*`|"(?:\\.|[^"\\])*");/)?.[1] || ''],
+  ...ids.map((id) => [`/lessons/${id}/`, (worker.match(new RegExp(`"${id}":("(?:\\\\.|[^"\\\\])*")`)) || [])[1] || '']),
+  ...editorialIds.map((id) => [`/editorial/${id}/`, JSON.stringify(editorialPages[id])])
+];
+const decodeJsString = (value) => {
+  if (!value) return '';
+  try { return JSON.parse(value); } catch { return value.startsWith('`') ? value.slice(1, -1) : ''; }
+};
+const normalizeInternalPath = (value, fromPath) => {
+  if (!value || /^(?:https?:|mailto:|tel:|data:|javascript:|#|\/\/)/i.test(value)) return null;
+  try { return new URL(value, base + fromPath).pathname; } catch { return null; }
+};
+const brokenLinks = [];
+for (const [fromPath, rawPage] of generatedPages) {
+  const page = decodeJsString(rawPage);
+  if (!page) continue;
+  for (const match of page.matchAll(/<a\b[^>]*?\bhref=["']([^"']+)["']/gi)) {
+    const href = match[1];
+    const pathname = normalizeInternalPath(href, fromPath);
+    if (!pathname) continue;
+    if (knownRoutes.has(pathname)) continue;
+    const assetPath = pathname.replace(/^\//, '');
+    if (assetPath && existsSync(resolve(root, 'public', assetPath))) continue;
+    // Treat /route and /route/index.html as safe aliases only when their canonical route exists.
+    const canonicalCandidate = pathname.endsWith('/index.html')
+      ? pathname.slice(0, -'index.html'.length)
+      : pathname.endsWith('/') ? pathname : pathname + '/';
+    if (knownRoutes.has(canonicalCandidate)) continue;
+    brokenLinks.push(`${fromPath} -> ${href}`);
+  }
+}
+if (brokenLinks.length) {
+  console.warn(`⚠️ 404候補の内部リンクがあります（警告のみ・デプロイは続行します）:\n${brokenLinks.join('\n')}`);
+} else {
+  console.log(`404予防チェック合格: 内部リンクに既知のリンク切れはありません`);
+}
+
 for (const path of ['worker.js', ...Array.from({ length: 8 }, (_, i) => `public/assets/js/part-0${i + 1}.js`)]) {
   execFileSync(process.execPath, ['--check', resolve(root, path)], { stdio: 'pipe' });
 }
