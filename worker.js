@@ -80,6 +80,25 @@ export default {
     if (url.pathname === '/api/help-chat') return handleHelpChat(request, env, url);
     if (url.pathname === '/api/contact') return handleContact(request, env, url);
 
+    // Normalize common public URL variants before asset lookup.
+    // This prevents avoidable 404s from old bookmarks, hand-typed URLs and crawlers.
+    if ((request.method === 'GET' || request.method === 'HEAD') && url.pathname === '/index.html') {
+      return Response.redirect(new URL('/' + url.search, url.origin), 308);
+    }
+    const looseLesson = /^\/lessons\/(\d{1,2})(?:\/|\/index\.html)?$/.exec(url.pathname);
+    if (looseLesson) {
+      const n = Number(looseLesson[1]);
+      if (n >= 1 && n <= 22) {
+        const canonicalPath = `/lessons/${String(n).padStart(2, '0')}/`;
+        if (url.pathname !== canonicalPath) return Response.redirect(new URL(canonicalPath + url.search, url.origin), 308);
+      }
+    }
+    const looseEditorial = /^\/editorial\/(5[1-3])(?:\/|\/index\.html)?$/.exec(url.pathname);
+    if (looseEditorial) {
+      const canonicalPath = `/editorial/${looseEditorial[1]}/`;
+      if (url.pathname !== canonicalPath) return Response.redirect(new URL(canonicalPath + url.search, url.origin), 308);
+    }
+
     const cf = request.cf || {};
     if (url.pathname === "/lessons" || url.pathname === "/lessons/") {
       if (url.pathname === "/lessons") return Response.redirect(new URL("/lessons/", url.origin), 308);
