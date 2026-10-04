@@ -4780,3 +4780,20 @@ section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="l
 /* v3.12: clear contact submission result. */
 #contactStatus{min-height:1.5em;font-weight:750;color:#174a63;margin:12px 0 0}
 #contactSend:disabled{opacity:.65;cursor:wait}
+
+/* === v3.21 PC annual roadmap fix (2026-10-05) === */
+@media (min-width:981px){
+  #roadmap{max-width:1120px;margin:0 auto;}
+  #roadmap .roadmap-hero{padding:36px 40px;margin-bottom:22px;}
+  #roadmap .roadmap-hero h1{font-size:clamp(32px,3.4vw,46px);margin:12px 0 14px;}
+  #roadmap .town{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch;}
+  #roadmap .building{min-width:0;height:100%;}
+  #roadmap .card:nth-of-type(2){padding:32px;}
+  #roadmap .card:nth-of-type(2) > h2{margin-bottom:24px;}
+  #roadmap .roadmap-step{display:grid;grid-template-columns:56px 245px minmax(0,1fr);align-items:center;column-gap:18px;padding:22px 24px;margin:0;border-radius:0;border-bottom:0;}
+  #roadmap .roadmap-step:first-of-type{border-radius:16px 16px 0 0;}
+  #roadmap .roadmap-step:last-of-type{border-bottom:1px solid var(--line);border-radius:0 0 16px 16px;}
+  #roadmap .roadmap-step .num{position:static;width:42px;height:42px;font-size:16px;}
+  #roadmap .roadmap-step h3{margin:0;font-size:17px;}
+  #roadmap .roadmap-step p{margin:0;font-size:14px;line-height:1.75;}
+}
