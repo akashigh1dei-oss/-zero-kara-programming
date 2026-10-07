@@ -4857,3 +4857,16 @@ body.help-ai-open{overflow:hidden}
   #help .card > p:last-child .btn{display:flex;width:100%;min-height:58px;align-items:center;justify-content:center;margin-top:18px;font-size:1rem;font-weight:800;border-radius:16px}
   #help .card{padding-bottom:30px}
 }
+
+/* === v3.35: iPhone keyboard-safe AI room + footer isolation === */
+.help-ai-dialog:not([hidden]){display:block!important}
+body.help-ai-open > footer{visibility:hidden!important;pointer-events:none!important}
+@media(max-width:560px){
+  .help-ai-dialog{height:100dvh!important;overflow:hidden!important}
+  .help-ai-backdrop{position:fixed!important;inset:0!important}
+  .help-ai-panel{position:fixed!important;inset:0!important;width:100%!important;height:100dvh!important;max-height:100dvh!important;border-radius:0!important;padding-bottom:env(safe-area-inset-bottom)!important}
+  .help-ai-panel .help-ai-messages{min-height:0!important;flex:1 1 auto!important;overflow:auto!important}
+  .help-ai-composer{flex:0 0 auto!important;padding:10px 12px 6px!important}
+  .help-ai-status,.help-ai-caution{flex:0 0 auto!important}
+  #helpAiQuestion{font-size:16px!important}
+}
