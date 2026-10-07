@@ -35,5 +35,21 @@
   ],
   "vars": {
     "HELP_AI_ENABLED": "false"
-  }
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "HELP_QUOTA",
+        "class_name": "HelpQuota"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "help-quota-v1",
+      "new_sqlite_classes": [
+        "HelpQuota"
+      ]
+    }
+  ]
 }
