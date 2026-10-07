@@ -34,7 +34,7 @@
     }
   ],
   "vars": {
-    "HELP_AI_ENABLED": "false"
+    "HELP_AI_ENABLED": "true"
   },
   "durable_objects": {
     "bindings": [
