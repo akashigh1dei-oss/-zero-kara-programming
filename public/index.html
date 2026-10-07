@@ -30,14 +30,14 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ゼロから始めるプログラム言語", "url": "https://mmdei.com/", "inLanguage": "ja", "description": "プログラミング初心者が、作りながら学ぶ学習サイト。HTML・CSS・JavaScriptからPython・SQL・APIへ。実践記事、用語集、ヒント付きミニテスト、制作の編集後記を掲載しています。"}</script>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
 <!-- v1.81 contact unified baseline: v1.76 preserved; staged refactor starts from contact area. -->
-<link href="./assets/css/site.css?v=3.28" rel="stylesheet"/>
+<link href="./assets/css/site.css?v=3.30" rel="stylesheet"/>
 </head>
 <body>
 <div aria-live="polite" data-no-translate="true" id="iphoneTranslationVeil">翻訳中…</div>
 <header>
 <div class="topbar">
 <div class="brand">ゼロから始めるプログラム言語</div>
-<div class="version">v3.29</div>
+<div class="version">v3.30</div>
 </div>
 <div aria-label="翻訳" class="translation-zone mobile-translation-zone">
 <div class="translation-zone-title">🌐 Language / 翻訳</div>
@@ -112,6 +112,7 @@
 <button onclick="showPage('lessons')">学習</button>
 <button onclick="showPage('roadmap')">学習ロードマップ</button>
 <button onclick="showPage('glossary')">教材集</button>
+<button type="button" class="ref-ai-nav" onclick="openHelpAi()">AI相談室</button>
 <button onclick="showPage('lineFriends')">お問い合わせ</button>
 <button onclick="showPage('profile')">運営について</button>
 </nav>
@@ -145,6 +146,7 @@
 <p>つくることで、考える力が育ち、<br/>日常が少しずつ面白くなっていく。<br/>この場所は、そんな変化を応援する<br/>プログラミング学習サイトです。</p>
 <div class="ref-cta-row">
 <button class="primary" onclick="showPage('lessons')">さっそくはじめる　→</button>
+<button class="ref-ai-cta" type="button" onclick="openHelpAi()">AIに相談する →</button>
 <button class="link" onclick="showPage('profile')">このサイトについて　→</button>
 </div>
 </div>
@@ -687,7 +689,7 @@ console.log(answers[2]);</code></pre><div class="chat"><div class="who">AI</div>
 <p>用語集では、名前や読み方から探せます。例えば「HTML」「変数」「API」などを入力し、説明と使用例を確認してください。</p>
 <p><button class="btn secondary" type="button" onclick="showPage('glossary')">用語集で調べる</button></p>
 
-<div class="help-ai-room" aria-labelledby="helpAiTitle"><h2 id="helpAiTitle">AIに相談する</h2>
+<div class="help-ai-room" aria-labelledby="helpAiTitle"><h2 id="helpAiTitle" tabindex="-1">AI相談室</h2>
 <p>学習中の疑問や画面の困りごとを聞いてください。返事を読んで、続けて質問できます。</p>
 <p class="muted">質問と直近の会話をAIに送ります。画面を閉じると会話の表示は消えます。名前・メールアドレス・パスワードは入力しないでください。AIの答えは間違うこともあります。</p>
 <div id="helpAiMessages" class="help-ai-messages" role="log" aria-live="polite" aria-label="AIとの会話"><p>こんにちは。困ったことを聞いてください。</p></div>
@@ -3185,7 +3187,7 @@ async function loadWeather() {
 <!-- v1.91 security baseline: current static site only. Future shop/payment must use server-side validation, authenticated admin access, payment-provider hosted/tokenized flows, idempotency, audit logs, and secrets kept out of client HTML. -->
 <script id="v192-reliability-fix" src="./assets/js/part-07.js?v=3.28"></script>
 <script src="./assets/js/part-08.js?v=3.28"></script>
-<script src="./assets/js/help-chat.js?v=3.28" defer></script>
+<script src="./assets/js/help-chat.js?v=3.30" defer></script>
 <script src="./assets/js/contact.js?v=3.28" defer></script>
 <!-- v2.34: version display synchronized with current package -->
 <script>window.addEventListener("load",()=>{if(location.hash==="#editorialIndex"&&typeof showPage==="function")showPage("editorialIndex")});</script>
