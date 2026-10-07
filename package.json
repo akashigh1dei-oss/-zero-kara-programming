@@ -11,6 +11,6 @@
     "repair:site": "node scripts/site-guard.mjs --fix"
   },
   "devDependencies": {
-    "wrangler": "4.135.0"
+    "wrangler": "4.148.0"
   }
 }
