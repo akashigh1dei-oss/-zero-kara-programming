@@ -4822,3 +4822,29 @@ section[id^="jsLecture"] .article-nav.lesson-pager > .btn.pager-list[onclick*="l
 .help-ai-composer{padding:12px 14px 4px;border-top:1px solid #eee4e9;background:#fff}.help-ai-input-wrap{display:flex;align-items:flex-end;gap:8px;padding:6px 7px 6px 12px;border:1px solid #cbbbc4;border-radius:18px;background:#fff}.help-ai-input-wrap:focus-within{border-color:#763e61;box-shadow:0 0 0 3px rgba(118,62,97,.11)}.help-ai-panel textarea{flex:1;width:auto;min-height:44px;max-height:120px;padding:9px 0;border:0!important;outline:0!important;resize:none;background:transparent;font:inherit;box-shadow:none!important}.help-ai-send{flex:0 0 42px;width:42px;height:42px;border:0;border-radius:50%;background:#763e61;color:#fff;font-size:20px;cursor:pointer}.help-ai-send:disabled{opacity:.45;cursor:wait}.help-ai-status{min-height:1.35em;margin:4px 18px 0;font-size:.78rem;font-weight:700;color:#5c4854}.help-ai-caution{margin:4px 18px 14px;font-size:.68rem;line-height:1.45;color:#766872}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 body.help-ai-open{overflow:hidden}
 @media(max-width:560px){.help-ai-cta{display:block;padding:18px}.help-ai-cta-button{width:100%;margin-top:12px}.help-ai-fab{right:14px;bottom:calc(86px + env(safe-area-inset-bottom));min-height:48px;padding:0 15px}.help-ai-panel{inset:auto 0 0 0;width:100%;height:min(82dvh,720px);border-radius:24px 24px 0 0}.help-ai-header{padding:15px 14px 12px}.help-ai-panel .help-ai-messages{padding:14px}.help-ai-caution{margin-bottom:calc(10px + env(safe-area-inset-bottom))}}
+
+/* === v3.33: top-news layout + larger PC consultation entry (2026-10-08) === */
+@media (min-width:981px){
+  .pc105-grid{grid-template-columns:minmax(0,1.55fr) minmax(260px,.78fr) minmax(250px,.72fr)}
+  .pc105-feature{padding:24px 28px 28px;background:linear-gradient(145deg,#fffdfb 0%,#fff7fa 100%)}
+  .pc105-feature .pc105-head small{font-size:.78rem;color:#a52e61}
+  .pc105-feature .pc105-head h2{font-size:2.25rem}
+  .pc105-feature-body{grid-template-columns:minmax(270px,1.05fr) minmax(300px,1fr);gap:28px;align-items:center}
+  .pc105-feature-image.pc105-sns-visual{min-height:300px!important;border-radius:16px}
+  .pc105-feature-copy{padding:8px 4px}
+  .pc105-feature-copy .pc105-chip{padding:7px 14px;font-size:.88rem;letter-spacing:.04em}
+  .pc105-feature-copy h3{font-size:2.15rem;line-height:1.28;font-weight:600;margin:2px 0 14px}
+  .pc105-feature-copy p{font-size:1.02rem;line-height:1.9}
+  .pc105-feature-copy .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;margin-top:8px;font-size:1rem;font-weight:800;border-radius:14px}
+  .pc105-feature-copy .pc105-date{font-size:.88rem}
+  .help-ai-cta{padding:34px 38px;min-height:180px;border-width:2px}
+  .help-ai-cta h2{font-size:2rem;line-height:1.35}
+  .help-ai-cta p{font-size:1.05rem;line-height:1.8}
+  .help-ai-cta-button{min-height:58px;padding:0 28px;font-size:1.02rem}
+}
+@media (min-width:981px) and (max-width:1180px){
+  .pc105-grid{grid-template-columns:minmax(0,1.35fr) minmax(250px,.85fr) minmax(230px,.8fr)}
+  .pc105-feature-body{grid-template-columns:1fr;gap:18px}
+  .pc105-feature-image.pc105-sns-visual{min-height:220px!important}
+  .pc105-feature-copy h3{font-size:1.85rem}
+}
