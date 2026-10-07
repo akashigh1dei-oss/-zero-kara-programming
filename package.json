@@ -1,6 +1,6 @@
 {
   "name": "zero-kara-prog",
-  "version": "3.30.0",
+  "version": "3.31.0",
   "private": true,
   "scripts": {
     "check:site": "node scripts/site-guard.mjs --fix",

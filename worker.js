@@ -64,11 +64,13 @@ async function handleHelpChat(request,env,url){
   const safeHistory=history.filter(x=>x&&['user','assistant'].includes(x.role)&&typeof x.content==='string')
     .map(x=>({role:x.role,content:[...x.content].slice(0,1000).join('')}));
   try{
-    const result=await env.AI.run('@cf/meta/llama-3.2-3b-instruct',{
+    const result=await env.AI.run('@cf/google/gemma-4-26b-a4b-it',{
       messages:[{role:'system',content:HELP_SYSTEM},...safeHistory,{role:'user',content:question}],
-      max_tokens:360,temperature:0.4
+      max_completion_tokens:360,temperature:0.4,
+      chat_template_kwargs:{enable_thinking:false}
     });
-    const answer=typeof result?.response==='string'?result.response.trim():'';
+    const content=result?.choices?.[0]?.message?.content ?? result?.response;
+    const answer=typeof content==='string'?content.trim():'';
     if(!answer)return helpJson({error:'回答を作れませんでした。もう一度お試しください。'},502);
     return helpJson({answer:answer.slice(0,2400)});
   }catch(e){return helpJson({error:'AIにつながりませんでした。時間をおいてお試しください。'},503);}
