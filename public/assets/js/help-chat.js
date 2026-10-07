@@ -1,3 +1,11 @@
+// Open the same AI room from the desktop home without duplicating the form.
+window.openHelpAi=function(){
+  showPage('help');
+  requestAnimationFrame(function(){
+    const title=document.getElementById('helpAiTitle');
+    if(title){title.scrollIntoView({block:'start',behavior:'instant'});title.focus({preventScroll:true});}
+  });
+};
 document.addEventListener('DOMContentLoaded',function(){
   const form=document.getElementById('helpAiForm');if(!form)return;
   const input=document.getElementById('helpAiQuestion'),messages=document.getElementById('helpAiMessages');
