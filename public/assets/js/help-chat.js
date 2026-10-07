@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('helpAiClear').addEventListener('click',function(){history=[];messages.textContent='';bubble('answer','新しい相談を始めましょう。');status.textContent='会話を消しました。';input.focus();});
   form.addEventListener('submit',async function(e){
     e.preventDefault();const question=input.value.trim();if(!question||send.disabled)return;
+    if([...question].length>1000){status.textContent='質問は1,000文字以内で入力してください。';return;}
     send.disabled=true;status.textContent='AIが返事を考えています…';
     try{
       const response=await fetch('/api/help-chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,history:history.slice(-6),session})});
