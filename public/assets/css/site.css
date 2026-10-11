@@ -4871,33 +4871,45 @@ body.help-ai-open > footer{visibility:hidden!important;pointer-events:none!impor
   #helpAiQuestion{font-size:16px!important}
 }
 
-/* v3.40: iPhone floating AI button must not cover article actions */
+/* v3.42: visible consultation label above mobile navigation */
 @media (max-width: 560px) {
   #helpAiFab.help-ai-fab {
     position: fixed !important;
     right: max(14px, env(safe-area-inset-right)) !important;
     left: auto !important;
     bottom: calc(100px + env(safe-area-inset-bottom)) !important;
-    width: 48px !important;
+    width: auto !important;
     height: 48px !important;
     min-height: 48px !important;
-    padding: 0 !important;
+    max-width: calc(100vw - 28px) !important;
+    padding: 0 16px !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50% !important;
+    gap: 8px;
+    border-radius: 999px !important;
+    background: #763e61 !important;
+    border: 2px solid #fff4db !important;
+    box-shadow: 0 4px 16px rgba(56,31,47,.3);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
     z-index: 900;
   }
-  #helpAiFab .help-ai-fab-dot { width: 12px; height: 12px; flex: none; }
+  #helpAiFab .help-ai-fab-dot { width: 9px; height: 9px; flex: none; }
   #helpAiFab span:not(.help-ai-fab-dot) {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
     padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0,0,0,0) !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
     white-space: nowrap !important;
     border: 0 !important;
+    color: #fff;
   }
 }
