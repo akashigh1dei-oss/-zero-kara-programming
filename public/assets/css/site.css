@@ -4913,3 +4913,16 @@ body.help-ai-open > footer{visibility:hidden!important;pointer-events:none!impor
     color: #fff;
   }
 }
+
+/* v3.43: detailed glossary, scroll safely within the viewport */
+#glossaryDetailDialog {
+  box-sizing: border-box;
+  max-height: calc(100dvh - 32px);
+  max-width: calc(100vw - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-top: 64px;
+}
+#glossaryDetailDialog h3 { margin-top: 24px; }
+#glossaryDetailDialog .glossary-dialog-close { z-index: 1; padding-bottom: 8px; }
+#glossaryDialogPoint { padding: 12px 14px; border-left: 3px solid #176b52; background: #f0f5f2; border-radius: 6px; }
