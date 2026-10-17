@@ -34,7 +34,8 @@
     }
   ],
   "vars": {
-    "HELP_AI_ENABLED": "true"
+    "HELP_AI_ENABLED": "true",
+    "HELP_HISTORY_ENABLED": "true"
   },
   "durable_objects": {
     "bindings": [
@@ -51,5 +52,18 @@
         "HelpQuota"
       ]
     }
-  ]
+  ],
+  "d1_databases": [
+    {
+      "binding": "HELP_HISTORY_DB",
+      "database_name": "zero-kara-help-history",
+      "database_id": "4a0bbe2e-6e66-49a5-ab14-cf7ce0c5aa20",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "17 * * * *"
+    ]
+  }
 }
