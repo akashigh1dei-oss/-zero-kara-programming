@@ -4926,3 +4926,6 @@ body.help-ai-open > footer{visibility:hidden!important;pointer-events:none!impor
 #glossaryDetailDialog h3 { margin-top: 24px; }
 #glossaryDetailDialog .glossary-dialog-close { z-index: 1; padding-bottom: 8px; }
 #glossaryDialogPoint { padding: 12px 14px; border-left: 3px solid #176b52; background: #f0f5f2; border-radius: 6px; }
+
+/* v3.44: optional history consent, mobile dialog */
+.help-ai-history-notice{padding:8px 14px;background:#f3f6fb;color:#334155;font-size:12px;line-height:1.5;max-height:145px;overflow:auto;flex-shrink:1}.help-ai-history-notice p{margin:4px 0}.help-ai-history-notice label{display:block;font-weight:600}.help-ai-history-notice input{width:18px;height:18px;vertical-align:middle;accent-color:#735181}.help-ai-messages{min-height:80px}
