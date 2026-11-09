@@ -39,7 +39,10 @@
   },
   "durable_objects": {
     "bindings": [
-      {"name":"CONTENT_RATINGS","class_name":"ContentRatings"},
+      {
+        "name": "CONTENT_RATINGS",
+        "class_name": "ContentRatings"
+      },
       {
         "name": "HELP_QUOTA",
         "class_name": "HelpQuota"
@@ -47,11 +50,16 @@
     ]
   },
   "migrations": [
-    {"tag":"content-ratings-v1","new_sqlite_classes":["ContentRatings"]},
     {
       "tag": "help-quota-v1",
       "new_sqlite_classes": [
         "HelpQuota"
+      ]
+    },
+    {
+      "tag": "content-ratings-v1",
+      "new_sqlite_classes": [
+        "ContentRatings"
       ]
     }
   ],
