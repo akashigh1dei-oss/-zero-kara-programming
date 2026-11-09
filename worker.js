@@ -82,6 +82,27 @@ async function handleHelpChat(request,env,url){
   }catch(e){await finishHistory(env,record,'error');return helpJson({error:'AIにつながりませんでした。時間をおいてお試しください。'},503);}
 }
 
+export class ContentRatings {
+  constructor(state, env) { this.state = state; }
+  async fetch(request) {
+    const url = new URL(request.url);
+    const key = url.searchParams.get('key') || '';
+    if (!/^[a-zA-Z0-9_:/.-]{1,160}$/.test(key)) return Response.json({error:'invalid key'}, {status:400});
+    const data = await this.state.storage.get('r:' + key) || {up:0,down:0,voters:{}};
+    if (request.method === 'GET') return Response.json({up:data.up,down:data.down});
+    if (request.method !== 'POST') return new Response('Method not allowed',{status:405});
+    let body; try { body=await request.json(); } catch {return Response.json({error:'invalid JSON'},{status:400});}
+    if (!['up','down'].includes(body.vote) || !/^[a-f0-9-]{36}$/.test(body.visitor||'')) return Response.json({error:'invalid vote'},{status:400});
+    const old = data.voters[body.visitor];
+    if (old !== body.vote) {
+      if (old) data[old] = Math.max(0,data[old]-1);
+      data[body.vote]++; data.voters[body.visitor]=body.vote;
+      await this.state.storage.put('r:'+key,data);
+    }
+    return Response.json({up:data.up,down:data.down,vote:body.vote});
+  }
+}
+
 export default {
   async scheduled(controller, env) { await purgeHistory(env); },
   async fetch(request, env) {
@@ -96,6 +117,13 @@ export default {
       return Response.redirect(canonicalUrl, 301);
     }
 
+    if (url.pathname === '/api/ratings') {
+      if (!['GET','POST'].includes(request.method)) return new Response('Method not allowed',{status:405});
+      const key = url.searchParams.get('key') || '';
+      if (!/^[a-zA-Z0-9_:/.-]{1,160}$/.test(key)) return Response.json({error:'invalid key'},{status:400});
+      const id = env.CONTENT_RATINGS.idFromName(key);
+      return env.CONTENT_RATINGS.get(id).fetch(request);
+    }
     if (url.pathname === '/api/help-chat') return handleHelpChat(request, env, url);
     if (url.pathname === '/api/contact') return handleContact(request, env, url);
 
@@ -172,6 +200,9 @@ export default {
       colo: cf.colo || null,
       device: request.headers.get("sec-ch-ua-mobile") === "?1" ? "mobile" : "other"
     }));
+    if (request.method === 'GET' && response.status === 200 && (response.headers.get('content-type')||'').includes('text/html')) {
+      response = new HTMLRewriter().on('body', {element(el) {el.append('<script src="/ratings.js" defer></script>', {html:true});}}).transform(response);
+    }
     return response;
   }
 };
